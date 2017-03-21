@@ -1,0 +1,11 @@
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.csprojResolveAssemblyReference.cache
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.Form1.resources
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.Form2.resources
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.Form3.resources
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.Properties.Resources.resources
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.csproj.GenerateResource.Cache
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\bin\Debug\TaxonScout.exe.config
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\bin\Debug\TaxonScout.exe
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\bin\Debug\TaxonScout.pdb
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.exe
+C:\Users\MiSU\Documents\Visual Studio 2017\Projects\TaxonScout\TaxonScout\obj\Debug\TaxonScout.pdb
