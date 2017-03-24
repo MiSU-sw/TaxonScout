@@ -97,10 +97,13 @@
             // 
             // Form3
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(298, 126);
+            this.CancelButton = this.button2;
+            this.ClientSize = new System.Drawing.Size(295, 126);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form3";
             this.Text = "Select Taxon";

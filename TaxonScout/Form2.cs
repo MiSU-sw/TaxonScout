@@ -261,7 +261,7 @@ namespace TaxonScout
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = "";
+            openFileDialog1.InitialDirectory = Application.StartupPath;
             openFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;

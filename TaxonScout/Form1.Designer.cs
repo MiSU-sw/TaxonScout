@@ -36,7 +36,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.buttonSaveData = new System.Windows.Forms.Button();
             this.buttonKeyBindings = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindAlgaeToKeysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sampleParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllCountersToZeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -319,6 +319,9 @@
             this.numericUpDown46 = new System.Windows.Forms.NumericUpDown();
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.buttonSampleParams = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -484,12 +487,13 @@
             this.numericUpDown1.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown1.TabIndex = 21;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // buttonSaveData
             // 
-            this.buttonSaveData.Location = new System.Drawing.Point(224, 398);
+            this.buttonSaveData.Location = new System.Drawing.Point(35, 487);
             this.buttonSaveData.Name = "buttonSaveData";
-            this.buttonSaveData.Size = new System.Drawing.Size(80, 23);
+            this.buttonSaveData.Size = new System.Drawing.Size(106, 23);
             this.buttonSaveData.TabIndex = 2;
             this.buttonSaveData.Text = "Save Data";
             this.buttonSaveData.UseVisualStyleBackColor = true;
@@ -497,9 +501,9 @@
             // 
             // buttonKeyBindings
             // 
-            this.buttonKeyBindings.Location = new System.Drawing.Point(12, 398);
+            this.buttonKeyBindings.Location = new System.Drawing.Point(35, 429);
             this.buttonKeyBindings.Name = "buttonKeyBindings";
-            this.buttonKeyBindings.Size = new System.Drawing.Size(95, 23);
+            this.buttonKeyBindings.Size = new System.Drawing.Size(106, 23);
             this.buttonKeyBindings.TabIndex = 0;
             this.buttonKeyBindings.Text = "Key Assignments";
             this.buttonKeyBindings.UseVisualStyleBackColor = true;
@@ -565,6 +569,7 @@
             this.numericUpDown2.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown2.TabIndex = 22;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // textBox2
             // 
@@ -607,7 +612,8 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindAlgaeToKeysToolStripMenuItem});
+            this.bindAlgaeToKeysToolStripMenuItem,
+            this.sampleParametersToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -615,9 +621,16 @@
             // bindAlgaeToKeysToolStripMenuItem
             // 
             this.bindAlgaeToKeysToolStripMenuItem.Name = "bindAlgaeToKeysToolStripMenuItem";
-            this.bindAlgaeToKeysToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.bindAlgaeToKeysToolStripMenuItem.Text = "Assign Taxons to Keys";
+            this.bindAlgaeToKeysToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.bindAlgaeToKeysToolStripMenuItem.Text = "Assign Taxa to Keys";
             this.bindAlgaeToKeysToolStripMenuItem.Click += new System.EventHandler(this.bindAlgaeToKeysToolStripMenuItem_Click);
+            // 
+            // sampleParametersToolStripMenuItem
+            // 
+            this.sampleParametersToolStripMenuItem.Name = "sampleParametersToolStripMenuItem";
+            this.sampleParametersToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.sampleParametersToolStripMenuItem.Text = "Sample Parameters";
+            this.sampleParametersToolStripMenuItem.Click += new System.EventHandler(this.sampleParametersToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
@@ -721,6 +734,7 @@
             this.numericUpDown3.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown3.TabIndex = 23;
             this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // textBox3
             // 
@@ -791,6 +805,7 @@
             this.numericUpDown4.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown4.TabIndex = 24;
             this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // textBox4
             // 
@@ -861,6 +876,7 @@
             this.numericUpDown5.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown5.TabIndex = 25;
             this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // textBox5
             // 
@@ -931,6 +947,7 @@
             this.numericUpDown6.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown6.TabIndex = 26;
             this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // textBox6
             // 
@@ -1001,6 +1018,7 @@
             this.numericUpDown7.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown7.TabIndex = 7;
             this.numericUpDown7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
             // textBox7
             // 
@@ -1071,6 +1089,7 @@
             this.numericUpDown8.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown8.TabIndex = 28;
             this.numericUpDown8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown8.ValueChanged += new System.EventHandler(this.numericUpDown8_ValueChanged);
             // 
             // textBox8
             // 
@@ -1141,6 +1160,7 @@
             this.numericUpDown9.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown9.TabIndex = 29;
             this.numericUpDown9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown9.ValueChanged += new System.EventHandler(this.numericUpDown9_ValueChanged);
             // 
             // textBox9
             // 
@@ -1211,6 +1231,7 @@
             this.numericUpDown10.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown10.TabIndex = 30;
             this.numericUpDown10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown10.ValueChanged += new System.EventHandler(this.numericUpDown10_ValueChanged);
             // 
             // textBox10
             // 
@@ -1281,6 +1302,7 @@
             this.numericUpDown11.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown11.TabIndex = 30;
             this.numericUpDown11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
             // 
             // textBox11
             // 
@@ -1351,6 +1373,7 @@
             this.numericUpDown12.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown12.TabIndex = 30;
             this.numericUpDown12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown12.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
             // 
             // textBox12
             // 
@@ -1421,6 +1444,7 @@
             this.numericUpDown13.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown13.TabIndex = 30;
             this.numericUpDown13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
             // 
             // textBox13
             // 
@@ -1491,6 +1515,7 @@
             this.numericUpDown14.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown14.TabIndex = 30;
             this.numericUpDown14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown14.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
             // 
             // textBox14
             // 
@@ -1561,6 +1586,7 @@
             this.numericUpDown15.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown15.TabIndex = 30;
             this.numericUpDown15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown15.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
             // 
             // textBox15
             // 
@@ -1631,6 +1657,7 @@
             this.numericUpDown16.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown16.TabIndex = 30;
             this.numericUpDown16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown16.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
             // 
             // textBox16
             // 
@@ -1701,6 +1728,7 @@
             this.numericUpDown17.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown17.TabIndex = 30;
             this.numericUpDown17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown17.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
             // 
             // textBox17
             // 
@@ -1771,6 +1799,7 @@
             this.numericUpDown18.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown18.TabIndex = 30;
             this.numericUpDown18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown18.ValueChanged += new System.EventHandler(this.numericUpDown18_ValueChanged);
             // 
             // textBox18
             // 
@@ -1841,6 +1870,7 @@
             this.numericUpDown19.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown19.TabIndex = 30;
             this.numericUpDown19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown19.ValueChanged += new System.EventHandler(this.numericUpDown19_ValueChanged);
             // 
             // textBox19
             // 
@@ -1911,6 +1941,7 @@
             this.numericUpDown20.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown20.TabIndex = 30;
             this.numericUpDown20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown20.ValueChanged += new System.EventHandler(this.numericUpDown20_ValueChanged);
             // 
             // textBox20
             // 
@@ -1981,6 +2012,7 @@
             this.numericUpDown21.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown21.TabIndex = 30;
             this.numericUpDown21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown21.ValueChanged += new System.EventHandler(this.numericUpDown21_ValueChanged);
             // 
             // textBox21
             // 
@@ -2051,6 +2083,7 @@
             this.numericUpDown22.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown22.TabIndex = 30;
             this.numericUpDown22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown22.ValueChanged += new System.EventHandler(this.numericUpDown22_ValueChanged);
             // 
             // textBox22
             // 
@@ -2121,6 +2154,7 @@
             this.numericUpDown23.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown23.TabIndex = 30;
             this.numericUpDown23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown23.ValueChanged += new System.EventHandler(this.numericUpDown23_ValueChanged);
             // 
             // textBox23
             // 
@@ -2191,6 +2225,7 @@
             this.numericUpDown24.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown24.TabIndex = 30;
             this.numericUpDown24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown24.ValueChanged += new System.EventHandler(this.numericUpDown24_ValueChanged);
             // 
             // textBox24
             // 
@@ -2261,6 +2296,7 @@
             this.numericUpDown25.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown25.TabIndex = 30;
             this.numericUpDown25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown25.ValueChanged += new System.EventHandler(this.numericUpDown25_ValueChanged);
             // 
             // textBox25
             // 
@@ -2331,6 +2367,7 @@
             this.numericUpDown26.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown26.TabIndex = 30;
             this.numericUpDown26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown26.ValueChanged += new System.EventHandler(this.numericUpDown26_ValueChanged);
             // 
             // textBox26
             // 
@@ -2401,6 +2438,7 @@
             this.numericUpDown27.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown27.TabIndex = 30;
             this.numericUpDown27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown27.ValueChanged += new System.EventHandler(this.numericUpDown27_ValueChanged);
             // 
             // textBox27
             // 
@@ -2471,6 +2509,7 @@
             this.numericUpDown28.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown28.TabIndex = 30;
             this.numericUpDown28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown28.ValueChanged += new System.EventHandler(this.numericUpDown28_ValueChanged);
             // 
             // textBox28
             // 
@@ -2541,6 +2580,7 @@
             this.numericUpDown29.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown29.TabIndex = 30;
             this.numericUpDown29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown29.ValueChanged += new System.EventHandler(this.numericUpDown29_ValueChanged);
             // 
             // textBox29
             // 
@@ -2611,6 +2651,7 @@
             this.numericUpDown30.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown30.TabIndex = 30;
             this.numericUpDown30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown30.ValueChanged += new System.EventHandler(this.numericUpDown30_ValueChanged);
             // 
             // textBox30
             // 
@@ -2681,6 +2722,7 @@
             this.numericUpDown31.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown31.TabIndex = 30;
             this.numericUpDown31.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown31.ValueChanged += new System.EventHandler(this.numericUpDown31_ValueChanged);
             // 
             // textBox31
             // 
@@ -2751,6 +2793,7 @@
             this.numericUpDown32.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown32.TabIndex = 30;
             this.numericUpDown32.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown32.ValueChanged += new System.EventHandler(this.numericUpDown32_ValueChanged);
             // 
             // textBox32
             // 
@@ -2821,6 +2864,7 @@
             this.numericUpDown33.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown33.TabIndex = 30;
             this.numericUpDown33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown33.ValueChanged += new System.EventHandler(this.numericUpDown33_ValueChanged);
             // 
             // textBox33
             // 
@@ -2891,6 +2935,7 @@
             this.numericUpDown34.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown34.TabIndex = 30;
             this.numericUpDown34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown34.ValueChanged += new System.EventHandler(this.numericUpDown34_ValueChanged);
             // 
             // textBox34
             // 
@@ -2961,6 +3006,7 @@
             this.numericUpDown35.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown35.TabIndex = 30;
             this.numericUpDown35.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown35.ValueChanged += new System.EventHandler(this.numericUpDown35_ValueChanged);
             // 
             // textBox35
             // 
@@ -3031,6 +3077,7 @@
             this.numericUpDown36.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown36.TabIndex = 30;
             this.numericUpDown36.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown36.ValueChanged += new System.EventHandler(this.numericUpDown36_ValueChanged);
             // 
             // textBox36
             // 
@@ -3101,6 +3148,7 @@
             this.numericUpDown37.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown37.TabIndex = 30;
             this.numericUpDown37.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown37.ValueChanged += new System.EventHandler(this.numericUpDown37_ValueChanged);
             // 
             // textBox37
             // 
@@ -3171,6 +3219,7 @@
             this.numericUpDown38.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown38.TabIndex = 30;
             this.numericUpDown38.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown38.ValueChanged += new System.EventHandler(this.numericUpDown38_ValueChanged);
             // 
             // textBox38
             // 
@@ -3241,6 +3290,7 @@
             this.numericUpDown39.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown39.TabIndex = 30;
             this.numericUpDown39.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown39.ValueChanged += new System.EventHandler(this.numericUpDown39_ValueChanged);
             // 
             // textBox39
             // 
@@ -3311,6 +3361,7 @@
             this.numericUpDown40.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown40.TabIndex = 30;
             this.numericUpDown40.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown40.ValueChanged += new System.EventHandler(this.numericUpDown40_ValueChanged);
             // 
             // textBox40
             // 
@@ -3381,6 +3432,7 @@
             this.numericUpDown41.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown41.TabIndex = 30;
             this.numericUpDown41.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown41.ValueChanged += new System.EventHandler(this.numericUpDown41_ValueChanged);
             // 
             // textBox41
             // 
@@ -3451,6 +3503,7 @@
             this.numericUpDown42.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown42.TabIndex = 30;
             this.numericUpDown42.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown42.ValueChanged += new System.EventHandler(this.numericUpDown42_ValueChanged);
             // 
             // textBox42
             // 
@@ -3521,6 +3574,7 @@
             this.numericUpDown43.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown43.TabIndex = 30;
             this.numericUpDown43.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown43.ValueChanged += new System.EventHandler(this.numericUpDown43_ValueChanged);
             // 
             // textBox43
             // 
@@ -3591,6 +3645,7 @@
             this.numericUpDown44.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown44.TabIndex = 30;
             this.numericUpDown44.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown44.ValueChanged += new System.EventHandler(this.numericUpDown44_ValueChanged);
             // 
             // textBox44
             // 
@@ -3661,6 +3716,7 @@
             this.numericUpDown45.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown45.TabIndex = 30;
             this.numericUpDown45.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown45.ValueChanged += new System.EventHandler(this.numericUpDown45_ValueChanged);
             // 
             // textBox45
             // 
@@ -3731,6 +3787,7 @@
             this.numericUpDown46.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown46.TabIndex = 30;
             this.numericUpDown46.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown46.ValueChanged += new System.EventHandler(this.numericUpDown46_ValueChanged);
             // 
             // textBox46
             // 
@@ -3761,6 +3818,34 @@
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "Numpad";
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(51, 387);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(65, 13);
+            this.label47.TabIndex = 61;
+            this.label47.Text = "Total Count:";
+            // 
+            // textBox47
+            // 
+            this.textBox47.Location = new System.Drawing.Point(126, 384);
+            this.textBox47.Name = "textBox47";
+            this.textBox47.Size = new System.Drawing.Size(65, 20);
+            this.textBox47.TabIndex = 62;
+            this.textBox47.Text = "0";
+            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // buttonSampleParams
+            // 
+            this.buttonSampleParams.Location = new System.Drawing.Point(35, 458);
+            this.buttonSampleParams.Name = "buttonSampleParams";
+            this.buttonSampleParams.Size = new System.Drawing.Size(106, 23);
+            this.buttonSampleParams.TabIndex = 63;
+            this.buttonSampleParams.Text = "Sample Parameters";
+            this.buttonSampleParams.UseVisualStyleBackColor = true;
+            this.buttonSampleParams.Click += new System.EventHandler(this.buttonSampleParams_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3768,6 +3853,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1370, 709);
+            this.Controls.Add(this.buttonSampleParams);
+            this.Controls.Add(this.textBox47);
+            this.Controls.Add(this.label47);
             this.Controls.Add(this.groupBox47);
             this.Controls.Add(this.groupBox36);
             this.Controls.Add(this.groupBox35);
@@ -3966,7 +4054,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonKeyBindings;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox checkBox1;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -4251,6 +4338,10 @@
         private System.Windows.Forms.NumericUpDown numericUpDown46;
         public System.Windows.Forms.TextBox textBox46;
         private System.Windows.Forms.GroupBox groupBox47;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.ToolStripMenuItem sampleParametersToolStripMenuItem;
+        private System.Windows.Forms.Button buttonSampleParams;
     }
 }
 

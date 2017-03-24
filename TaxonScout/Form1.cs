@@ -83,9 +83,7 @@ namespace TaxonScout
                 case Keys.NumPad8:  checkBox44.Checked = true;   break;
                 case Keys.NumPad9:  checkBox45.Checked = true;   break;
                 case Keys.NumPad0:  checkBox46.Checked = true;   break;
-
-
-
+                    
                 default:  /* do nothing */  break;
             }
             
@@ -142,13 +140,65 @@ namespace TaxonScout
                 case Keys.NumPad8:  numericUpDown44.Value += 1; checkBox44.Checked = false; break;
                 case Keys.NumPad9:  numericUpDown45.Value += 1; checkBox45.Checked = false; break;
                 case Keys.NumPad0:  numericUpDown46.Value += 1; checkBox46.Checked = false; break;
-
-
-
+                    
                 default:  /* do nothing */  break;
             }
 
+            
             e.Handled = false;
+        }
+
+        private void CalculateTotal()
+        {
+            decimal sum = 0;
+            sum = numericUpDown1.Value  +
+                  numericUpDown2.Value  +
+                  numericUpDown3.Value  +
+                  numericUpDown4.Value  +
+                  numericUpDown5.Value  +
+                  numericUpDown6.Value  +
+                  numericUpDown7.Value  +
+                  numericUpDown8.Value  +
+                  numericUpDown9.Value  +
+                  numericUpDown10.Value +
+                  numericUpDown11.Value +
+                  numericUpDown12.Value +
+                  numericUpDown13.Value +
+                  numericUpDown14.Value +
+                  numericUpDown15.Value +
+                  numericUpDown16.Value +
+                  numericUpDown17.Value +
+                  numericUpDown18.Value +
+                  numericUpDown19.Value +
+                  numericUpDown20.Value +
+                  numericUpDown21.Value +
+                  numericUpDown22.Value +
+                  numericUpDown23.Value +
+                  numericUpDown24.Value +
+                  numericUpDown25.Value +
+                  numericUpDown26.Value +
+                  numericUpDown27.Value +
+                  numericUpDown28.Value +
+                  numericUpDown29.Value +
+                  numericUpDown30.Value +
+                  numericUpDown31.Value +
+                  numericUpDown32.Value +
+                  numericUpDown33.Value +
+                  numericUpDown34.Value +
+                  numericUpDown35.Value +
+                  numericUpDown36.Value +
+                  numericUpDown37.Value +
+                  numericUpDown38.Value +
+                  numericUpDown39.Value +
+                  numericUpDown40.Value +
+                  numericUpDown41.Value +
+                  numericUpDown42.Value +
+                  numericUpDown43.Value +
+                  numericUpDown44.Value +
+                  numericUpDown45.Value +
+                  numericUpDown46.Value;
+
+            textBox47.Text = sum.ToString();    // write calculated value in textbox
         }
 
         public void setString(TextBox tb, String s)
@@ -210,10 +260,15 @@ namespace TaxonScout
             frm.comboBox44.DataSource = new BindingSource(bs, "");  // KeyPad8
             frm.comboBox45.DataSource = new BindingSource(bs, "");  // KeyPad9
             frm.comboBox46.DataSource = new BindingSource(bs, "");  // KeyPad0
-
-
-
+            
             frm.Show(this);     // the "this" is a pointer to the owner. Let him know who's the boss
+        }
+
+        private void buttonSampleParams_Click(object sender, EventArgs e)
+        {
+            Form4 frm = new Form4();
+
+            frm.Show(this); // the "this" is a pointer to the owner. Let him know who's the boss
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -230,271 +285,271 @@ namespace TaxonScout
         private void checkBox2_Click(object sender, EventArgs e)
         {   // W "button"
             numericUpDown2.Value += 1;  // increments by 1
-            checkBox2.Checked = false;  // resets the value to not pressed
+            checkBox2.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox3_Click(object sender, EventArgs e)
         {   // E "button"
             numericUpDown3.Value += 1;  // increments by 1
-            checkBox3.Checked = false;  // resets the value to not pressed
+            checkBox3.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox4_Click(object sender, EventArgs e)
         {   // R "button"
             numericUpDown4.Value += 1;  // increments by 1
-            checkBox4.Checked = false;  // resets the value to not pressed
+            checkBox4.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox5_Click(object sender, EventArgs e)
         {   // T "button"
             numericUpDown5.Value += 1;  // increments by 1
-            checkBox5.Checked = false;  // resets the value to not pressed
+            checkBox5.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox6_Click(object sender, EventArgs e)
         {   // Y "button"
             numericUpDown6.Value += 1;  // increments by 1
-            checkBox6.Checked = false;  // resets the value to not pressed
+            checkBox6.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox7_Click(object sender, EventArgs e)
         {   // U "button"
             numericUpDown7.Value += 1;  // increments by 1
-            checkBox7.Checked = false;  // resets the value to not pressed
+            checkBox7.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox8_Click(object sender, EventArgs e)
         {   // I "button"
             numericUpDown8.Value += 1;  // increments by 1
-            checkBox8.Checked = false;  // resets the value to not pressed
+            checkBox8.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox9_Click(object sender, EventArgs e)
         {   // O "button"
             numericUpDown9.Value += 1;  // increments by 1
-            checkBox9.Checked = false;  // resets the value to not pressed
+            checkBox9.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox10_Click(object sender, EventArgs e)
         {   // P "button"
             numericUpDown10.Value += 1;  // increments by 1
-            checkBox10.Checked = false;  // resets the value to not pressed
+            checkBox10.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox11_Click(object sender, EventArgs e)
         {   // A "button"
             numericUpDown11.Value += 1;  // increments by 1
-            checkBox11.Checked = false;  // resets the value to not pressed
+            checkBox11.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox12_Click(object sender, EventArgs e)
         {   // S "button"
             numericUpDown12.Value += 1;  // increments by 1
-            checkBox12.Checked = false;  // resets the value to not pressed
+            checkBox12.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox13_Click(object sender, EventArgs e)
         {   // D "button"
             numericUpDown13.Value += 1;  // increments by 1
-            checkBox13.Checked = false;  // resets the value to not pressed
+            checkBox13.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox14_Click(object sender, EventArgs e)
         {   // F "button"
             numericUpDown14.Value += 1;  // increments by 1
-            checkBox14.Checked = false;  // resets the value to not pressed
+            checkBox14.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox15_Click(object sender, EventArgs e)
         {   // G "button"
             numericUpDown15.Value += 1;  // increments by 1
-            checkBox15.Checked = false;  // resets the value to not pressed
+            checkBox15.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox16_Click(object sender, EventArgs e)
         {   // H "button"
             numericUpDown16.Value += 1;  // increments by 1
-            checkBox16.Checked = false;  // resets the value to not pressed
+            checkBox16.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox17_Click(object sender, EventArgs e)
         {   // J "button"
             numericUpDown17.Value += 1;  // increments by 1
-            checkBox17.Checked = false;  // resets the value to not pressed
+            checkBox17.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox18_Click(object sender, EventArgs e)
         {   // K "button"
             numericUpDown18.Value += 1;  // increments by 1
-            checkBox18.Checked = false;  // resets the value to not pressed
+            checkBox18.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox19_Click(object sender, EventArgs e)
         {   // L "button"
             numericUpDown19.Value += 1;  // increments by 1
-            checkBox19.Checked = false;  // resets the value to not pressed
+            checkBox19.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox20_Click(object sender, EventArgs e)
         {   // Z "button"
             numericUpDown20.Value += 1;  // increments by 1
-            checkBox20.Checked = false;  // resets the value to not pressed
+            checkBox20.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox21_Click(object sender, EventArgs e)
         {   // X "button"
             numericUpDown21.Value += 1;  // increments by 1
-            checkBox21.Checked = false;  // resets the value to not pressed
+            checkBox21.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox22_Click(object sender, EventArgs e)
         {   // C "button"
             numericUpDown22.Value += 1;  // increments by 1
-            checkBox22.Checked = false;  // resets the value to not pressed
+            checkBox22.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox23_Click(object sender, EventArgs e)
         {   // V "button"
             numericUpDown23.Value += 1;  // increments by 1
-            checkBox23.Checked = false;  // resets the value to not pressed
+            checkBox23.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox24_Click(object sender, EventArgs e)
         {   // B "button"
             numericUpDown24.Value += 1;  // increments by 1
-            checkBox24.Checked = false;  // resets the value to not pressed
+            checkBox24.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox25_Click(object sender, EventArgs e)
         {   // N "button"
             numericUpDown25.Value += 1;  // increments by 1
-            checkBox25.Checked = false;  // resets the value to not pressed
+            checkBox25.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox26_Click(object sender, EventArgs e)
         {   // M "button"
             numericUpDown26.Value += 1;  // increments by 1
-            checkBox26.Checked = false;  // resets the value to not pressed
+            checkBox26.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox27_Click(object sender, EventArgs e)
         {   // D1 "button"
             numericUpDown27.Value += 1;  // increments by 1
-            checkBox27.Checked = false;  // resets the value to not pressed
+            checkBox27.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox28_Click(object sender, EventArgs e)
         {   // D2 "button"
             numericUpDown28.Value += 1;  // increments by 1
-            checkBox28.Checked = false;  // resets the value to not pressed
+            checkBox28.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox29_Click(object sender, EventArgs e)
         {   // D3 "button"
             numericUpDown29.Value += 1;  // increments by 1
-            checkBox29.Checked = false;  // resets the value to not pressed
+            checkBox29.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox30_Click(object sender, EventArgs e)
         {   // D4 "button"
             numericUpDown30.Value += 1;  // increments by 1
-            checkBox30.Checked = false;  // resets the value to not pressed
+            checkBox30.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox31_Click(object sender, EventArgs e)
         {   // D5 "button"
             numericUpDown31.Value += 1;  // increments by 1
-            checkBox31.Checked = false;  // resets the value to not pressed
+            checkBox31.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox32_Click(object sender, EventArgs e)
         {   // D6 "button"
             numericUpDown32.Value += 1;  // increments by 1
-            checkBox32.Checked = false;  // resets the value to not pressed
+            checkBox32.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox33_Click(object sender, EventArgs e)
         {   // D7 "button"
             numericUpDown33.Value += 1;  // increments by 1
-            checkBox33.Checked = false;  // resets the value to not pressed
+            checkBox33.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox34_Click(object sender, EventArgs e)
         {   // D8 "button"
             numericUpDown34.Value += 1;  // increments by 1
-            checkBox34.Checked = false;  // resets the value to not pressed
+            checkBox34.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox35_Click(object sender, EventArgs e)
         {   // D9 "button"
             numericUpDown35.Value += 1;  // increments by 1
-            checkBox35.Checked = false;  // resets the value to not pressed
+            checkBox35.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox36_Click(object sender, EventArgs e)
         {   // D0 "button"
             numericUpDown36.Value += 1;  // increments by 1
-            checkBox36.Checked = false;  // resets the value to not pressed
+            checkBox36.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox37_Click(object sender, EventArgs e)
         {   // Num7 "button"
             numericUpDown37.Value += 1;  // increments by 1
-            checkBox37.Checked = false;  // resets the value to not pressed
+            checkBox37.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox38_Click(object sender, EventArgs e)
         {   // Num8 "button"
             numericUpDown38.Value += 1;  // increments by 1
-            checkBox26.Checked = false;  // resets the value to not pressed
+            checkBox26.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox39_Click(object sender, EventArgs e)
         {   // Num9 "button"
             numericUpDown39.Value += 1;  // increments by 1
-            checkBox39.Checked = false;  // resets the value to not pressed
+            checkBox39.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox40_Click(object sender, EventArgs e)
         {   // Num4 "button"
             numericUpDown40.Value += 1;  // increments by 1
-            checkBox40.Checked = false;  // resets the value to not pressed
+            checkBox40.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox41_Click(object sender, EventArgs e)
         {   // Num5 "button"
             numericUpDown41.Value += 1;  // increments by 1
-            checkBox41.Checked = false;  // resets the value to not pressed
+            checkBox41.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox42_Click(object sender, EventArgs e)
         {   // Num6 "button"
             numericUpDown42.Value += 1;  // increments by 1
-            checkBox42.Checked = false;  // resets the value to not pressed
+            checkBox42.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox43_Click(object sender, EventArgs e)
         {   // Num1 "button"
             numericUpDown43.Value += 1;  // increments by 1
-            checkBox43.Checked = false;  // resets the value to not pressed
+            checkBox43.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox44_Click(object sender, EventArgs e)
         {   // Num2 "button"
             numericUpDown44.Value += 1;  // increments by 1
-            checkBox44.Checked = false;  // resets the value to not pressed
+            checkBox44.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox45_Click(object sender, EventArgs e)
         {   // Num3 "button"
             numericUpDown45.Value += 1;  // increments by 1
-            checkBox45.Checked = false;  // resets the value to not pressed
+            checkBox45.Checked = false;  // resets the value to not pressed            
         }
 
         private void checkBox46_Click(object sender, EventArgs e)
         {   // Num0 "button"
             numericUpDown46.Value += 1;  // increments by 1
-            checkBox46.Checked = false;  // resets the value to not pressed
+            checkBox46.Checked = false;  // resets the value to not pressed            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -874,22 +929,23 @@ namespace TaxonScout
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-            saveFileDialog1.InitialDirectory = "";
+            //saveFileDialog1.RestoreDirectory = (false);
+            saveFileDialog1.InitialDirectory = Application.StartupPath;
             saveFileDialog1.FileName = "*.txt";
             saveFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 // add every textbox and count value to a list
                 List<String> exportList = new List<String>();
-                exportList.Add(textBox1.Text + "\t" + numericUpDown1.Value); // Q
-                exportList.Add(textBox2.Text + "\t" + numericUpDown2.Value); // W
-                exportList.Add(textBox3.Text + "\t" + numericUpDown3.Value); // E
-                exportList.Add(textBox4.Text + "\t" + numericUpDown4.Value); // R
-                exportList.Add(textBox5.Text + "\t" + numericUpDown5.Value); // T
-                exportList.Add(textBox6.Text + "\t" + numericUpDown6.Value); // Y
-                exportList.Add(textBox7.Text + "\t" + numericUpDown7.Value); // U
-                exportList.Add(textBox8.Text + "\t" + numericUpDown8.Value); // I
-                exportList.Add(textBox9.Text + "\t" + numericUpDown9.Value); // O
+                exportList.Add(textBox1.Text  + "\t" + numericUpDown1.Value);  // Q
+                exportList.Add(textBox2.Text  + "\t" + numericUpDown2.Value);  // W
+                exportList.Add(textBox3.Text  + "\t" + numericUpDown3.Value);  // E
+                exportList.Add(textBox4.Text  + "\t" + numericUpDown4.Value);  // R
+                exportList.Add(textBox5.Text  + "\t" + numericUpDown5.Value);  // T
+                exportList.Add(textBox6.Text  + "\t" + numericUpDown6.Value);  // Y
+                exportList.Add(textBox7.Text  + "\t" + numericUpDown7.Value);  // U
+                exportList.Add(textBox8.Text  + "\t" + numericUpDown8.Value);  // I
+                exportList.Add(textBox9.Text  + "\t" + numericUpDown9.Value);  // O
                 exportList.Add(textBox10.Text + "\t" + numericUpDown10.Value); // P
                 exportList.Add(textBox11.Text + "\t" + numericUpDown11.Value); // A
                 exportList.Add(textBox12.Text + "\t" + numericUpDown12.Value); // S
@@ -946,6 +1002,11 @@ namespace TaxonScout
             buttonSaveData.PerformClick();
         }
 
+        private void sampleParametersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonSampleParams.PerformClick();
+        }
+
         private void resetAllCountersToZeroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             numericUpDown1.Value  = 0;
@@ -994,6 +1055,238 @@ namespace TaxonScout
             numericUpDown44.Value = 0;
             numericUpDown45.Value = 0;
             numericUpDown46.Value = 0;
+
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown6_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown7_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown8_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown9_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown10_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown11_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown12_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown13_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown14_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown15_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown16_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown17_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown18_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown19_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown20_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown21_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown22_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown23_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown24_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown25_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown26_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown27_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown28_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown29_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown30_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown31_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown32_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown33_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown34_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown35_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown36_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown37_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown38_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown39_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown40_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown41_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown42_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown43_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown44_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown45_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
+        }
+
+        private void numericUpDown46_ValueChanged(object sender, EventArgs e)
+        {
+            CalculateTotal(); // recalculate total
         }
     }
 }
