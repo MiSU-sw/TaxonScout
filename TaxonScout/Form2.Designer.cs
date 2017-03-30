@@ -55,7 +55,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox27 = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.comboBox26 = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.comboBox25 = new System.Windows.Forms.ComboBox();
@@ -106,6 +105,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -153,7 +153,7 @@
             this.button1.Location = new System.Drawing.Point(546, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 23);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Import";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -166,7 +166,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(596, 50);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import predefined taxa list";
             // 
@@ -175,7 +175,7 @@
             this.button4.Location = new System.Drawing.Point(516, 17);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(24, 23);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 1;
             this.button4.Text = "...";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -185,7 +185,7 @@
             this.textBox1.Location = new System.Drawing.Point(6, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(504, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 0;
             // 
             // comboBox1
             // 
@@ -193,7 +193,7 @@
             this.comboBox1.Location = new System.Drawing.Point(36, 19);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboBox1.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -272,7 +272,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 68);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(794, 293);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Alphanumeric Keyboard";
             // 
@@ -282,7 +282,7 @@
             this.comboBox36.Location = new System.Drawing.Point(628, 262);
             this.comboBox36.Name = "comboBox36";
             this.comboBox36.Size = new System.Drawing.Size(155, 21);
-            this.comboBox36.TabIndex = 73;
+            this.comboBox36.TabIndex = 35;
             // 
             // label36
             // 
@@ -303,7 +303,7 @@
             this.comboBox35.Location = new System.Drawing.Point(628, 235);
             this.comboBox35.Name = "comboBox35";
             this.comboBox35.Size = new System.Drawing.Size(155, 21);
-            this.comboBox35.TabIndex = 71;
+            this.comboBox35.TabIndex = 34;
             // 
             // label35
             // 
@@ -324,7 +324,7 @@
             this.comboBox34.Location = new System.Drawing.Point(628, 208);
             this.comboBox34.Name = "comboBox34";
             this.comboBox34.Size = new System.Drawing.Size(155, 21);
-            this.comboBox34.TabIndex = 69;
+            this.comboBox34.TabIndex = 33;
             // 
             // label34
             // 
@@ -345,7 +345,7 @@
             this.comboBox33.Location = new System.Drawing.Point(628, 181);
             this.comboBox33.Name = "comboBox33";
             this.comboBox33.Size = new System.Drawing.Size(155, 21);
-            this.comboBox33.TabIndex = 67;
+            this.comboBox33.TabIndex = 32;
             // 
             // label33
             // 
@@ -366,7 +366,7 @@
             this.comboBox32.Location = new System.Drawing.Point(628, 154);
             this.comboBox32.Name = "comboBox32";
             this.comboBox32.Size = new System.Drawing.Size(155, 21);
-            this.comboBox32.TabIndex = 65;
+            this.comboBox32.TabIndex = 31;
             // 
             // label32
             // 
@@ -387,7 +387,7 @@
             this.comboBox31.Location = new System.Drawing.Point(628, 127);
             this.comboBox31.Name = "comboBox31";
             this.comboBox31.Size = new System.Drawing.Size(155, 21);
-            this.comboBox31.TabIndex = 63;
+            this.comboBox31.TabIndex = 30;
             // 
             // label31
             // 
@@ -408,7 +408,7 @@
             this.comboBox30.Location = new System.Drawing.Point(628, 100);
             this.comboBox30.Name = "comboBox30";
             this.comboBox30.Size = new System.Drawing.Size(155, 21);
-            this.comboBox30.TabIndex = 61;
+            this.comboBox30.TabIndex = 29;
             // 
             // label30
             // 
@@ -429,7 +429,7 @@
             this.comboBox29.Location = new System.Drawing.Point(628, 73);
             this.comboBox29.Name = "comboBox29";
             this.comboBox29.Size = new System.Drawing.Size(155, 21);
-            this.comboBox29.TabIndex = 59;
+            this.comboBox29.TabIndex = 28;
             // 
             // label29
             // 
@@ -450,7 +450,7 @@
             this.comboBox28.Location = new System.Drawing.Point(628, 46);
             this.comboBox28.Name = "comboBox28";
             this.comboBox28.Size = new System.Drawing.Size(155, 21);
-            this.comboBox28.TabIndex = 57;
+            this.comboBox28.TabIndex = 27;
             // 
             // label28
             // 
@@ -471,7 +471,7 @@
             this.comboBox27.Location = new System.Drawing.Point(628, 19);
             this.comboBox27.Name = "comboBox27";
             this.comboBox27.Size = new System.Drawing.Size(155, 21);
-            this.comboBox27.TabIndex = 55;
+            this.comboBox27.TabIndex = 26;
             // 
             // label27
             // 
@@ -486,23 +486,13 @@
             this.label27.Text = "1";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(640, 393);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 23);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Auto-distribute Taxa";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // comboBox26
             // 
             this.comboBox26.FormattingEnabled = true;
             this.comboBox26.Location = new System.Drawing.Point(430, 181);
             this.comboBox26.Name = "comboBox26";
             this.comboBox26.Size = new System.Drawing.Size(155, 21);
-            this.comboBox26.TabIndex = 53;
+            this.comboBox26.TabIndex = 25;
             // 
             // label26
             // 
@@ -523,7 +513,7 @@
             this.comboBox25.Location = new System.Drawing.Point(430, 154);
             this.comboBox25.Name = "comboBox25";
             this.comboBox25.Size = new System.Drawing.Size(155, 21);
-            this.comboBox25.TabIndex = 51;
+            this.comboBox25.TabIndex = 24;
             // 
             // label25
             // 
@@ -544,7 +534,7 @@
             this.comboBox24.Location = new System.Drawing.Point(430, 127);
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(155, 21);
-            this.comboBox24.TabIndex = 49;
+            this.comboBox24.TabIndex = 23;
             // 
             // label24
             // 
@@ -565,7 +555,7 @@
             this.comboBox23.Location = new System.Drawing.Point(430, 100);
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.Size = new System.Drawing.Size(155, 21);
-            this.comboBox23.TabIndex = 47;
+            this.comboBox23.TabIndex = 22;
             // 
             // label23
             // 
@@ -586,7 +576,7 @@
             this.comboBox22.Location = new System.Drawing.Point(430, 73);
             this.comboBox22.Name = "comboBox22";
             this.comboBox22.Size = new System.Drawing.Size(155, 21);
-            this.comboBox22.TabIndex = 45;
+            this.comboBox22.TabIndex = 21;
             // 
             // label22
             // 
@@ -607,7 +597,7 @@
             this.comboBox21.Location = new System.Drawing.Point(430, 46);
             this.comboBox21.Name = "comboBox21";
             this.comboBox21.Size = new System.Drawing.Size(155, 21);
-            this.comboBox21.TabIndex = 43;
+            this.comboBox21.TabIndex = 20;
             // 
             // label21
             // 
@@ -628,7 +618,7 @@
             this.comboBox20.Location = new System.Drawing.Point(430, 19);
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(155, 21);
-            this.comboBox20.TabIndex = 41;
+            this.comboBox20.TabIndex = 19;
             // 
             // label20
             // 
@@ -649,7 +639,7 @@
             this.comboBox19.Location = new System.Drawing.Point(233, 235);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(155, 21);
-            this.comboBox19.TabIndex = 39;
+            this.comboBox19.TabIndex = 18;
             // 
             // label19
             // 
@@ -670,7 +660,7 @@
             this.comboBox18.Location = new System.Drawing.Point(233, 208);
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(155, 21);
-            this.comboBox18.TabIndex = 37;
+            this.comboBox18.TabIndex = 17;
             // 
             // label18
             // 
@@ -691,7 +681,7 @@
             this.comboBox17.Location = new System.Drawing.Point(233, 181);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(155, 21);
-            this.comboBox17.TabIndex = 35;
+            this.comboBox17.TabIndex = 16;
             // 
             // label17
             // 
@@ -712,7 +702,7 @@
             this.comboBox16.Location = new System.Drawing.Point(233, 154);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(155, 21);
-            this.comboBox16.TabIndex = 33;
+            this.comboBox16.TabIndex = 15;
             // 
             // label16
             // 
@@ -733,7 +723,7 @@
             this.comboBox15.Location = new System.Drawing.Point(233, 127);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(155, 21);
-            this.comboBox15.TabIndex = 31;
+            this.comboBox15.TabIndex = 14;
             // 
             // label15
             // 
@@ -754,7 +744,7 @@
             this.comboBox14.Location = new System.Drawing.Point(233, 100);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(155, 21);
-            this.comboBox14.TabIndex = 29;
+            this.comboBox14.TabIndex = 13;
             // 
             // label14
             // 
@@ -775,7 +765,7 @@
             this.comboBox13.Location = new System.Drawing.Point(233, 73);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(155, 21);
-            this.comboBox13.TabIndex = 27;
+            this.comboBox13.TabIndex = 12;
             // 
             // label13
             // 
@@ -796,7 +786,7 @@
             this.comboBox12.Location = new System.Drawing.Point(233, 46);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(155, 21);
-            this.comboBox12.TabIndex = 25;
+            this.comboBox12.TabIndex = 11;
             // 
             // label12
             // 
@@ -817,7 +807,7 @@
             this.comboBox11.Location = new System.Drawing.Point(233, 19);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(155, 21);
-            this.comboBox11.TabIndex = 23;
+            this.comboBox11.TabIndex = 10;
             // 
             // label11
             // 
@@ -838,7 +828,7 @@
             this.comboBox10.Location = new System.Drawing.Point(36, 262);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(155, 21);
-            this.comboBox10.TabIndex = 21;
+            this.comboBox10.TabIndex = 9;
             // 
             // label10
             // 
@@ -859,7 +849,7 @@
             this.comboBox9.Location = new System.Drawing.Point(36, 235);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(155, 21);
-            this.comboBox9.TabIndex = 19;
+            this.comboBox9.TabIndex = 8;
             // 
             // label9
             // 
@@ -880,7 +870,7 @@
             this.comboBox8.Location = new System.Drawing.Point(36, 208);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(155, 21);
-            this.comboBox8.TabIndex = 17;
+            this.comboBox8.TabIndex = 7;
             // 
             // label8
             // 
@@ -901,7 +891,7 @@
             this.comboBox7.Location = new System.Drawing.Point(36, 181);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(155, 21);
-            this.comboBox7.TabIndex = 15;
+            this.comboBox7.TabIndex = 6;
             // 
             // label7
             // 
@@ -922,7 +912,7 @@
             this.comboBox6.Location = new System.Drawing.Point(36, 154);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(155, 21);
-            this.comboBox6.TabIndex = 13;
+            this.comboBox6.TabIndex = 5;
             // 
             // label6
             // 
@@ -943,7 +933,7 @@
             this.comboBox5.Location = new System.Drawing.Point(36, 127);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(155, 21);
-            this.comboBox5.TabIndex = 11;
+            this.comboBox5.TabIndex = 4;
             // 
             // label5
             // 
@@ -964,7 +954,7 @@
             this.comboBox4.Location = new System.Drawing.Point(36, 100);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(155, 21);
-            this.comboBox4.TabIndex = 9;
+            this.comboBox4.TabIndex = 3;
             // 
             // label4
             // 
@@ -985,7 +975,7 @@
             this.comboBox3.Location = new System.Drawing.Point(36, 73);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(155, 21);
-            this.comboBox3.TabIndex = 7;
+            this.comboBox3.TabIndex = 2;
             // 
             // label3
             // 
@@ -1006,7 +996,7 @@
             this.comboBox2.Location = new System.Drawing.Point(36, 46);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(155, 21);
-            this.comboBox2.TabIndex = 5;
+            this.comboBox2.TabIndex = 1;
             // 
             // label2
             // 
@@ -1021,13 +1011,23 @@
             this.label2.Text = "W";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(640, 393);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(155, 23);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Auto-distribute Taxa";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button2.Location = new System.Drawing.Point(640, 29);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1038,7 +1038,7 @@
             this.button3.Location = new System.Drawing.Point(731, 29);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -1053,7 +1053,7 @@
             this.comboBox37.Location = new System.Drawing.Point(36, 28);
             this.comboBox37.Name = "comboBox37";
             this.comboBox37.Size = new System.Drawing.Size(155, 21);
-            this.comboBox37.TabIndex = 75;
+            this.comboBox37.TabIndex = 0;
             // 
             // label37
             // 
@@ -1074,7 +1074,7 @@
             this.comboBox38.Location = new System.Drawing.Point(233, 28);
             this.comboBox38.Name = "comboBox38";
             this.comboBox38.Size = new System.Drawing.Size(155, 21);
-            this.comboBox38.TabIndex = 77;
+            this.comboBox38.TabIndex = 1;
             // 
             // label38
             // 
@@ -1095,7 +1095,7 @@
             this.comboBox39.Location = new System.Drawing.Point(430, 28);
             this.comboBox39.Name = "comboBox39";
             this.comboBox39.Size = new System.Drawing.Size(155, 21);
-            this.comboBox39.TabIndex = 79;
+            this.comboBox39.TabIndex = 2;
             // 
             // label39
             // 
@@ -1116,7 +1116,7 @@
             this.comboBox40.Location = new System.Drawing.Point(36, 55);
             this.comboBox40.Name = "comboBox40";
             this.comboBox40.Size = new System.Drawing.Size(155, 21);
-            this.comboBox40.TabIndex = 81;
+            this.comboBox40.TabIndex = 3;
             // 
             // label40
             // 
@@ -1137,7 +1137,7 @@
             this.comboBox41.Location = new System.Drawing.Point(233, 55);
             this.comboBox41.Name = "comboBox41";
             this.comboBox41.Size = new System.Drawing.Size(155, 21);
-            this.comboBox41.TabIndex = 83;
+            this.comboBox41.TabIndex = 4;
             // 
             // label41
             // 
@@ -1158,7 +1158,7 @@
             this.comboBox42.Location = new System.Drawing.Point(430, 55);
             this.comboBox42.Name = "comboBox42";
             this.comboBox42.Size = new System.Drawing.Size(155, 21);
-            this.comboBox42.TabIndex = 85;
+            this.comboBox42.TabIndex = 5;
             // 
             // label42
             // 
@@ -1179,7 +1179,7 @@
             this.comboBox43.Location = new System.Drawing.Point(36, 82);
             this.comboBox43.Name = "comboBox43";
             this.comboBox43.Size = new System.Drawing.Size(155, 21);
-            this.comboBox43.TabIndex = 87;
+            this.comboBox43.TabIndex = 6;
             // 
             // label43
             // 
@@ -1200,7 +1200,7 @@
             this.comboBox44.Location = new System.Drawing.Point(233, 82);
             this.comboBox44.Name = "comboBox44";
             this.comboBox44.Size = new System.Drawing.Size(155, 21);
-            this.comboBox44.TabIndex = 89;
+            this.comboBox44.TabIndex = 7;
             // 
             // label44
             // 
@@ -1221,7 +1221,7 @@
             this.comboBox45.Location = new System.Drawing.Point(430, 82);
             this.comboBox45.Name = "comboBox45";
             this.comboBox45.Size = new System.Drawing.Size(155, 21);
-            this.comboBox45.TabIndex = 91;
+            this.comboBox45.TabIndex = 8;
             // 
             // label45
             // 
@@ -1242,7 +1242,7 @@
             this.comboBox46.Location = new System.Drawing.Point(36, 109);
             this.comboBox46.Name = "comboBox46";
             this.comboBox46.Size = new System.Drawing.Size(155, 21);
-            this.comboBox46.TabIndex = 93;
+            this.comboBox46.TabIndex = 9;
             // 
             // label46
             // 
@@ -1282,7 +1282,7 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 367);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(595, 138);
-            this.groupBox3.TabIndex = 94;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "NumPad";
             // 

@@ -3,4 +3,6 @@
 ################################################################################
 
 /TaxonScout/obj
-/TaxonScout/bin/Debug/import.txt
+*.txt
+*.config
+*.rar

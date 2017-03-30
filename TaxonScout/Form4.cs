@@ -32,15 +32,18 @@ namespace TaxonScout
 
             parametersList.Clear();
 
-            parametersList.Add(textBox2.Text);
-            parametersList.Add(textBox3.Text);
-            parametersList.Add(textBox4.Text);
-            parametersList.Add(textBox5.Text);
-            parametersList.Add(textBox6.Text);
-            parametersList.Add(textBox7.Text);
-            parametersList.Add(textBox8.Text);
-            parametersList.Add(textBox9.Text);
+            if (textBox1.Text.Length > 0) parametersList.Add(textBox1.Text);
+            if (textBox2.Text.Length > 0) parametersList.Add(textBox2.Text);
+            if (textBox3.Text.Length > 0) parametersList.Add(textBox3.Text);
+            if (textBox4.Text.Length > 0) parametersList.Add(textBox4.Text);
+            if (textBox5.Text.Length > 0) parametersList.Add(textBox5.Text);
+            if (textBox6.Text.Length > 0) parametersList.Add(textBox6.Text);
+            if (textBox7.Text.Length > 0) parametersList.Add(textBox7.Text);
+            if (textBox8.Text.Length > 0) parametersList.Add(textBox8.Text);
+            if (textBox9.Text.Length > 0) parametersList.Add(textBox9.Text);
 
+            parent.parametersList = this.parametersList;
+            parent.checkBox47.Checked = true;
             this.Close();
         }
 

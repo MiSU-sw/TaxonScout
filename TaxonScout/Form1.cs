@@ -15,6 +15,7 @@ namespace TaxonScout
         public BindingSource bs = new BindingSource();
         String AssignedValue = "";
         private List<String> dummyList = new List<String>();
+        public List<String> parametersList = new List<String>();
 
         public Form1()
         {   // subscribe this Form to the KeyUp and KeyDown keyboard events
@@ -938,6 +939,14 @@ namespace TaxonScout
                 // add every textbox and count value to a list
                 List<String> exportList = new List<String>();
                 exportList.Clear();
+                if (checkBox47.Checked)
+                {
+                    exportList.Add("==================================================");
+                    exportList.AddRange(parametersList);
+                    exportList.Add("==================================================");
+                    exportList.Add("");
+                }
+                
                 if ( numericUpDown1.Value != 0) exportList.Add( textBox1.Text + "\t" + numericUpDown1.Value);  // Q
                 if ( numericUpDown2.Value != 0) exportList.Add( textBox2.Text + "\t" + numericUpDown2.Value);  // W
                 if ( numericUpDown3.Value != 0) exportList.Add( textBox3.Text + "\t" + numericUpDown3.Value);  // E
@@ -1285,6 +1294,67 @@ namespace TaxonScout
         private void numericUpDown46_ValueChanged(object sender, EventArgs e)
         {
             CalculateTotal(); // recalculate total
+        }
+
+        private void newCountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox13.Text = "";
+            textBox14.Text = "";
+            textBox15.Text = "";
+            textBox16.Text = "";
+            textBox17.Text = "";
+            textBox18.Text = "";
+            textBox19.Text = "";
+            textBox20.Text = "";
+            textBox21.Text = "";
+            textBox22.Text = "";
+            textBox23.Text = "";
+            textBox24.Text = "";
+            textBox25.Text = "";
+            textBox26.Text = "";
+            textBox27.Text = "";
+            textBox28.Text = "";
+            textBox29.Text = "";
+            textBox30.Text = "";
+            textBox31.Text = "";
+            textBox32.Text = "";
+            textBox33.Text = "";
+            textBox34.Text = "";
+            textBox35.Text = "";
+            textBox36.Text = "";
+            textBox37.Text = "";
+            textBox38.Text = "";
+            textBox39.Text = "";
+            textBox40.Text = "";
+            textBox41.Text = "";
+            textBox42.Text = "";
+            textBox43.Text = "";
+            textBox44.Text = "";
+            textBox45.Text = "";
+            textBox46.Text = "";
+
+            resetAllCountersToZeroToolStripMenuItem.PerformClick();
+        }
+
+        private void ColorButton_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                this.BackColor = cd.Color;
+            }
         }
     }
 }

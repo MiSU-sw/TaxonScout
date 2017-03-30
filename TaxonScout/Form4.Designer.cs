@@ -63,17 +63,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 38);
+            this.textBox2.Location = new System.Drawing.Point(144, 38);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(400, 20);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 64);
+            this.textBox3.Location = new System.Drawing.Point(144, 64);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(194, 20);
-            this.textBox3.TabIndex = 3;
+            this.textBox3.TabIndex = 2;
             // 
             // label2
             // 
@@ -86,10 +86,10 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(137, 90);
+            this.textBox4.Location = new System.Drawing.Point(144, 90);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(400, 20);
-            this.textBox4.TabIndex = 5;
+            this.textBox4.TabIndex = 4;
             // 
             // label3
             // 
@@ -102,10 +102,10 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(137, 116);
+            this.textBox5.Location = new System.Drawing.Point(144, 116);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(400, 20);
-            this.textBox5.TabIndex = 7;
+            this.textBox5.TabIndex = 5;
             // 
             // label4
             // 
@@ -118,10 +118,10 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(137, 142);
+            this.textBox6.Location = new System.Drawing.Point(144, 142);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(400, 20);
-            this.textBox6.TabIndex = 9;
+            this.textBox6.TabIndex = 6;
             // 
             // label5
             // 
@@ -134,10 +134,10 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(137, 168);
+            this.textBox7.Location = new System.Drawing.Point(144, 168);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(400, 20);
-            this.textBox7.TabIndex = 11;
+            this.textBox7.TabIndex = 7;
             // 
             // label6
             // 
@@ -150,10 +150,10 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(137, 194);
+            this.textBox8.Location = new System.Drawing.Point(144, 194);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(194, 20);
-            this.textBox8.TabIndex = 13;
+            this.textBox8.TabIndex = 8;
             // 
             // label7
             // 
@@ -166,52 +166,52 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(137, 220);
+            this.textBox9.Location = new System.Drawing.Point(144, 220);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(400, 20);
-            this.textBox9.TabIndex = 15;
+            this.textBox9.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(19, 223);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 13);
+            this.label8.Size = new System.Drawing.Size(119, 13);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Aditional observations:";
+            this.label8.Text = "Additional observations:";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Location = new System.Drawing.Point(337, 64);
+            this.dateTimePicker1.Location = new System.Drawing.Point(344, 64);
             this.dateTimePicker1.MaxDate = new System.DateTime(2090, 3, 11, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1990, 3, 11, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2017, 3, 24, 0, 0, 0, 0);
             this.dateTimePicker1.CloseUp += new System.EventHandler(this.dateTimePicker1_CloseUp);
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Checked = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(337, 194);
+            this.dateTimePicker2.Location = new System.Drawing.Point(344, 194);
             this.dateTimePicker2.MaxDate = new System.DateTime(2090, 3, 11, 0, 0, 0, 0);
             this.dateTimePicker2.MinDate = new System.DateTime(1990, 3, 11, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dateTimePicker2.TabIndex = 9;
             this.dateTimePicker2.Value = new System.DateTime(2017, 3, 24, 0, 0, 0, 0);
             this.dateTimePicker2.CloseUp += new System.EventHandler(this.dateTimePicker2_CloseUp);
             // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(311, 246);
+            this.button2.Location = new System.Drawing.Point(318, 246);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 28;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -219,20 +219,20 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(174, 246);
+            this.button1.Location = new System.Drawing.Point(181, 246);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 12);
+            this.textBox1.Location = new System.Drawing.Point(144, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(400, 20);
-            this.textBox1.TabIndex = 30;
+            this.textBox1.TabIndex = 0;
             // 
             // label9
             // 
@@ -250,7 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(560, 281);
+            this.ClientSize = new System.Drawing.Size(565, 281);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);

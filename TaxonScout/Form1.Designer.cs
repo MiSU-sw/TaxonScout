@@ -43,6 +43,8 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -322,6 +324,9 @@
             this.label47 = new System.Windows.Forms.Label();
             this.textBox47 = new System.Windows.Forms.TextBox();
             this.buttonSampleParams = new System.Windows.Forms.Button();
+            this.checkBox47 = new System.Windows.Forms.CheckBox();
+            this.ColorButton = new System.Windows.Forms.Button();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -416,12 +421,13 @@
             this.groupBox46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown46)).BeginInit();
             this.groupBox47.SuspendLayout();
+            this.groupBox48.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(-2, 40);
+            this.textBox1.Location = new System.Drawing.Point(0, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(130, 18);
@@ -435,10 +441,10 @@
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(2, 104);
+            this.groupBox1.Location = new System.Drawing.Point(4, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(125, 82);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Q";
             // 
@@ -447,7 +453,7 @@
             this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(94, 19);
+            this.checkBox1.Location = new System.Drawing.Point(96, 22);
             this.checkBox1.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox1.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox1.Name = "checkBox1";
@@ -461,7 +467,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Location = new System.Drawing.Point(8, 22);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 20);
             this.button1.TabIndex = 1;
@@ -473,7 +479,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 61);
+            this.label2.Location = new System.Drawing.Point(8, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -482,7 +488,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown1.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown1.TabIndex = 21;
@@ -491,17 +497,19 @@
             // 
             // buttonSaveData
             // 
-            this.buttonSaveData.Location = new System.Drawing.Point(35, 487);
+            this.buttonSaveData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveData.Location = new System.Drawing.Point(8, 84);
             this.buttonSaveData.Name = "buttonSaveData";
             this.buttonSaveData.Size = new System.Drawing.Size(106, 23);
-            this.buttonSaveData.TabIndex = 2;
+            this.buttonSaveData.TabIndex = 3;
             this.buttonSaveData.Text = "Save Data";
             this.buttonSaveData.UseVisualStyleBackColor = true;
             this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
             // 
             // buttonKeyBindings
             // 
-            this.buttonKeyBindings.Location = new System.Drawing.Point(35, 429);
+            this.buttonKeyBindings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeyBindings.Location = new System.Drawing.Point(8, 26);
             this.buttonKeyBindings.Name = "buttonKeyBindings";
             this.buttonKeyBindings.Size = new System.Drawing.Size(106, 23);
             this.buttonKeyBindings.TabIndex = 0;
@@ -517,10 +525,10 @@
             this.groupBox2.Controls.Add(this.numericUpDown2);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(128, 104);
+            this.groupBox2.Location = new System.Drawing.Point(130, 107);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(125, 82);
-            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "W";
             // 
@@ -529,7 +537,7 @@
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(94, 19);
+            this.checkBox2.Location = new System.Drawing.Point(96, 22);
             this.checkBox2.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox2.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox2.Name = "checkBox2";
@@ -543,7 +551,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 19);
+            this.button2.Location = new System.Drawing.Point(8, 22);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 20);
             this.button2.TabIndex = 2;
@@ -555,7 +563,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 61);
+            this.label1.Location = new System.Drawing.Point(8, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 4;
@@ -564,7 +572,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown2.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown2.TabIndex = 22;
@@ -574,7 +582,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(-2, 40);
+            this.textBox2.Location = new System.Drawing.Point(0, 43);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(130, 18);
@@ -583,6 +591,8 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newCountToolStripMenuItem,
+            this.toolStripSeparator2,
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
             this.toolStripMenuItem1});
@@ -590,22 +600,34 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // newCountToolStripMenuItem
+            // 
+            this.newCountToolStripMenuItem.Name = "newCountToolStripMenuItem";
+            this.newCountToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.newCountToolStripMenuItem.Text = "New Count";
+            this.newCountToolStripMenuItem.Click += new System.EventHandler(this.newCountToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
+            // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(120, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.toolStripMenuItem1.Text = "Exit";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -670,8 +692,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
-            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Size = new System.Drawing.Size(1266, 24);
+            this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // groupBox3
@@ -682,10 +704,10 @@
             this.groupBox3.Controls.Add(this.numericUpDown3);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(254, 104);
+            this.groupBox3.Location = new System.Drawing.Point(256, 107);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(125, 82);
-            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "E";
             // 
@@ -694,7 +716,7 @@
             this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(94, 19);
+            this.checkBox3.Location = new System.Drawing.Point(96, 22);
             this.checkBox3.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox3.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox3.Name = "checkBox3";
@@ -708,7 +730,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(6, 19);
+            this.button3.Location = new System.Drawing.Point(8, 22);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 20);
             this.button3.TabIndex = 3;
@@ -720,7 +742,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 61);
+            this.label3.Location = new System.Drawing.Point(8, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 4;
@@ -729,7 +751,7 @@
             // numericUpDown3
             // 
             this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown3.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown3.TabIndex = 23;
@@ -739,7 +761,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(-2, 40);
+            this.textBox3.Location = new System.Drawing.Point(0, 43);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(130, 18);
@@ -753,10 +775,10 @@
             this.groupBox4.Controls.Add(this.numericUpDown4);
             this.groupBox4.Controls.Add(this.textBox4);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(380, 104);
+            this.groupBox4.Location = new System.Drawing.Point(382, 107);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(125, 82);
-            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "R";
             // 
@@ -765,7 +787,7 @@
             this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(94, 19);
+            this.checkBox4.Location = new System.Drawing.Point(96, 22);
             this.checkBox4.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox4.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox4.Name = "checkBox4";
@@ -779,7 +801,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(6, 19);
+            this.button4.Location = new System.Drawing.Point(8, 22);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(79, 20);
             this.button4.TabIndex = 4;
@@ -791,7 +813,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 61);
+            this.label4.Location = new System.Drawing.Point(8, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 4;
@@ -800,7 +822,7 @@
             // numericUpDown4
             // 
             this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown4.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown4.TabIndex = 24;
@@ -810,7 +832,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(-2, 40);
+            this.textBox4.Location = new System.Drawing.Point(0, 43);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(130, 18);
@@ -824,10 +846,10 @@
             this.groupBox5.Controls.Add(this.numericUpDown5);
             this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(506, 104);
+            this.groupBox5.Location = new System.Drawing.Point(508, 107);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(125, 82);
-            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabIndex = 19;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "T";
             // 
@@ -836,7 +858,7 @@
             this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(94, 19);
+            this.checkBox5.Location = new System.Drawing.Point(96, 22);
             this.checkBox5.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox5.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox5.Name = "checkBox5";
@@ -850,7 +872,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(6, 19);
+            this.button5.Location = new System.Drawing.Point(8, 22);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(79, 20);
             this.button5.TabIndex = 5;
@@ -862,7 +884,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 61);
+            this.label5.Location = new System.Drawing.Point(8, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 4;
@@ -871,7 +893,7 @@
             // numericUpDown5
             // 
             this.numericUpDown5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown5.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown5.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown5.TabIndex = 25;
@@ -881,7 +903,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(-2, 40);
+            this.textBox5.Location = new System.Drawing.Point(0, 43);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(130, 18);
@@ -895,10 +917,10 @@
             this.groupBox6.Controls.Add(this.numericUpDown6);
             this.groupBox6.Controls.Add(this.textBox6);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(632, 104);
+            this.groupBox6.Location = new System.Drawing.Point(634, 107);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(125, 82);
-            this.groupBox6.TabIndex = 12;
+            this.groupBox6.TabIndex = 20;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Y";
             // 
@@ -907,7 +929,7 @@
             this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(94, 19);
+            this.checkBox6.Location = new System.Drawing.Point(96, 22);
             this.checkBox6.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox6.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox6.Name = "checkBox6";
@@ -921,7 +943,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(6, 19);
+            this.button6.Location = new System.Drawing.Point(8, 22);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(79, 20);
             this.button6.TabIndex = 6;
@@ -933,7 +955,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 61);
+            this.label6.Location = new System.Drawing.Point(8, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 4;
@@ -942,7 +964,7 @@
             // numericUpDown6
             // 
             this.numericUpDown6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown6.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown6.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown6.TabIndex = 26;
@@ -952,7 +974,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(-2, 40);
+            this.textBox6.Location = new System.Drawing.Point(0, 43);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(130, 18);
@@ -966,10 +988,10 @@
             this.groupBox7.Controls.Add(this.numericUpDown7);
             this.groupBox7.Controls.Add(this.textBox7);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(758, 104);
+            this.groupBox7.Location = new System.Drawing.Point(760, 107);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(125, 82);
-            this.groupBox7.TabIndex = 13;
+            this.groupBox7.TabIndex = 21;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "U";
             // 
@@ -978,7 +1000,7 @@
             this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox7.AutoSize = true;
             this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(94, 19);
+            this.checkBox7.Location = new System.Drawing.Point(96, 22);
             this.checkBox7.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox7.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox7.Name = "checkBox7";
@@ -992,7 +1014,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(6, 19);
+            this.button7.Location = new System.Drawing.Point(8, 22);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(79, 20);
             this.button7.TabIndex = 7;
@@ -1004,7 +1026,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 61);
+            this.label7.Location = new System.Drawing.Point(8, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 4;
@@ -1013,7 +1035,7 @@
             // numericUpDown7
             // 
             this.numericUpDown7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown7.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown7.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown7.TabIndex = 7;
@@ -1023,7 +1045,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(-2, 40);
+            this.textBox7.Location = new System.Drawing.Point(0, 43);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(130, 18);
@@ -1037,10 +1059,10 @@
             this.groupBox8.Controls.Add(this.numericUpDown8);
             this.groupBox8.Controls.Add(this.textBox8);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(884, 104);
+            this.groupBox8.Location = new System.Drawing.Point(886, 107);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(125, 82);
-            this.groupBox8.TabIndex = 14;
+            this.groupBox8.TabIndex = 22;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "I";
             // 
@@ -1049,7 +1071,7 @@
             this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox8.AutoSize = true;
             this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(94, 19);
+            this.checkBox8.Location = new System.Drawing.Point(96, 22);
             this.checkBox8.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox8.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox8.Name = "checkBox8";
@@ -1063,7 +1085,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(6, 19);
+            this.button8.Location = new System.Drawing.Point(8, 22);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(79, 20);
             this.button8.TabIndex = 8;
@@ -1075,7 +1097,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 61);
+            this.label8.Location = new System.Drawing.Point(8, 64);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 4;
@@ -1084,7 +1106,7 @@
             // numericUpDown8
             // 
             this.numericUpDown8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown8.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown8.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown8.TabIndex = 28;
@@ -1094,7 +1116,7 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(-2, 40);
+            this.textBox8.Location = new System.Drawing.Point(0, 43);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(130, 18);
@@ -1108,10 +1130,10 @@
             this.groupBox9.Controls.Add(this.numericUpDown9);
             this.groupBox9.Controls.Add(this.textBox9);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(1010, 104);
+            this.groupBox9.Location = new System.Drawing.Point(1012, 107);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(125, 82);
-            this.groupBox9.TabIndex = 15;
+            this.groupBox9.TabIndex = 23;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "O";
             // 
@@ -1120,7 +1142,7 @@
             this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox9.AutoSize = true;
             this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(94, 19);
+            this.checkBox9.Location = new System.Drawing.Point(96, 22);
             this.checkBox9.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox9.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox9.Name = "checkBox9";
@@ -1134,7 +1156,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(6, 19);
+            this.button9.Location = new System.Drawing.Point(8, 22);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(79, 20);
             this.button9.TabIndex = 9;
@@ -1146,7 +1168,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 61);
+            this.label9.Location = new System.Drawing.Point(8, 64);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 4;
@@ -1155,7 +1177,7 @@
             // numericUpDown9
             // 
             this.numericUpDown9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown9.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown9.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown9.TabIndex = 29;
@@ -1165,7 +1187,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(-2, 40);
+            this.textBox9.Location = new System.Drawing.Point(0, 43);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(130, 18);
@@ -1179,10 +1201,10 @@
             this.groupBox10.Controls.Add(this.numericUpDown10);
             this.groupBox10.Controls.Add(this.textBox10);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(1136, 104);
+            this.groupBox10.Location = new System.Drawing.Point(1138, 107);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(125, 82);
-            this.groupBox10.TabIndex = 16;
+            this.groupBox10.TabIndex = 24;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "P";
             // 
@@ -1191,7 +1213,7 @@
             this.checkBox10.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox10.AutoSize = true;
             this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(94, 19);
+            this.checkBox10.Location = new System.Drawing.Point(96, 22);
             this.checkBox10.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox10.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox10.Name = "checkBox10";
@@ -1205,7 +1227,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(6, 19);
+            this.button10.Location = new System.Drawing.Point(8, 22);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(79, 20);
             this.button10.TabIndex = 10;
@@ -1217,7 +1239,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 61);
+            this.label10.Location = new System.Drawing.Point(8, 64);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 4;
@@ -1226,7 +1248,7 @@
             // numericUpDown10
             // 
             this.numericUpDown10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown10.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown10.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown10.TabIndex = 30;
@@ -1236,7 +1258,7 @@
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(-2, 40);
+            this.textBox10.Location = new System.Drawing.Point(0, 43);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(130, 18);
@@ -1250,10 +1272,10 @@
             this.groupBox11.Controls.Add(this.numericUpDown11);
             this.groupBox11.Controls.Add(this.textBox11);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(21, 186);
+            this.groupBox11.Location = new System.Drawing.Point(23, 189);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(125, 82);
-            this.groupBox11.TabIndex = 17;
+            this.groupBox11.TabIndex = 25;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "A";
             // 
@@ -1262,7 +1284,7 @@
             this.checkBox11.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox11.AutoSize = true;
             this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(94, 19);
+            this.checkBox11.Location = new System.Drawing.Point(96, 22);
             this.checkBox11.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox11.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox11.Name = "checkBox11";
@@ -1276,7 +1298,7 @@
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(6, 19);
+            this.button11.Location = new System.Drawing.Point(8, 22);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(79, 20);
             this.button11.TabIndex = 10;
@@ -1288,7 +1310,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 61);
+            this.label11.Location = new System.Drawing.Point(8, 64);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 4;
@@ -1297,7 +1319,7 @@
             // numericUpDown11
             // 
             this.numericUpDown11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown11.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown11.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown11.TabIndex = 30;
@@ -1307,7 +1329,7 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(-2, 40);
+            this.textBox11.Location = new System.Drawing.Point(0, 43);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(130, 18);
@@ -1321,10 +1343,10 @@
             this.groupBox12.Controls.Add(this.numericUpDown12);
             this.groupBox12.Controls.Add(this.textBox12);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(147, 186);
+            this.groupBox12.Location = new System.Drawing.Point(149, 189);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(125, 82);
-            this.groupBox12.TabIndex = 31;
+            this.groupBox12.TabIndex = 26;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "S";
             // 
@@ -1333,7 +1355,7 @@
             this.checkBox12.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox12.AutoSize = true;
             this.checkBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox12.Location = new System.Drawing.Point(94, 19);
+            this.checkBox12.Location = new System.Drawing.Point(96, 22);
             this.checkBox12.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox12.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox12.Name = "checkBox12";
@@ -1347,7 +1369,7 @@
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(6, 19);
+            this.button12.Location = new System.Drawing.Point(8, 22);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(79, 20);
             this.button12.TabIndex = 10;
@@ -1359,7 +1381,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 61);
+            this.label12.Location = new System.Drawing.Point(8, 64);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 13);
             this.label12.TabIndex = 4;
@@ -1368,7 +1390,7 @@
             // numericUpDown12
             // 
             this.numericUpDown12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown12.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown12.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown12.TabIndex = 30;
@@ -1378,7 +1400,7 @@
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(-2, 40);
+            this.textBox12.Location = new System.Drawing.Point(0, 43);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(130, 18);
@@ -1392,10 +1414,10 @@
             this.groupBox13.Controls.Add(this.numericUpDown13);
             this.groupBox13.Controls.Add(this.textBox13);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(273, 186);
+            this.groupBox13.Location = new System.Drawing.Point(275, 189);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(125, 82);
-            this.groupBox13.TabIndex = 32;
+            this.groupBox13.TabIndex = 27;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "D";
             // 
@@ -1404,7 +1426,7 @@
             this.checkBox13.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox13.AutoSize = true;
             this.checkBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox13.Location = new System.Drawing.Point(94, 19);
+            this.checkBox13.Location = new System.Drawing.Point(96, 22);
             this.checkBox13.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox13.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox13.Name = "checkBox13";
@@ -1418,7 +1440,7 @@
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(6, 19);
+            this.button13.Location = new System.Drawing.Point(8, 22);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(79, 20);
             this.button13.TabIndex = 10;
@@ -1430,7 +1452,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 61);
+            this.label13.Location = new System.Drawing.Point(8, 64);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 4;
@@ -1439,7 +1461,7 @@
             // numericUpDown13
             // 
             this.numericUpDown13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown13.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown13.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown13.Name = "numericUpDown13";
             this.numericUpDown13.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown13.TabIndex = 30;
@@ -1449,7 +1471,7 @@
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(-2, 40);
+            this.textBox13.Location = new System.Drawing.Point(0, 43);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(130, 18);
@@ -1463,10 +1485,10 @@
             this.groupBox14.Controls.Add(this.numericUpDown14);
             this.groupBox14.Controls.Add(this.textBox14);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(399, 186);
+            this.groupBox14.Location = new System.Drawing.Point(401, 189);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(125, 82);
-            this.groupBox14.TabIndex = 33;
+            this.groupBox14.TabIndex = 28;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "F";
             // 
@@ -1475,7 +1497,7 @@
             this.checkBox14.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox14.AutoSize = true;
             this.checkBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox14.Location = new System.Drawing.Point(94, 19);
+            this.checkBox14.Location = new System.Drawing.Point(96, 22);
             this.checkBox14.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox14.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox14.Name = "checkBox14";
@@ -1489,7 +1511,7 @@
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(6, 19);
+            this.button14.Location = new System.Drawing.Point(8, 22);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(79, 20);
             this.button14.TabIndex = 10;
@@ -1501,7 +1523,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 61);
+            this.label14.Location = new System.Drawing.Point(8, 64);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 13);
             this.label14.TabIndex = 4;
@@ -1510,7 +1532,7 @@
             // numericUpDown14
             // 
             this.numericUpDown14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown14.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown14.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown14.Name = "numericUpDown14";
             this.numericUpDown14.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown14.TabIndex = 30;
@@ -1520,7 +1542,7 @@
             // textBox14
             // 
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(-2, 40);
+            this.textBox14.Location = new System.Drawing.Point(0, 43);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(130, 18);
@@ -1534,10 +1556,10 @@
             this.groupBox15.Controls.Add(this.numericUpDown15);
             this.groupBox15.Controls.Add(this.textBox15);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(525, 186);
+            this.groupBox15.Location = new System.Drawing.Point(527, 189);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(125, 82);
-            this.groupBox15.TabIndex = 34;
+            this.groupBox15.TabIndex = 29;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "G";
             // 
@@ -1546,7 +1568,7 @@
             this.checkBox15.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox15.AutoSize = true;
             this.checkBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox15.Location = new System.Drawing.Point(94, 19);
+            this.checkBox15.Location = new System.Drawing.Point(96, 22);
             this.checkBox15.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox15.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox15.Name = "checkBox15";
@@ -1560,7 +1582,7 @@
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(6, 19);
+            this.button15.Location = new System.Drawing.Point(8, 22);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(79, 20);
             this.button15.TabIndex = 10;
@@ -1572,7 +1594,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 61);
+            this.label15.Location = new System.Drawing.Point(8, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(38, 13);
             this.label15.TabIndex = 4;
@@ -1581,7 +1603,7 @@
             // numericUpDown15
             // 
             this.numericUpDown15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown15.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown15.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown15.Name = "numericUpDown15";
             this.numericUpDown15.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown15.TabIndex = 30;
@@ -1591,7 +1613,7 @@
             // textBox15
             // 
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(-2, 40);
+            this.textBox15.Location = new System.Drawing.Point(0, 43);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(130, 18);
@@ -1605,10 +1627,10 @@
             this.groupBox16.Controls.Add(this.numericUpDown16);
             this.groupBox16.Controls.Add(this.textBox16);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox16.Location = new System.Drawing.Point(651, 186);
+            this.groupBox16.Location = new System.Drawing.Point(653, 189);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(125, 82);
-            this.groupBox16.TabIndex = 35;
+            this.groupBox16.TabIndex = 30;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "H";
             // 
@@ -1617,7 +1639,7 @@
             this.checkBox16.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox16.AutoSize = true;
             this.checkBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox16.Location = new System.Drawing.Point(94, 19);
+            this.checkBox16.Location = new System.Drawing.Point(96, 22);
             this.checkBox16.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox16.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox16.Name = "checkBox16";
@@ -1631,7 +1653,7 @@
             // button16
             // 
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(6, 19);
+            this.button16.Location = new System.Drawing.Point(8, 22);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(79, 20);
             this.button16.TabIndex = 10;
@@ -1643,7 +1665,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(6, 61);
+            this.label16.Location = new System.Drawing.Point(8, 64);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(38, 13);
             this.label16.TabIndex = 4;
@@ -1652,7 +1674,7 @@
             // numericUpDown16
             // 
             this.numericUpDown16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown16.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown16.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown16.Name = "numericUpDown16";
             this.numericUpDown16.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown16.TabIndex = 30;
@@ -1662,7 +1684,7 @@
             // textBox16
             // 
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(-2, 40);
+            this.textBox16.Location = new System.Drawing.Point(0, 43);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(130, 18);
@@ -1676,10 +1698,10 @@
             this.groupBox17.Controls.Add(this.numericUpDown17);
             this.groupBox17.Controls.Add(this.textBox17);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox17.Location = new System.Drawing.Point(777, 186);
+            this.groupBox17.Location = new System.Drawing.Point(779, 189);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(125, 82);
-            this.groupBox17.TabIndex = 34;
+            this.groupBox17.TabIndex = 31;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "J";
             // 
@@ -1688,7 +1710,7 @@
             this.checkBox17.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox17.AutoSize = true;
             this.checkBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox17.Location = new System.Drawing.Point(94, 19);
+            this.checkBox17.Location = new System.Drawing.Point(96, 22);
             this.checkBox17.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox17.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox17.Name = "checkBox17";
@@ -1702,7 +1724,7 @@
             // button17
             // 
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(6, 19);
+            this.button17.Location = new System.Drawing.Point(8, 22);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(79, 20);
             this.button17.TabIndex = 10;
@@ -1714,7 +1736,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(6, 61);
+            this.label17.Location = new System.Drawing.Point(8, 64);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(38, 13);
             this.label17.TabIndex = 4;
@@ -1723,7 +1745,7 @@
             // numericUpDown17
             // 
             this.numericUpDown17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown17.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown17.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown17.Name = "numericUpDown17";
             this.numericUpDown17.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown17.TabIndex = 30;
@@ -1733,7 +1755,7 @@
             // textBox17
             // 
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(-2, 40);
+            this.textBox17.Location = new System.Drawing.Point(0, 43);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
             this.textBox17.Size = new System.Drawing.Size(130, 18);
@@ -1747,10 +1769,10 @@
             this.groupBox18.Controls.Add(this.numericUpDown18);
             this.groupBox18.Controls.Add(this.textBox18);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(903, 186);
+            this.groupBox18.Location = new System.Drawing.Point(905, 189);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(125, 82);
-            this.groupBox18.TabIndex = 36;
+            this.groupBox18.TabIndex = 32;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "K";
             // 
@@ -1759,7 +1781,7 @@
             this.checkBox18.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox18.AutoSize = true;
             this.checkBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox18.Location = new System.Drawing.Point(94, 19);
+            this.checkBox18.Location = new System.Drawing.Point(96, 22);
             this.checkBox18.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox18.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox18.Name = "checkBox18";
@@ -1773,7 +1795,7 @@
             // button18
             // 
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(6, 19);
+            this.button18.Location = new System.Drawing.Point(8, 22);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(79, 20);
             this.button18.TabIndex = 10;
@@ -1785,7 +1807,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 61);
+            this.label18.Location = new System.Drawing.Point(8, 64);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(38, 13);
             this.label18.TabIndex = 4;
@@ -1794,7 +1816,7 @@
             // numericUpDown18
             // 
             this.numericUpDown18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown18.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown18.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown18.Name = "numericUpDown18";
             this.numericUpDown18.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown18.TabIndex = 30;
@@ -1804,7 +1826,7 @@
             // textBox18
             // 
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(-2, 40);
+            this.textBox18.Location = new System.Drawing.Point(0, 43);
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
             this.textBox18.Size = new System.Drawing.Size(130, 18);
@@ -1818,10 +1840,10 @@
             this.groupBox19.Controls.Add(this.numericUpDown19);
             this.groupBox19.Controls.Add(this.textBox19);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(1029, 186);
+            this.groupBox19.Location = new System.Drawing.Point(1031, 189);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(125, 82);
-            this.groupBox19.TabIndex = 34;
+            this.groupBox19.TabIndex = 33;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "L";
             // 
@@ -1830,7 +1852,7 @@
             this.checkBox19.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox19.AutoSize = true;
             this.checkBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox19.Location = new System.Drawing.Point(94, 19);
+            this.checkBox19.Location = new System.Drawing.Point(96, 22);
             this.checkBox19.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox19.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox19.Name = "checkBox19";
@@ -1844,7 +1866,7 @@
             // button19
             // 
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(6, 19);
+            this.button19.Location = new System.Drawing.Point(8, 22);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(79, 20);
             this.button19.TabIndex = 10;
@@ -1856,7 +1878,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 61);
+            this.label19.Location = new System.Drawing.Point(8, 64);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(38, 13);
             this.label19.TabIndex = 4;
@@ -1865,7 +1887,7 @@
             // numericUpDown19
             // 
             this.numericUpDown19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown19.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown19.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown19.Name = "numericUpDown19";
             this.numericUpDown19.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown19.TabIndex = 30;
@@ -1875,7 +1897,7 @@
             // textBox19
             // 
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(-2, 40);
+            this.textBox19.Location = new System.Drawing.Point(0, 43);
             this.textBox19.Name = "textBox19";
             this.textBox19.ReadOnly = true;
             this.textBox19.Size = new System.Drawing.Size(130, 18);
@@ -1889,10 +1911,10 @@
             this.groupBox20.Controls.Add(this.numericUpDown20);
             this.groupBox20.Controls.Add(this.textBox20);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.Location = new System.Drawing.Point(40, 268);
+            this.groupBox20.Location = new System.Drawing.Point(42, 271);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(125, 82);
-            this.groupBox20.TabIndex = 35;
+            this.groupBox20.TabIndex = 34;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Z";
             // 
@@ -1901,7 +1923,7 @@
             this.checkBox20.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox20.AutoSize = true;
             this.checkBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox20.Location = new System.Drawing.Point(94, 19);
+            this.checkBox20.Location = new System.Drawing.Point(96, 22);
             this.checkBox20.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox20.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox20.Name = "checkBox20";
@@ -1915,7 +1937,7 @@
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(6, 19);
+            this.button20.Location = new System.Drawing.Point(8, 22);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(79, 20);
             this.button20.TabIndex = 10;
@@ -1927,7 +1949,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 61);
+            this.label20.Location = new System.Drawing.Point(8, 64);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 4;
@@ -1936,7 +1958,7 @@
             // numericUpDown20
             // 
             this.numericUpDown20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown20.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown20.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown20.Name = "numericUpDown20";
             this.numericUpDown20.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown20.TabIndex = 30;
@@ -1946,7 +1968,7 @@
             // textBox20
             // 
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(-2, 40);
+            this.textBox20.Location = new System.Drawing.Point(0, 43);
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
             this.textBox20.Size = new System.Drawing.Size(130, 18);
@@ -1960,10 +1982,10 @@
             this.groupBox21.Controls.Add(this.numericUpDown21);
             this.groupBox21.Controls.Add(this.textBox21);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.Location = new System.Drawing.Point(166, 268);
+            this.groupBox21.Location = new System.Drawing.Point(168, 271);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(125, 82);
-            this.groupBox21.TabIndex = 36;
+            this.groupBox21.TabIndex = 35;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "X";
             // 
@@ -1972,7 +1994,7 @@
             this.checkBox21.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox21.AutoSize = true;
             this.checkBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox21.Location = new System.Drawing.Point(94, 19);
+            this.checkBox21.Location = new System.Drawing.Point(96, 22);
             this.checkBox21.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox21.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox21.Name = "checkBox21";
@@ -1986,7 +2008,7 @@
             // button21
             // 
             this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(6, 19);
+            this.button21.Location = new System.Drawing.Point(8, 22);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(79, 20);
             this.button21.TabIndex = 10;
@@ -1998,7 +2020,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(6, 61);
+            this.label21.Location = new System.Drawing.Point(8, 64);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(38, 13);
             this.label21.TabIndex = 4;
@@ -2007,7 +2029,7 @@
             // numericUpDown21
             // 
             this.numericUpDown21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown21.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown21.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown21.Name = "numericUpDown21";
             this.numericUpDown21.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown21.TabIndex = 30;
@@ -2017,7 +2039,7 @@
             // textBox21
             // 
             this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(-2, 40);
+            this.textBox21.Location = new System.Drawing.Point(0, 43);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
             this.textBox21.Size = new System.Drawing.Size(130, 18);
@@ -2031,10 +2053,10 @@
             this.groupBox22.Controls.Add(this.numericUpDown22);
             this.groupBox22.Controls.Add(this.textBox22);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox22.Location = new System.Drawing.Point(292, 268);
+            this.groupBox22.Location = new System.Drawing.Point(294, 271);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(125, 82);
-            this.groupBox22.TabIndex = 37;
+            this.groupBox22.TabIndex = 36;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "C";
             // 
@@ -2043,7 +2065,7 @@
             this.checkBox22.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox22.AutoSize = true;
             this.checkBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox22.Location = new System.Drawing.Point(94, 19);
+            this.checkBox22.Location = new System.Drawing.Point(96, 22);
             this.checkBox22.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox22.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox22.Name = "checkBox22";
@@ -2057,7 +2079,7 @@
             // button22
             // 
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(6, 19);
+            this.button22.Location = new System.Drawing.Point(8, 22);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(79, 20);
             this.button22.TabIndex = 10;
@@ -2069,7 +2091,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(6, 61);
+            this.label22.Location = new System.Drawing.Point(8, 64);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(38, 13);
             this.label22.TabIndex = 4;
@@ -2078,7 +2100,7 @@
             // numericUpDown22
             // 
             this.numericUpDown22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown22.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown22.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown22.Name = "numericUpDown22";
             this.numericUpDown22.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown22.TabIndex = 30;
@@ -2088,7 +2110,7 @@
             // textBox22
             // 
             this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(-2, 40);
+            this.textBox22.Location = new System.Drawing.Point(0, 43);
             this.textBox22.Name = "textBox22";
             this.textBox22.ReadOnly = true;
             this.textBox22.Size = new System.Drawing.Size(130, 18);
@@ -2102,10 +2124,10 @@
             this.groupBox23.Controls.Add(this.numericUpDown23);
             this.groupBox23.Controls.Add(this.textBox23);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox23.Location = new System.Drawing.Point(418, 268);
+            this.groupBox23.Location = new System.Drawing.Point(420, 271);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(125, 82);
-            this.groupBox23.TabIndex = 38;
+            this.groupBox23.TabIndex = 37;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "V";
             // 
@@ -2114,7 +2136,7 @@
             this.checkBox23.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox23.AutoSize = true;
             this.checkBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox23.Location = new System.Drawing.Point(94, 19);
+            this.checkBox23.Location = new System.Drawing.Point(96, 22);
             this.checkBox23.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox23.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox23.Name = "checkBox23";
@@ -2128,7 +2150,7 @@
             // button23
             // 
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(6, 19);
+            this.button23.Location = new System.Drawing.Point(8, 22);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(79, 20);
             this.button23.TabIndex = 10;
@@ -2140,7 +2162,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(6, 61);
+            this.label23.Location = new System.Drawing.Point(8, 64);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(38, 13);
             this.label23.TabIndex = 4;
@@ -2149,7 +2171,7 @@
             // numericUpDown23
             // 
             this.numericUpDown23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown23.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown23.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown23.Name = "numericUpDown23";
             this.numericUpDown23.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown23.TabIndex = 30;
@@ -2159,7 +2181,7 @@
             // textBox23
             // 
             this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(-2, 40);
+            this.textBox23.Location = new System.Drawing.Point(0, 43);
             this.textBox23.Name = "textBox23";
             this.textBox23.ReadOnly = true;
             this.textBox23.Size = new System.Drawing.Size(130, 18);
@@ -2173,10 +2195,10 @@
             this.groupBox24.Controls.Add(this.numericUpDown24);
             this.groupBox24.Controls.Add(this.textBox24);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.Location = new System.Drawing.Point(544, 268);
+            this.groupBox24.Location = new System.Drawing.Point(546, 271);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(125, 82);
-            this.groupBox24.TabIndex = 39;
+            this.groupBox24.TabIndex = 38;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "B";
             // 
@@ -2185,7 +2207,7 @@
             this.checkBox24.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox24.AutoSize = true;
             this.checkBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox24.Location = new System.Drawing.Point(94, 19);
+            this.checkBox24.Location = new System.Drawing.Point(96, 22);
             this.checkBox24.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox24.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox24.Name = "checkBox24";
@@ -2199,7 +2221,7 @@
             // button24
             // 
             this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(6, 19);
+            this.button24.Location = new System.Drawing.Point(8, 22);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(79, 20);
             this.button24.TabIndex = 10;
@@ -2211,7 +2233,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 61);
+            this.label24.Location = new System.Drawing.Point(8, 64);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(38, 13);
             this.label24.TabIndex = 4;
@@ -2220,7 +2242,7 @@
             // numericUpDown24
             // 
             this.numericUpDown24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown24.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown24.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown24.Name = "numericUpDown24";
             this.numericUpDown24.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown24.TabIndex = 30;
@@ -2230,7 +2252,7 @@
             // textBox24
             // 
             this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(-2, 40);
+            this.textBox24.Location = new System.Drawing.Point(0, 43);
             this.textBox24.Name = "textBox24";
             this.textBox24.ReadOnly = true;
             this.textBox24.Size = new System.Drawing.Size(130, 18);
@@ -2244,10 +2266,10 @@
             this.groupBox25.Controls.Add(this.numericUpDown25);
             this.groupBox25.Controls.Add(this.textBox25);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox25.Location = new System.Drawing.Point(670, 268);
+            this.groupBox25.Location = new System.Drawing.Point(672, 271);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(125, 82);
-            this.groupBox25.TabIndex = 40;
+            this.groupBox25.TabIndex = 39;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "N";
             // 
@@ -2256,7 +2278,7 @@
             this.checkBox25.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox25.AutoSize = true;
             this.checkBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox25.Location = new System.Drawing.Point(94, 19);
+            this.checkBox25.Location = new System.Drawing.Point(96, 22);
             this.checkBox25.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox25.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox25.Name = "checkBox25";
@@ -2270,7 +2292,7 @@
             // button25
             // 
             this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(6, 19);
+            this.button25.Location = new System.Drawing.Point(8, 22);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(79, 20);
             this.button25.TabIndex = 10;
@@ -2282,7 +2304,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(6, 61);
+            this.label25.Location = new System.Drawing.Point(8, 64);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(38, 13);
             this.label25.TabIndex = 4;
@@ -2291,7 +2313,7 @@
             // numericUpDown25
             // 
             this.numericUpDown25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown25.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown25.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown25.Name = "numericUpDown25";
             this.numericUpDown25.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown25.TabIndex = 30;
@@ -2301,7 +2323,7 @@
             // textBox25
             // 
             this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(-2, 40);
+            this.textBox25.Location = new System.Drawing.Point(0, 43);
             this.textBox25.Name = "textBox25";
             this.textBox25.ReadOnly = true;
             this.textBox25.Size = new System.Drawing.Size(130, 18);
@@ -2315,7 +2337,7 @@
             this.groupBox26.Controls.Add(this.numericUpDown26);
             this.groupBox26.Controls.Add(this.textBox26);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(796, 268);
+            this.groupBox26.Location = new System.Drawing.Point(798, 271);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Size = new System.Drawing.Size(125, 82);
             this.groupBox26.TabIndex = 40;
@@ -2327,7 +2349,7 @@
             this.checkBox26.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox26.AutoSize = true;
             this.checkBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox26.Location = new System.Drawing.Point(94, 19);
+            this.checkBox26.Location = new System.Drawing.Point(96, 22);
             this.checkBox26.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox26.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox26.Name = "checkBox26";
@@ -2341,7 +2363,7 @@
             // button26
             // 
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(6, 19);
+            this.button26.Location = new System.Drawing.Point(8, 22);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(79, 20);
             this.button26.TabIndex = 10;
@@ -2353,7 +2375,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(6, 61);
+            this.label26.Location = new System.Drawing.Point(8, 64);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(38, 13);
             this.label26.TabIndex = 4;
@@ -2362,7 +2384,7 @@
             // numericUpDown26
             // 
             this.numericUpDown26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown26.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown26.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown26.Name = "numericUpDown26";
             this.numericUpDown26.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown26.TabIndex = 30;
@@ -2372,7 +2394,7 @@
             // textBox26
             // 
             this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(-2, 40);
+            this.textBox26.Location = new System.Drawing.Point(0, 43);
             this.textBox26.Name = "textBox26";
             this.textBox26.ReadOnly = true;
             this.textBox26.Size = new System.Drawing.Size(130, 18);
@@ -2386,10 +2408,10 @@
             this.groupBox27.Controls.Add(this.numericUpDown27);
             this.groupBox27.Controls.Add(this.textBox27);
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(2, 22);
+            this.groupBox27.Location = new System.Drawing.Point(4, 25);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(125, 82);
-            this.groupBox27.TabIndex = 41;
+            this.groupBox27.TabIndex = 5;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "1";
             // 
@@ -2398,7 +2420,7 @@
             this.checkBox27.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox27.AutoSize = true;
             this.checkBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox27.Location = new System.Drawing.Point(94, 19);
+            this.checkBox27.Location = new System.Drawing.Point(96, 22);
             this.checkBox27.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox27.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox27.Name = "checkBox27";
@@ -2412,7 +2434,7 @@
             // button27
             // 
             this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.Location = new System.Drawing.Point(6, 19);
+            this.button27.Location = new System.Drawing.Point(8, 22);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(79, 20);
             this.button27.TabIndex = 10;
@@ -2424,7 +2446,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(6, 61);
+            this.label27.Location = new System.Drawing.Point(8, 64);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(38, 13);
             this.label27.TabIndex = 4;
@@ -2433,7 +2455,7 @@
             // numericUpDown27
             // 
             this.numericUpDown27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown27.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown27.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown27.Name = "numericUpDown27";
             this.numericUpDown27.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown27.TabIndex = 30;
@@ -2443,7 +2465,7 @@
             // textBox27
             // 
             this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(-2, 40);
+            this.textBox27.Location = new System.Drawing.Point(0, 43);
             this.textBox27.Name = "textBox27";
             this.textBox27.ReadOnly = true;
             this.textBox27.Size = new System.Drawing.Size(130, 18);
@@ -2457,10 +2479,10 @@
             this.groupBox28.Controls.Add(this.numericUpDown28);
             this.groupBox28.Controls.Add(this.textBox28);
             this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox28.Location = new System.Drawing.Point(128, 22);
+            this.groupBox28.Location = new System.Drawing.Point(130, 25);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Size = new System.Drawing.Size(125, 82);
-            this.groupBox28.TabIndex = 42;
+            this.groupBox28.TabIndex = 6;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "2";
             // 
@@ -2469,7 +2491,7 @@
             this.checkBox28.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox28.AutoSize = true;
             this.checkBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox28.Location = new System.Drawing.Point(94, 19);
+            this.checkBox28.Location = new System.Drawing.Point(96, 22);
             this.checkBox28.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox28.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox28.Name = "checkBox28";
@@ -2483,7 +2505,7 @@
             // button28
             // 
             this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.Location = new System.Drawing.Point(6, 19);
+            this.button28.Location = new System.Drawing.Point(8, 22);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(79, 20);
             this.button28.TabIndex = 10;
@@ -2495,7 +2517,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(6, 61);
+            this.label28.Location = new System.Drawing.Point(8, 64);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(38, 13);
             this.label28.TabIndex = 4;
@@ -2504,7 +2526,7 @@
             // numericUpDown28
             // 
             this.numericUpDown28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown28.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown28.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown28.Name = "numericUpDown28";
             this.numericUpDown28.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown28.TabIndex = 30;
@@ -2514,7 +2536,7 @@
             // textBox28
             // 
             this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(-2, 40);
+            this.textBox28.Location = new System.Drawing.Point(0, 43);
             this.textBox28.Name = "textBox28";
             this.textBox28.ReadOnly = true;
             this.textBox28.Size = new System.Drawing.Size(130, 18);
@@ -2528,10 +2550,10 @@
             this.groupBox29.Controls.Add(this.numericUpDown29);
             this.groupBox29.Controls.Add(this.textBox29);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox29.Location = new System.Drawing.Point(254, 22);
+            this.groupBox29.Location = new System.Drawing.Point(256, 25);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Size = new System.Drawing.Size(125, 82);
-            this.groupBox29.TabIndex = 43;
+            this.groupBox29.TabIndex = 7;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "3";
             // 
@@ -2540,7 +2562,7 @@
             this.checkBox29.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox29.AutoSize = true;
             this.checkBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox29.Location = new System.Drawing.Point(94, 19);
+            this.checkBox29.Location = new System.Drawing.Point(96, 22);
             this.checkBox29.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox29.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox29.Name = "checkBox29";
@@ -2554,7 +2576,7 @@
             // button29
             // 
             this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(6, 19);
+            this.button29.Location = new System.Drawing.Point(8, 22);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(79, 20);
             this.button29.TabIndex = 10;
@@ -2566,7 +2588,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(6, 61);
+            this.label29.Location = new System.Drawing.Point(8, 64);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(38, 13);
             this.label29.TabIndex = 4;
@@ -2575,7 +2597,7 @@
             // numericUpDown29
             // 
             this.numericUpDown29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown29.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown29.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown29.Name = "numericUpDown29";
             this.numericUpDown29.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown29.TabIndex = 30;
@@ -2585,7 +2607,7 @@
             // textBox29
             // 
             this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(-2, 40);
+            this.textBox29.Location = new System.Drawing.Point(0, 43);
             this.textBox29.Name = "textBox29";
             this.textBox29.ReadOnly = true;
             this.textBox29.Size = new System.Drawing.Size(130, 18);
@@ -2599,10 +2621,10 @@
             this.groupBox30.Controls.Add(this.numericUpDown30);
             this.groupBox30.Controls.Add(this.textBox30);
             this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.Location = new System.Drawing.Point(380, 22);
+            this.groupBox30.Location = new System.Drawing.Point(382, 25);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Size = new System.Drawing.Size(125, 82);
-            this.groupBox30.TabIndex = 44;
+            this.groupBox30.TabIndex = 8;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "4";
             // 
@@ -2611,7 +2633,7 @@
             this.checkBox30.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox30.AutoSize = true;
             this.checkBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox30.Location = new System.Drawing.Point(94, 19);
+            this.checkBox30.Location = new System.Drawing.Point(96, 22);
             this.checkBox30.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox30.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox30.Name = "checkBox30";
@@ -2625,7 +2647,7 @@
             // button30
             // 
             this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(6, 19);
+            this.button30.Location = new System.Drawing.Point(8, 22);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(79, 20);
             this.button30.TabIndex = 10;
@@ -2637,7 +2659,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(6, 61);
+            this.label30.Location = new System.Drawing.Point(8, 64);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(38, 13);
             this.label30.TabIndex = 4;
@@ -2646,7 +2668,7 @@
             // numericUpDown30
             // 
             this.numericUpDown30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown30.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown30.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown30.Name = "numericUpDown30";
             this.numericUpDown30.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown30.TabIndex = 30;
@@ -2656,7 +2678,7 @@
             // textBox30
             // 
             this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(-2, 40);
+            this.textBox30.Location = new System.Drawing.Point(0, 43);
             this.textBox30.Name = "textBox30";
             this.textBox30.ReadOnly = true;
             this.textBox30.Size = new System.Drawing.Size(130, 18);
@@ -2670,10 +2692,10 @@
             this.groupBox31.Controls.Add(this.numericUpDown31);
             this.groupBox31.Controls.Add(this.textBox31);
             this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox31.Location = new System.Drawing.Point(506, 22);
+            this.groupBox31.Location = new System.Drawing.Point(508, 25);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(125, 82);
-            this.groupBox31.TabIndex = 45;
+            this.groupBox31.TabIndex = 9;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "5";
             // 
@@ -2682,7 +2704,7 @@
             this.checkBox31.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox31.AutoSize = true;
             this.checkBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox31.Location = new System.Drawing.Point(94, 19);
+            this.checkBox31.Location = new System.Drawing.Point(96, 22);
             this.checkBox31.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox31.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox31.Name = "checkBox31";
@@ -2696,7 +2718,7 @@
             // button31
             // 
             this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.Location = new System.Drawing.Point(6, 19);
+            this.button31.Location = new System.Drawing.Point(8, 22);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(79, 20);
             this.button31.TabIndex = 10;
@@ -2708,7 +2730,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(6, 61);
+            this.label31.Location = new System.Drawing.Point(8, 64);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(38, 13);
             this.label31.TabIndex = 4;
@@ -2717,7 +2739,7 @@
             // numericUpDown31
             // 
             this.numericUpDown31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown31.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown31.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown31.Name = "numericUpDown31";
             this.numericUpDown31.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown31.TabIndex = 30;
@@ -2727,7 +2749,7 @@
             // textBox31
             // 
             this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(-2, 40);
+            this.textBox31.Location = new System.Drawing.Point(0, 43);
             this.textBox31.Name = "textBox31";
             this.textBox31.ReadOnly = true;
             this.textBox31.Size = new System.Drawing.Size(130, 18);
@@ -2741,10 +2763,10 @@
             this.groupBox32.Controls.Add(this.numericUpDown32);
             this.groupBox32.Controls.Add(this.textBox32);
             this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox32.Location = new System.Drawing.Point(632, 22);
+            this.groupBox32.Location = new System.Drawing.Point(634, 25);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Size = new System.Drawing.Size(125, 82);
-            this.groupBox32.TabIndex = 46;
+            this.groupBox32.TabIndex = 10;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "6";
             // 
@@ -2753,7 +2775,7 @@
             this.checkBox32.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox32.AutoSize = true;
             this.checkBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox32.Location = new System.Drawing.Point(94, 19);
+            this.checkBox32.Location = new System.Drawing.Point(96, 22);
             this.checkBox32.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox32.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox32.Name = "checkBox32";
@@ -2767,7 +2789,7 @@
             // button32
             // 
             this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(6, 19);
+            this.button32.Location = new System.Drawing.Point(8, 22);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(79, 20);
             this.button32.TabIndex = 10;
@@ -2779,7 +2801,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(6, 61);
+            this.label32.Location = new System.Drawing.Point(8, 64);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(38, 13);
             this.label32.TabIndex = 4;
@@ -2788,7 +2810,7 @@
             // numericUpDown32
             // 
             this.numericUpDown32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown32.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown32.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown32.Name = "numericUpDown32";
             this.numericUpDown32.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown32.TabIndex = 30;
@@ -2798,7 +2820,7 @@
             // textBox32
             // 
             this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(-2, 40);
+            this.textBox32.Location = new System.Drawing.Point(0, 43);
             this.textBox32.Name = "textBox32";
             this.textBox32.ReadOnly = true;
             this.textBox32.Size = new System.Drawing.Size(130, 18);
@@ -2812,10 +2834,10 @@
             this.groupBox33.Controls.Add(this.numericUpDown33);
             this.groupBox33.Controls.Add(this.textBox33);
             this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox33.Location = new System.Drawing.Point(758, 22);
+            this.groupBox33.Location = new System.Drawing.Point(760, 25);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Size = new System.Drawing.Size(125, 82);
-            this.groupBox33.TabIndex = 47;
+            this.groupBox33.TabIndex = 11;
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "7";
             // 
@@ -2824,7 +2846,7 @@
             this.checkBox33.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox33.AutoSize = true;
             this.checkBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox33.Location = new System.Drawing.Point(94, 19);
+            this.checkBox33.Location = new System.Drawing.Point(96, 22);
             this.checkBox33.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox33.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox33.Name = "checkBox33";
@@ -2838,7 +2860,7 @@
             // button33
             // 
             this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button33.Location = new System.Drawing.Point(6, 19);
+            this.button33.Location = new System.Drawing.Point(8, 22);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(79, 20);
             this.button33.TabIndex = 10;
@@ -2850,7 +2872,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(6, 61);
+            this.label33.Location = new System.Drawing.Point(8, 64);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(38, 13);
             this.label33.TabIndex = 4;
@@ -2859,7 +2881,7 @@
             // numericUpDown33
             // 
             this.numericUpDown33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown33.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown33.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown33.Name = "numericUpDown33";
             this.numericUpDown33.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown33.TabIndex = 30;
@@ -2869,7 +2891,7 @@
             // textBox33
             // 
             this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(-2, 40);
+            this.textBox33.Location = new System.Drawing.Point(0, 43);
             this.textBox33.Name = "textBox33";
             this.textBox33.ReadOnly = true;
             this.textBox33.Size = new System.Drawing.Size(130, 18);
@@ -2883,10 +2905,10 @@
             this.groupBox34.Controls.Add(this.numericUpDown34);
             this.groupBox34.Controls.Add(this.textBox34);
             this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox34.Location = new System.Drawing.Point(884, 22);
+            this.groupBox34.Location = new System.Drawing.Point(886, 25);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Size = new System.Drawing.Size(125, 82);
-            this.groupBox34.TabIndex = 48;
+            this.groupBox34.TabIndex = 12;
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "8";
             // 
@@ -2895,7 +2917,7 @@
             this.checkBox34.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox34.AutoSize = true;
             this.checkBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox34.Location = new System.Drawing.Point(94, 19);
+            this.checkBox34.Location = new System.Drawing.Point(96, 22);
             this.checkBox34.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox34.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox34.Name = "checkBox34";
@@ -2909,7 +2931,7 @@
             // button34
             // 
             this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button34.Location = new System.Drawing.Point(6, 19);
+            this.button34.Location = new System.Drawing.Point(8, 22);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(79, 20);
             this.button34.TabIndex = 10;
@@ -2921,7 +2943,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(6, 61);
+            this.label34.Location = new System.Drawing.Point(8, 64);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(38, 13);
             this.label34.TabIndex = 4;
@@ -2930,7 +2952,7 @@
             // numericUpDown34
             // 
             this.numericUpDown34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown34.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown34.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown34.Name = "numericUpDown34";
             this.numericUpDown34.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown34.TabIndex = 30;
@@ -2940,7 +2962,7 @@
             // textBox34
             // 
             this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(-2, 40);
+            this.textBox34.Location = new System.Drawing.Point(0, 43);
             this.textBox34.Name = "textBox34";
             this.textBox34.ReadOnly = true;
             this.textBox34.Size = new System.Drawing.Size(130, 18);
@@ -2954,10 +2976,10 @@
             this.groupBox35.Controls.Add(this.numericUpDown35);
             this.groupBox35.Controls.Add(this.textBox35);
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.Location = new System.Drawing.Point(1010, 22);
+            this.groupBox35.Location = new System.Drawing.Point(1012, 25);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(125, 82);
-            this.groupBox35.TabIndex = 49;
+            this.groupBox35.TabIndex = 13;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "9";
             // 
@@ -2966,7 +2988,7 @@
             this.checkBox35.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox35.AutoSize = true;
             this.checkBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox35.Location = new System.Drawing.Point(94, 19);
+            this.checkBox35.Location = new System.Drawing.Point(96, 22);
             this.checkBox35.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox35.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox35.Name = "checkBox35";
@@ -2980,7 +3002,7 @@
             // button35
             // 
             this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.Location = new System.Drawing.Point(6, 19);
+            this.button35.Location = new System.Drawing.Point(8, 22);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(79, 20);
             this.button35.TabIndex = 10;
@@ -2992,7 +3014,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(6, 61);
+            this.label35.Location = new System.Drawing.Point(8, 64);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(38, 13);
             this.label35.TabIndex = 4;
@@ -3001,7 +3023,7 @@
             // numericUpDown35
             // 
             this.numericUpDown35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown35.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown35.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown35.Name = "numericUpDown35";
             this.numericUpDown35.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown35.TabIndex = 30;
@@ -3011,7 +3033,7 @@
             // textBox35
             // 
             this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(-2, 40);
+            this.textBox35.Location = new System.Drawing.Point(0, 43);
             this.textBox35.Name = "textBox35";
             this.textBox35.ReadOnly = true;
             this.textBox35.Size = new System.Drawing.Size(130, 18);
@@ -3025,10 +3047,10 @@
             this.groupBox36.Controls.Add(this.numericUpDown36);
             this.groupBox36.Controls.Add(this.textBox36);
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox36.Location = new System.Drawing.Point(1136, 22);
+            this.groupBox36.Location = new System.Drawing.Point(1138, 25);
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.Size = new System.Drawing.Size(125, 82);
-            this.groupBox36.TabIndex = 50;
+            this.groupBox36.TabIndex = 14;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "0";
             // 
@@ -3037,7 +3059,7 @@
             this.checkBox36.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox36.AutoSize = true;
             this.checkBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox36.Location = new System.Drawing.Point(94, 19);
+            this.checkBox36.Location = new System.Drawing.Point(96, 22);
             this.checkBox36.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox36.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox36.Name = "checkBox36";
@@ -3051,7 +3073,7 @@
             // button36
             // 
             this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.Location = new System.Drawing.Point(6, 19);
+            this.button36.Location = new System.Drawing.Point(8, 22);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(79, 20);
             this.button36.TabIndex = 10;
@@ -3063,7 +3085,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(6, 61);
+            this.label36.Location = new System.Drawing.Point(8, 64);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(38, 13);
             this.label36.TabIndex = 4;
@@ -3072,7 +3094,7 @@
             // numericUpDown36
             // 
             this.numericUpDown36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown36.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown36.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown36.Name = "numericUpDown36";
             this.numericUpDown36.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown36.TabIndex = 30;
@@ -3082,7 +3104,7 @@
             // textBox36
             // 
             this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(-2, 40);
+            this.textBox36.Location = new System.Drawing.Point(0, 43);
             this.textBox36.Name = "textBox36";
             this.textBox36.ReadOnly = true;
             this.textBox36.Size = new System.Drawing.Size(130, 18);
@@ -3096,10 +3118,10 @@
             this.groupBox37.Controls.Add(this.numericUpDown37);
             this.groupBox37.Controls.Add(this.textBox37);
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox37.Location = new System.Drawing.Point(6, 18);
+            this.groupBox37.Location = new System.Drawing.Point(8, 18);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Size = new System.Drawing.Size(125, 82);
-            this.groupBox37.TabIndex = 51;
+            this.groupBox37.TabIndex = 0;
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "7";
             // 
@@ -3108,7 +3130,7 @@
             this.checkBox37.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox37.AutoSize = true;
             this.checkBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox37.Location = new System.Drawing.Point(94, 19);
+            this.checkBox37.Location = new System.Drawing.Point(96, 22);
             this.checkBox37.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox37.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox37.Name = "checkBox37";
@@ -3122,7 +3144,7 @@
             // button37
             // 
             this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.Location = new System.Drawing.Point(6, 19);
+            this.button37.Location = new System.Drawing.Point(8, 22);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(79, 20);
             this.button37.TabIndex = 10;
@@ -3134,7 +3156,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(6, 61);
+            this.label37.Location = new System.Drawing.Point(8, 64);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(38, 13);
             this.label37.TabIndex = 4;
@@ -3143,7 +3165,7 @@
             // numericUpDown37
             // 
             this.numericUpDown37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown37.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown37.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown37.Name = "numericUpDown37";
             this.numericUpDown37.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown37.TabIndex = 30;
@@ -3153,7 +3175,7 @@
             // textBox37
             // 
             this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(-2, 40);
+            this.textBox37.Location = new System.Drawing.Point(0, 43);
             this.textBox37.Name = "textBox37";
             this.textBox37.ReadOnly = true;
             this.textBox37.Size = new System.Drawing.Size(130, 18);
@@ -3167,10 +3189,10 @@
             this.groupBox38.Controls.Add(this.numericUpDown38);
             this.groupBox38.Controls.Add(this.textBox38);
             this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox38.Location = new System.Drawing.Point(132, 18);
+            this.groupBox38.Location = new System.Drawing.Point(134, 18);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Size = new System.Drawing.Size(125, 82);
-            this.groupBox38.TabIndex = 52;
+            this.groupBox38.TabIndex = 1;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "8";
             // 
@@ -3179,7 +3201,7 @@
             this.checkBox38.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox38.AutoSize = true;
             this.checkBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox38.Location = new System.Drawing.Point(94, 19);
+            this.checkBox38.Location = new System.Drawing.Point(96, 22);
             this.checkBox38.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox38.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox38.Name = "checkBox38";
@@ -3193,7 +3215,7 @@
             // button38
             // 
             this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button38.Location = new System.Drawing.Point(6, 19);
+            this.button38.Location = new System.Drawing.Point(8, 22);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(79, 20);
             this.button38.TabIndex = 10;
@@ -3205,7 +3227,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(6, 61);
+            this.label38.Location = new System.Drawing.Point(8, 64);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(38, 13);
             this.label38.TabIndex = 4;
@@ -3214,7 +3236,7 @@
             // numericUpDown38
             // 
             this.numericUpDown38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown38.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown38.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown38.Name = "numericUpDown38";
             this.numericUpDown38.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown38.TabIndex = 30;
@@ -3224,7 +3246,7 @@
             // textBox38
             // 
             this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox38.Location = new System.Drawing.Point(-2, 40);
+            this.textBox38.Location = new System.Drawing.Point(0, 43);
             this.textBox38.Name = "textBox38";
             this.textBox38.ReadOnly = true;
             this.textBox38.Size = new System.Drawing.Size(130, 18);
@@ -3238,10 +3260,10 @@
             this.groupBox39.Controls.Add(this.numericUpDown39);
             this.groupBox39.Controls.Add(this.textBox39);
             this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox39.Location = new System.Drawing.Point(258, 18);
+            this.groupBox39.Location = new System.Drawing.Point(260, 18);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Size = new System.Drawing.Size(125, 82);
-            this.groupBox39.TabIndex = 53;
+            this.groupBox39.TabIndex = 2;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "9";
             // 
@@ -3250,7 +3272,7 @@
             this.checkBox39.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox39.AutoSize = true;
             this.checkBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox39.Location = new System.Drawing.Point(94, 19);
+            this.checkBox39.Location = new System.Drawing.Point(96, 22);
             this.checkBox39.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox39.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox39.Name = "checkBox39";
@@ -3264,7 +3286,7 @@
             // button39
             // 
             this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.Location = new System.Drawing.Point(6, 19);
+            this.button39.Location = new System.Drawing.Point(8, 22);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(79, 20);
             this.button39.TabIndex = 10;
@@ -3276,7 +3298,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(6, 61);
+            this.label39.Location = new System.Drawing.Point(8, 64);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(38, 13);
             this.label39.TabIndex = 4;
@@ -3285,7 +3307,7 @@
             // numericUpDown39
             // 
             this.numericUpDown39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown39.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown39.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown39.Name = "numericUpDown39";
             this.numericUpDown39.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown39.TabIndex = 30;
@@ -3295,7 +3317,7 @@
             // textBox39
             // 
             this.textBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox39.Location = new System.Drawing.Point(-2, 40);
+            this.textBox39.Location = new System.Drawing.Point(0, 43);
             this.textBox39.Name = "textBox39";
             this.textBox39.ReadOnly = true;
             this.textBox39.Size = new System.Drawing.Size(130, 18);
@@ -3309,10 +3331,10 @@
             this.groupBox40.Controls.Add(this.numericUpDown40);
             this.groupBox40.Controls.Add(this.textBox40);
             this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox40.Location = new System.Drawing.Point(6, 100);
+            this.groupBox40.Location = new System.Drawing.Point(8, 100);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Size = new System.Drawing.Size(125, 82);
-            this.groupBox40.TabIndex = 56;
+            this.groupBox40.TabIndex = 3;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "4";
             // 
@@ -3321,7 +3343,7 @@
             this.checkBox40.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox40.AutoSize = true;
             this.checkBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox40.Location = new System.Drawing.Point(94, 19);
+            this.checkBox40.Location = new System.Drawing.Point(96, 22);
             this.checkBox40.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox40.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox40.Name = "checkBox40";
@@ -3335,7 +3357,7 @@
             // button40
             // 
             this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.Location = new System.Drawing.Point(6, 19);
+            this.button40.Location = new System.Drawing.Point(8, 22);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(79, 20);
             this.button40.TabIndex = 10;
@@ -3347,7 +3369,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(6, 61);
+            this.label40.Location = new System.Drawing.Point(8, 64);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(38, 13);
             this.label40.TabIndex = 4;
@@ -3356,7 +3378,7 @@
             // numericUpDown40
             // 
             this.numericUpDown40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown40.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown40.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown40.Name = "numericUpDown40";
             this.numericUpDown40.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown40.TabIndex = 30;
@@ -3366,7 +3388,7 @@
             // textBox40
             // 
             this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox40.Location = new System.Drawing.Point(-2, 40);
+            this.textBox40.Location = new System.Drawing.Point(0, 43);
             this.textBox40.Name = "textBox40";
             this.textBox40.ReadOnly = true;
             this.textBox40.Size = new System.Drawing.Size(130, 18);
@@ -3380,10 +3402,10 @@
             this.groupBox41.Controls.Add(this.numericUpDown41);
             this.groupBox41.Controls.Add(this.textBox41);
             this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox41.Location = new System.Drawing.Point(132, 100);
+            this.groupBox41.Location = new System.Drawing.Point(134, 100);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Size = new System.Drawing.Size(125, 82);
-            this.groupBox41.TabIndex = 55;
+            this.groupBox41.TabIndex = 4;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "5";
             // 
@@ -3392,7 +3414,7 @@
             this.checkBox41.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox41.AutoSize = true;
             this.checkBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox41.Location = new System.Drawing.Point(94, 19);
+            this.checkBox41.Location = new System.Drawing.Point(96, 22);
             this.checkBox41.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox41.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox41.Name = "checkBox41";
@@ -3406,7 +3428,7 @@
             // button41
             // 
             this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.Location = new System.Drawing.Point(6, 19);
+            this.button41.Location = new System.Drawing.Point(8, 22);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(79, 20);
             this.button41.TabIndex = 10;
@@ -3418,7 +3440,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(6, 61);
+            this.label41.Location = new System.Drawing.Point(8, 64);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(38, 13);
             this.label41.TabIndex = 4;
@@ -3427,7 +3449,7 @@
             // numericUpDown41
             // 
             this.numericUpDown41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown41.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown41.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown41.Name = "numericUpDown41";
             this.numericUpDown41.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown41.TabIndex = 30;
@@ -3437,7 +3459,7 @@
             // textBox41
             // 
             this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox41.Location = new System.Drawing.Point(-2, 40);
+            this.textBox41.Location = new System.Drawing.Point(0, 43);
             this.textBox41.Name = "textBox41";
             this.textBox41.ReadOnly = true;
             this.textBox41.Size = new System.Drawing.Size(130, 18);
@@ -3451,10 +3473,10 @@
             this.groupBox42.Controls.Add(this.numericUpDown42);
             this.groupBox42.Controls.Add(this.textBox42);
             this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox42.Location = new System.Drawing.Point(258, 100);
+            this.groupBox42.Location = new System.Drawing.Point(260, 100);
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Size = new System.Drawing.Size(125, 82);
-            this.groupBox42.TabIndex = 54;
+            this.groupBox42.TabIndex = 5;
             this.groupBox42.TabStop = false;
             this.groupBox42.Text = "6";
             // 
@@ -3463,7 +3485,7 @@
             this.checkBox42.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox42.AutoSize = true;
             this.checkBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox42.Location = new System.Drawing.Point(94, 19);
+            this.checkBox42.Location = new System.Drawing.Point(96, 22);
             this.checkBox42.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox42.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox42.Name = "checkBox42";
@@ -3477,7 +3499,7 @@
             // button42
             // 
             this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button42.Location = new System.Drawing.Point(6, 19);
+            this.button42.Location = new System.Drawing.Point(8, 22);
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(79, 20);
             this.button42.TabIndex = 10;
@@ -3489,7 +3511,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(6, 61);
+            this.label42.Location = new System.Drawing.Point(8, 64);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(38, 13);
             this.label42.TabIndex = 4;
@@ -3498,7 +3520,7 @@
             // numericUpDown42
             // 
             this.numericUpDown42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown42.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown42.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown42.Name = "numericUpDown42";
             this.numericUpDown42.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown42.TabIndex = 30;
@@ -3508,7 +3530,7 @@
             // textBox42
             // 
             this.textBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox42.Location = new System.Drawing.Point(-2, 40);
+            this.textBox42.Location = new System.Drawing.Point(0, 43);
             this.textBox42.Name = "textBox42";
             this.textBox42.ReadOnly = true;
             this.textBox42.Size = new System.Drawing.Size(130, 18);
@@ -3522,10 +3544,10 @@
             this.groupBox43.Controls.Add(this.numericUpDown43);
             this.groupBox43.Controls.Add(this.textBox43);
             this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox43.Location = new System.Drawing.Point(6, 182);
+            this.groupBox43.Location = new System.Drawing.Point(8, 182);
             this.groupBox43.Name = "groupBox43";
             this.groupBox43.Size = new System.Drawing.Size(125, 82);
-            this.groupBox43.TabIndex = 59;
+            this.groupBox43.TabIndex = 6;
             this.groupBox43.TabStop = false;
             this.groupBox43.Text = "1";
             // 
@@ -3534,7 +3556,7 @@
             this.checkBox43.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox43.AutoSize = true;
             this.checkBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox43.Location = new System.Drawing.Point(94, 19);
+            this.checkBox43.Location = new System.Drawing.Point(96, 22);
             this.checkBox43.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox43.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox43.Name = "checkBox43";
@@ -3548,7 +3570,7 @@
             // button43
             // 
             this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button43.Location = new System.Drawing.Point(6, 19);
+            this.button43.Location = new System.Drawing.Point(8, 22);
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(79, 20);
             this.button43.TabIndex = 10;
@@ -3560,7 +3582,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(6, 61);
+            this.label43.Location = new System.Drawing.Point(8, 64);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(38, 13);
             this.label43.TabIndex = 4;
@@ -3569,7 +3591,7 @@
             // numericUpDown43
             // 
             this.numericUpDown43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown43.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown43.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown43.Name = "numericUpDown43";
             this.numericUpDown43.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown43.TabIndex = 30;
@@ -3579,7 +3601,7 @@
             // textBox43
             // 
             this.textBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox43.Location = new System.Drawing.Point(-2, 40);
+            this.textBox43.Location = new System.Drawing.Point(0, 43);
             this.textBox43.Name = "textBox43";
             this.textBox43.ReadOnly = true;
             this.textBox43.Size = new System.Drawing.Size(130, 18);
@@ -3593,10 +3615,10 @@
             this.groupBox44.Controls.Add(this.numericUpDown44);
             this.groupBox44.Controls.Add(this.textBox44);
             this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox44.Location = new System.Drawing.Point(132, 182);
+            this.groupBox44.Location = new System.Drawing.Point(134, 182);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Size = new System.Drawing.Size(125, 82);
-            this.groupBox44.TabIndex = 58;
+            this.groupBox44.TabIndex = 7;
             this.groupBox44.TabStop = false;
             this.groupBox44.Text = "2";
             // 
@@ -3605,7 +3627,7 @@
             this.checkBox44.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox44.AutoSize = true;
             this.checkBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox44.Location = new System.Drawing.Point(94, 19);
+            this.checkBox44.Location = new System.Drawing.Point(96, 22);
             this.checkBox44.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox44.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox44.Name = "checkBox44";
@@ -3619,7 +3641,7 @@
             // button44
             // 
             this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.Location = new System.Drawing.Point(6, 19);
+            this.button44.Location = new System.Drawing.Point(8, 22);
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(79, 20);
             this.button44.TabIndex = 10;
@@ -3631,7 +3653,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(6, 61);
+            this.label44.Location = new System.Drawing.Point(8, 64);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(38, 13);
             this.label44.TabIndex = 4;
@@ -3640,7 +3662,7 @@
             // numericUpDown44
             // 
             this.numericUpDown44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown44.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown44.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown44.Name = "numericUpDown44";
             this.numericUpDown44.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown44.TabIndex = 30;
@@ -3650,7 +3672,7 @@
             // textBox44
             // 
             this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox44.Location = new System.Drawing.Point(-2, 40);
+            this.textBox44.Location = new System.Drawing.Point(0, 43);
             this.textBox44.Name = "textBox44";
             this.textBox44.ReadOnly = true;
             this.textBox44.Size = new System.Drawing.Size(130, 18);
@@ -3664,10 +3686,10 @@
             this.groupBox45.Controls.Add(this.numericUpDown45);
             this.groupBox45.Controls.Add(this.textBox45);
             this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox45.Location = new System.Drawing.Point(258, 182);
+            this.groupBox45.Location = new System.Drawing.Point(260, 182);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.Size = new System.Drawing.Size(125, 82);
-            this.groupBox45.TabIndex = 57;
+            this.groupBox45.TabIndex = 8;
             this.groupBox45.TabStop = false;
             this.groupBox45.Text = "3";
             // 
@@ -3676,7 +3698,7 @@
             this.checkBox45.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox45.AutoSize = true;
             this.checkBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox45.Location = new System.Drawing.Point(94, 19);
+            this.checkBox45.Location = new System.Drawing.Point(96, 22);
             this.checkBox45.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox45.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox45.Name = "checkBox45";
@@ -3690,7 +3712,7 @@
             // button45
             // 
             this.button45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button45.Location = new System.Drawing.Point(6, 19);
+            this.button45.Location = new System.Drawing.Point(8, 22);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(79, 20);
             this.button45.TabIndex = 10;
@@ -3702,7 +3724,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(6, 61);
+            this.label45.Location = new System.Drawing.Point(8, 64);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(38, 13);
             this.label45.TabIndex = 4;
@@ -3711,7 +3733,7 @@
             // numericUpDown45
             // 
             this.numericUpDown45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown45.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown45.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown45.Name = "numericUpDown45";
             this.numericUpDown45.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown45.TabIndex = 30;
@@ -3721,7 +3743,7 @@
             // textBox45
             // 
             this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox45.Location = new System.Drawing.Point(-2, 40);
+            this.textBox45.Location = new System.Drawing.Point(0, 43);
             this.textBox45.Name = "textBox45";
             this.textBox45.ReadOnly = true;
             this.textBox45.Size = new System.Drawing.Size(130, 18);
@@ -3735,10 +3757,10 @@
             this.groupBox46.Controls.Add(this.numericUpDown46);
             this.groupBox46.Controls.Add(this.textBox46);
             this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox46.Location = new System.Drawing.Point(6, 264);
+            this.groupBox46.Location = new System.Drawing.Point(8, 264);
             this.groupBox46.Name = "groupBox46";
             this.groupBox46.Size = new System.Drawing.Size(125, 82);
-            this.groupBox46.TabIndex = 58;
+            this.groupBox46.TabIndex = 9;
             this.groupBox46.TabStop = false;
             this.groupBox46.Text = "0";
             // 
@@ -3747,7 +3769,7 @@
             this.checkBox46.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox46.AutoSize = true;
             this.checkBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox46.Location = new System.Drawing.Point(94, 19);
+            this.checkBox46.Location = new System.Drawing.Point(96, 22);
             this.checkBox46.MaximumSize = new System.Drawing.Size(25, 20);
             this.checkBox46.MinimumSize = new System.Drawing.Size(25, 20);
             this.checkBox46.Name = "checkBox46";
@@ -3761,7 +3783,7 @@
             // button46
             // 
             this.button46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button46.Location = new System.Drawing.Point(6, 19);
+            this.button46.Location = new System.Drawing.Point(8, 22);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(79, 20);
             this.button46.TabIndex = 10;
@@ -3773,7 +3795,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(6, 61);
+            this.label46.Location = new System.Drawing.Point(8, 64);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(38, 13);
             this.label46.TabIndex = 4;
@@ -3782,7 +3804,7 @@
             // numericUpDown46
             // 
             this.numericUpDown46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown46.Location = new System.Drawing.Point(49, 59);
+            this.numericUpDown46.Location = new System.Drawing.Point(51, 62);
             this.numericUpDown46.Name = "numericUpDown46";
             this.numericUpDown46.Size = new System.Drawing.Size(70, 20);
             this.numericUpDown46.TabIndex = 30;
@@ -3792,7 +3814,7 @@
             // textBox46
             // 
             this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox46.Location = new System.Drawing.Point(-2, 40);
+            this.textBox46.Location = new System.Drawing.Point(0, 43);
             this.textBox46.Name = "textBox46";
             this.textBox46.ReadOnly = true;
             this.textBox46.Size = new System.Drawing.Size(130, 18);
@@ -3811,17 +3833,17 @@
             this.groupBox47.Controls.Add(this.groupBox39);
             this.groupBox47.Controls.Add(this.groupBox45);
             this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox47.Location = new System.Drawing.Point(923, 268);
+            this.groupBox47.Location = new System.Drawing.Point(540, 353);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(388, 351);
-            this.groupBox47.TabIndex = 60;
+            this.groupBox47.Size = new System.Drawing.Size(388, 350);
+            this.groupBox47.TabIndex = 41;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "Numpad";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(51, 387);
+            this.label47.Location = new System.Drawing.Point(55, 517);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(65, 13);
             this.label47.TabIndex = 61;
@@ -3829,31 +3851,70 @@
             // 
             // textBox47
             // 
-            this.textBox47.Location = new System.Drawing.Point(126, 384);
+            this.textBox47.Location = new System.Drawing.Point(130, 514);
             this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(65, 20);
-            this.textBox47.TabIndex = 62;
+            this.textBox47.Size = new System.Drawing.Size(70, 20);
+            this.textBox47.TabIndex = 42;
             this.textBox47.Text = "0";
             this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // buttonSampleParams
             // 
-            this.buttonSampleParams.Location = new System.Drawing.Point(35, 458);
+            this.buttonSampleParams.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSampleParams.Location = new System.Drawing.Point(8, 55);
             this.buttonSampleParams.Name = "buttonSampleParams";
             this.buttonSampleParams.Size = new System.Drawing.Size(106, 23);
-            this.buttonSampleParams.TabIndex = 63;
+            this.buttonSampleParams.TabIndex = 1;
             this.buttonSampleParams.Text = "Sample Parameters";
             this.buttonSampleParams.UseVisualStyleBackColor = true;
             this.buttonSampleParams.Click += new System.EventHandler(this.buttonSampleParams_Click);
+            // 
+            // checkBox47
+            // 
+            this.checkBox47.AutoSize = true;
+            this.checkBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox47.Location = new System.Drawing.Point(132, 59);
+            this.checkBox47.Name = "checkBox47";
+            this.checkBox47.Size = new System.Drawing.Size(170, 17);
+            this.checkBox47.TabIndex = 2;
+            this.checkBox47.Text = "Add Sample Parameters to File";
+            this.checkBox47.UseVisualStyleBackColor = true;
+            // 
+            // ColorButton
+            // 
+            this.ColorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColorButton.Location = new System.Drawing.Point(10, 113);
+            this.ColorButton.Name = "ColorButton";
+            this.ColorButton.Size = new System.Drawing.Size(104, 23);
+            this.ColorButton.TabIndex = 4;
+            this.ColorButton.Text = "Background Color";
+            this.ColorButton.UseVisualStyleBackColor = true;
+            this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Controls.Add(this.buttonKeyBindings);
+            this.groupBox48.Controls.Add(this.ColorButton);
+            this.groupBox48.Controls.Add(this.buttonSaveData);
+            this.groupBox48.Controls.Add(this.checkBox47);
+            this.groupBox48.Controls.Add(this.buttonSampleParams);
+            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox48.Location = new System.Drawing.Point(42, 359);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Size = new System.Drawing.Size(305, 144);
+            this.groupBox48.TabIndex = 0;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "Controls";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1370, 709);
-            this.Controls.Add(this.buttonSampleParams);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(1266, 706);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox48);
             this.Controls.Add(this.textBox47);
             this.Controls.Add(this.label47);
             this.Controls.Add(this.groupBox47);
@@ -3892,10 +3953,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.buttonKeyBindings);
-            this.Controls.Add(this.buttonSaveData);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -4042,6 +4100,8 @@
             this.groupBox46.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown46)).EndInit();
             this.groupBox47.ResumeLayout(false);
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox48.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4342,6 +4402,11 @@
         private System.Windows.Forms.TextBox textBox47;
         private System.Windows.Forms.ToolStripMenuItem sampleParametersToolStripMenuItem;
         private System.Windows.Forms.Button buttonSampleParams;
+        private System.Windows.Forms.ToolStripMenuItem newCountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.Button ColorButton;
+        public System.Windows.Forms.CheckBox checkBox47;
+        private System.Windows.Forms.GroupBox groupBox48;
     }
 }
 
