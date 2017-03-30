@@ -73,15 +73,15 @@ namespace TaxonScout
                 case Keys.D8:       checkBox34.Checked = true;   break;
                 case Keys.D9:       checkBox35.Checked = true;   break;
                 case Keys.D0:       checkBox36.Checked = true;   break;
-                case Keys.NumPad1:  checkBox37.Checked = true;   break;
-                case Keys.NumPad2:  checkBox38.Checked = true;   break;
-                case Keys.NumPad3:  checkBox39.Checked = true;   break;
+                case Keys.NumPad7:  checkBox37.Checked = true;   break;
+                case Keys.NumPad8:  checkBox38.Checked = true;   break;
+                case Keys.NumPad9:  checkBox39.Checked = true;   break;
                 case Keys.NumPad4:  checkBox40.Checked = true;   break;
                 case Keys.NumPad5:  checkBox41.Checked = true;   break;
                 case Keys.NumPad6:  checkBox42.Checked = true;   break;
-                case Keys.NumPad7:  checkBox43.Checked = true;   break;
-                case Keys.NumPad8:  checkBox44.Checked = true;   break;
-                case Keys.NumPad9:  checkBox45.Checked = true;   break;
+                case Keys.NumPad1:  checkBox43.Checked = true;   break;
+                case Keys.NumPad2:  checkBox44.Checked = true;   break;
+                case Keys.NumPad3:  checkBox45.Checked = true;   break;
                 case Keys.NumPad0:  checkBox46.Checked = true;   break;
                     
                 default:  /* do nothing */  break;
@@ -130,15 +130,15 @@ namespace TaxonScout
                 case Keys.D8:       numericUpDown34.Value += 1; checkBox34.Checked = false; break;
                 case Keys.D9:       numericUpDown35.Value += 1; checkBox35.Checked = false; break;
                 case Keys.D0:       numericUpDown36.Value += 1; checkBox36.Checked = false; break;
-                case Keys.NumPad1:  numericUpDown37.Value += 1; checkBox37.Checked = false; break;
-                case Keys.NumPad2:  numericUpDown38.Value += 1; checkBox38.Checked = false; break;
-                case Keys.NumPad3:  numericUpDown39.Value += 1; checkBox39.Checked = false; break;
+                case Keys.NumPad7:  numericUpDown37.Value += 1; checkBox37.Checked = false; break;
+                case Keys.NumPad8:  numericUpDown38.Value += 1; checkBox38.Checked = false; break;
+                case Keys.NumPad9:  numericUpDown39.Value += 1; checkBox39.Checked = false; break;
                 case Keys.NumPad4:  numericUpDown40.Value += 1; checkBox40.Checked = false; break;
                 case Keys.NumPad5:  numericUpDown41.Value += 1; checkBox41.Checked = false; break;
                 case Keys.NumPad6:  numericUpDown42.Value += 1; checkBox42.Checked = false; break;
-                case Keys.NumPad7:  numericUpDown43.Value += 1; checkBox43.Checked = false; break;
-                case Keys.NumPad8:  numericUpDown44.Value += 1; checkBox44.Checked = false; break;
-                case Keys.NumPad9:  numericUpDown45.Value += 1; checkBox45.Checked = false; break;
+                case Keys.NumPad1:  numericUpDown43.Value += 1; checkBox43.Checked = false; break;
+                case Keys.NumPad2:  numericUpDown44.Value += 1; checkBox44.Checked = false; break;
+                case Keys.NumPad3:  numericUpDown45.Value += 1; checkBox45.Checked = false; break;
                 case Keys.NumPad0:  numericUpDown46.Value += 1; checkBox46.Checked = false; break;
                     
                 default:  /* do nothing */  break;
@@ -250,15 +250,15 @@ namespace TaxonScout
             frm.comboBox34.DataSource = new BindingSource(bs, "");  // D8
             frm.comboBox35.DataSource = new BindingSource(bs, "");  // D9
             frm.comboBox36.DataSource = new BindingSource(bs, "");  // D0
-            frm.comboBox37.DataSource = new BindingSource(bs, "");  // KeyPad1
-            frm.comboBox38.DataSource = new BindingSource(bs, "");  // KeyPad2
-            frm.comboBox39.DataSource = new BindingSource(bs, "");  // KeyPad3
+            frm.comboBox37.DataSource = new BindingSource(bs, "");  // KeyPad7
+            frm.comboBox38.DataSource = new BindingSource(bs, "");  // KeyPad8
+            frm.comboBox39.DataSource = new BindingSource(bs, "");  // KeyPad9
             frm.comboBox40.DataSource = new BindingSource(bs, "");  // KeyPad4
             frm.comboBox41.DataSource = new BindingSource(bs, "");  // KeyPad5
             frm.comboBox42.DataSource = new BindingSource(bs, "");  // KeyPad6
-            frm.comboBox43.DataSource = new BindingSource(bs, "");  // KeyPad7
-            frm.comboBox44.DataSource = new BindingSource(bs, "");  // KeyPad8
-            frm.comboBox45.DataSource = new BindingSource(bs, "");  // KeyPad9
+            frm.comboBox43.DataSource = new BindingSource(bs, "");  // KeyPad1
+            frm.comboBox44.DataSource = new BindingSource(bs, "");  // KeyPad2
+            frm.comboBox45.DataSource = new BindingSource(bs, "");  // KeyPad3
             frm.comboBox46.DataSource = new BindingSource(bs, "");  // KeyPad0
             
             frm.Show(this);     // the "this" is a pointer to the owner. Let him know who's the boss
@@ -841,7 +841,7 @@ namespace TaxonScout
         }
 
         private void button37_Click(object sender, EventArgs e)
-        {   // launch the form that handles a single key binding [Num1]
+        {   // launch the form that handles a single key binding [Num7]
             AssignedValue = groupBox37.Text;  // the specific Key you wish to bind to a taxon
             Form3 frm = new Form3(AssignedValue, textBox37);   // key is sent as a parameter. easy, huh?
             frm.comboBox1.DataSource = new BindingSource(bs, "");
@@ -849,7 +849,7 @@ namespace TaxonScout
         }
 
         private void button38_Click(object sender, EventArgs e)
-        {   // launch the form that handles a single key binding [Num2]
+        {   // launch the form that handles a single key binding [Num8]
             AssignedValue = groupBox38.Text;  // the specific Key you wish to bind to a taxon
             Form3 frm = new Form3(AssignedValue, textBox38);   // key is sent as a parameter. easy, huh?
             frm.comboBox1.DataSource = new BindingSource(bs, "");
@@ -857,7 +857,7 @@ namespace TaxonScout
         }
 
         private void button39_Click(object sender, EventArgs e)
-        {   // launch the form that handles a single key binding [Num3]
+        {   // launch the form that handles a single key binding [Num9]
             AssignedValue = groupBox39.Text;  // the specific Key you wish to bind to a taxon
             Form3 frm = new Form3(AssignedValue, textBox39);   // key is sent as a parameter. easy, huh?
             frm.comboBox1.DataSource = new BindingSource(bs, "");
@@ -889,7 +889,7 @@ namespace TaxonScout
         }
 
         private void button43_Click(object sender, EventArgs e)
-        {   // launch the form that handles a single key binding [Num7]
+        {   // launch the form that handles a single key binding [Num1]
             AssignedValue = groupBox43.Text;  // the specific Key you wish to bind to a taxon
             Form3 frm = new Form3(AssignedValue, textBox43);   // key is sent as a parameter. easy, huh?
             frm.comboBox1.DataSource = new BindingSource(bs, "");
@@ -897,7 +897,7 @@ namespace TaxonScout
         }
 
         private void button44_Click(object sender, EventArgs e)
-        {   // launch the form that handles a single key binding [Num8]
+        {   // launch the form that handles a single key binding [Num2]
             AssignedValue = groupBox44.Text;  // the specific Key you wish to bind to a taxon
             Form3 frm = new Form3(AssignedValue, textBox44);   // key is sent as a parameter. easy, huh?
             frm.comboBox1.DataSource = new BindingSource(bs, "");
@@ -905,7 +905,7 @@ namespace TaxonScout
         }
 
         private void button45_Click(object sender, EventArgs e)
-        {   // launch the form that handles a single key binding [Num9]
+        {   // launch the form that handles a single key binding [Num3]
             AssignedValue = groupBox45.Text;  // the specific Key you wish to bind to a taxon
             Form3 frm = new Form3(AssignedValue, textBox45);   // key is sent as a parameter. easy, huh?
             frm.comboBox1.DataSource = new BindingSource(bs, "");
@@ -937,61 +937,59 @@ namespace TaxonScout
             {
                 // add every textbox and count value to a list
                 List<String> exportList = new List<String>();
-                exportList.Add(textBox1.Text  + "\t" + numericUpDown1.Value);  // Q
-                exportList.Add(textBox2.Text  + "\t" + numericUpDown2.Value);  // W
-                exportList.Add(textBox3.Text  + "\t" + numericUpDown3.Value);  // E
-                exportList.Add(textBox4.Text  + "\t" + numericUpDown4.Value);  // R
-                exportList.Add(textBox5.Text  + "\t" + numericUpDown5.Value);  // T
-                exportList.Add(textBox6.Text  + "\t" + numericUpDown6.Value);  // Y
-                exportList.Add(textBox7.Text  + "\t" + numericUpDown7.Value);  // U
-                exportList.Add(textBox8.Text  + "\t" + numericUpDown8.Value);  // I
-                exportList.Add(textBox9.Text  + "\t" + numericUpDown9.Value);  // O
-                exportList.Add(textBox10.Text + "\t" + numericUpDown10.Value); // P
-                exportList.Add(textBox11.Text + "\t" + numericUpDown11.Value); // A
-                exportList.Add(textBox12.Text + "\t" + numericUpDown12.Value); // S
-                exportList.Add(textBox13.Text + "\t" + numericUpDown13.Value); // D
-                exportList.Add(textBox14.Text + "\t" + numericUpDown14.Value); // F
-                exportList.Add(textBox15.Text + "\t" + numericUpDown15.Value); // G
-                exportList.Add(textBox16.Text + "\t" + numericUpDown16.Value); // H
-                exportList.Add(textBox17.Text + "\t" + numericUpDown17.Value); // J
-                exportList.Add(textBox18.Text + "\t" + numericUpDown18.Value); // K
-                exportList.Add(textBox19.Text + "\t" + numericUpDown19.Value); // L
-                exportList.Add(textBox20.Text + "\t" + numericUpDown20.Value); // Z
-                exportList.Add(textBox21.Text + "\t" + numericUpDown21.Value); // X
-                exportList.Add(textBox22.Text + "\t" + numericUpDown22.Value); // C
-                exportList.Add(textBox23.Text + "\t" + numericUpDown23.Value); // V
-                exportList.Add(textBox24.Text + "\t" + numericUpDown24.Value); // B
-                exportList.Add(textBox25.Text + "\t" + numericUpDown25.Value); // N
-                exportList.Add(textBox26.Text + "\t" + numericUpDown26.Value); // M
-                exportList.Add(textBox27.Text + "\t" + numericUpDown27.Value); // D1
-                exportList.Add(textBox28.Text + "\t" + numericUpDown28.Value); // D2
-                exportList.Add(textBox29.Text + "\t" + numericUpDown29.Value); // D3
-                exportList.Add(textBox30.Text + "\t" + numericUpDown30.Value); // D4
-                exportList.Add(textBox31.Text + "\t" + numericUpDown31.Value); // D5
-                exportList.Add(textBox32.Text + "\t" + numericUpDown32.Value); // D6
-                exportList.Add(textBox33.Text + "\t" + numericUpDown33.Value); // D7
-                exportList.Add(textBox34.Text + "\t" + numericUpDown34.Value); // D8
-                exportList.Add(textBox35.Text + "\t" + numericUpDown35.Value); // D9
-                exportList.Add(textBox36.Text + "\t" + numericUpDown36.Value); // D0
-                exportList.Add(textBox37.Text + "\t" + numericUpDown37.Value); // KeyPad1
-                exportList.Add(textBox38.Text + "\t" + numericUpDown38.Value); // KeyPad2
-                exportList.Add(textBox39.Text + "\t" + numericUpDown39.Value); // KeyPad3
-                exportList.Add(textBox40.Text + "\t" + numericUpDown40.Value); // KeyPad4
-                exportList.Add(textBox41.Text + "\t" + numericUpDown41.Value); // KeyPad5
-                exportList.Add(textBox42.Text + "\t" + numericUpDown42.Value); // KeyPad6
-                exportList.Add(textBox43.Text + "\t" + numericUpDown43.Value); // KeyPad7
-                exportList.Add(textBox44.Text + "\t" + numericUpDown44.Value); // KeyPad8
-                exportList.Add(textBox45.Text + "\t" + numericUpDown45.Value); // KeyPad9
-                exportList.Add(textBox46.Text + "\t" + numericUpDown46.Value); // KeyPad0
+                exportList.Clear();
+                if ( numericUpDown1.Value != 0) exportList.Add( textBox1.Text + "\t" + numericUpDown1.Value);  // Q
+                if ( numericUpDown2.Value != 0) exportList.Add( textBox2.Text + "\t" + numericUpDown2.Value);  // W
+                if ( numericUpDown3.Value != 0) exportList.Add( textBox3.Text + "\t" + numericUpDown3.Value);  // E
+                if ( numericUpDown4.Value != 0) exportList.Add( textBox4.Text + "\t" + numericUpDown4.Value);  // R
+                if ( numericUpDown5.Value != 0) exportList.Add( textBox5.Text + "\t" + numericUpDown5.Value);  // T
+                if ( numericUpDown6.Value != 0) exportList.Add( textBox6.Text + "\t" + numericUpDown6.Value);  // Y
+                if ( numericUpDown7.Value != 0) exportList.Add( textBox7.Text + "\t" + numericUpDown7.Value);  // U
+                if ( numericUpDown8.Value != 0) exportList.Add( textBox8.Text + "\t" + numericUpDown8.Value);  // I
+                if ( numericUpDown9.Value != 0) exportList.Add( textBox9.Text + "\t" + numericUpDown9.Value);  // O
+                if (numericUpDown10.Value != 0) exportList.Add(textBox10.Text + "\t" + numericUpDown10.Value); // P
+                if (numericUpDown11.Value != 0) exportList.Add(textBox11.Text + "\t" + numericUpDown11.Value); // A
+                if (numericUpDown12.Value != 0) exportList.Add(textBox12.Text + "\t" + numericUpDown12.Value); // S
+                if (numericUpDown13.Value != 0) exportList.Add(textBox13.Text + "\t" + numericUpDown13.Value); // D
+                if (numericUpDown14.Value != 0) exportList.Add(textBox14.Text + "\t" + numericUpDown14.Value); // F
+                if (numericUpDown15.Value != 0) exportList.Add(textBox15.Text + "\t" + numericUpDown15.Value); // G
+                if (numericUpDown16.Value != 0) exportList.Add(textBox16.Text + "\t" + numericUpDown16.Value); // H
+                if (numericUpDown17.Value != 0) exportList.Add(textBox17.Text + "\t" + numericUpDown17.Value); // J
+                if (numericUpDown18.Value != 0) exportList.Add(textBox18.Text + "\t" + numericUpDown18.Value); // K
+                if (numericUpDown19.Value != 0) exportList.Add(textBox19.Text + "\t" + numericUpDown19.Value); // L
+                if (numericUpDown20.Value != 0) exportList.Add(textBox20.Text + "\t" + numericUpDown20.Value); // Z
+                if (numericUpDown21.Value != 0) exportList.Add(textBox21.Text + "\t" + numericUpDown21.Value); // X
+                if (numericUpDown22.Value != 0) exportList.Add(textBox22.Text + "\t" + numericUpDown22.Value); // C
+                if (numericUpDown23.Value != 0) exportList.Add(textBox23.Text + "\t" + numericUpDown23.Value); // V
+                if (numericUpDown24.Value != 0) exportList.Add(textBox24.Text + "\t" + numericUpDown24.Value); // B
+                if (numericUpDown25.Value != 0) exportList.Add(textBox25.Text + "\t" + numericUpDown25.Value); // N
+                if (numericUpDown26.Value != 0) exportList.Add(textBox26.Text + "\t" + numericUpDown26.Value); // M
+                if (numericUpDown27.Value != 0) exportList.Add(textBox27.Text + "\t" + numericUpDown27.Value); // D1
+                if (numericUpDown28.Value != 0) exportList.Add(textBox28.Text + "\t" + numericUpDown28.Value); // D2
+                if (numericUpDown29.Value != 0) exportList.Add(textBox29.Text + "\t" + numericUpDown29.Value); // D3
+                if (numericUpDown30.Value != 0) exportList.Add(textBox30.Text + "\t" + numericUpDown30.Value); // D4
+                if (numericUpDown31.Value != 0) exportList.Add(textBox31.Text + "\t" + numericUpDown31.Value); // D5
+                if (numericUpDown32.Value != 0) exportList.Add(textBox32.Text + "\t" + numericUpDown32.Value); // D6
+                if (numericUpDown33.Value != 0) exportList.Add(textBox33.Text + "\t" + numericUpDown33.Value); // D7
+                if (numericUpDown34.Value != 0) exportList.Add(textBox34.Text + "\t" + numericUpDown34.Value); // D8
+                if (numericUpDown35.Value != 0) exportList.Add(textBox35.Text + "\t" + numericUpDown35.Value); // D9
+                if (numericUpDown36.Value != 0) exportList.Add(textBox36.Text + "\t" + numericUpDown36.Value); // D0
+                if (numericUpDown37.Value != 0) exportList.Add(textBox37.Text + "\t" + numericUpDown37.Value); // KeyPad7
+                if (numericUpDown38.Value != 0) exportList.Add(textBox38.Text + "\t" + numericUpDown38.Value); // KeyPad8
+                if (numericUpDown39.Value != 0) exportList.Add(textBox39.Text + "\t" + numericUpDown39.Value); // KeyPad9
+                if (numericUpDown40.Value != 0) exportList.Add(textBox40.Text + "\t" + numericUpDown40.Value); // KeyPad4
+                if (numericUpDown41.Value != 0) exportList.Add(textBox41.Text + "\t" + numericUpDown41.Value); // KeyPad5
+                if (numericUpDown42.Value != 0) exportList.Add(textBox42.Text + "\t" + numericUpDown42.Value); // KeyPad6
+                if (numericUpDown43.Value != 0) exportList.Add(textBox43.Text + "\t" + numericUpDown43.Value); // KeyPad1
+                if (numericUpDown44.Value != 0) exportList.Add(textBox44.Text + "\t" + numericUpDown44.Value); // KeyPad2
+                if (numericUpDown45.Value != 0) exportList.Add(textBox45.Text + "\t" + numericUpDown45.Value); // KeyPad3
+                if (numericUpDown46.Value != 0) exportList.Add(textBox46.Text + "\t" + numericUpDown46.Value); // KeyPad0
                 
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName))
                 {
                     foreach (string line in exportList)
                     {
-                        if (!line.Contains("0"))
-                        {
-                            file.WriteLine(line);
-                        }
+                        file.WriteLine(line);
                     }
                 }
             }

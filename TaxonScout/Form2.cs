@@ -65,15 +65,15 @@ namespace TaxonScout
             comboBox34.Text = parent.textBox34.Text;   // D8
             comboBox35.Text = parent.textBox35.Text;   // D9
             comboBox36.Text = parent.textBox36.Text;   // D0
-            comboBox37.Text = parent.textBox37.Text;   // KeyPad1
-            comboBox38.Text = parent.textBox38.Text;   // KeyPad2
-            comboBox39.Text = parent.textBox39.Text;   // KeyPad3
+            comboBox37.Text = parent.textBox37.Text;   // KeyPad7
+            comboBox38.Text = parent.textBox38.Text;   // KeyPad8
+            comboBox39.Text = parent.textBox39.Text;   // KeyPad9
             comboBox40.Text = parent.textBox40.Text;   // KeyPad4
             comboBox41.Text = parent.textBox41.Text;   // KeyPad5
             comboBox42.Text = parent.textBox42.Text;   // KeyPad6
-            comboBox43.Text = parent.textBox43.Text;   // KeyPad7
-            comboBox44.Text = parent.textBox44.Text;   // KeyPad8
-            comboBox45.Text = parent.textBox45.Text;   // KeyPad9
+            comboBox43.Text = parent.textBox43.Text;   // KeyPad1
+            comboBox44.Text = parent.textBox44.Text;   // KeyPad2
+            comboBox45.Text = parent.textBox45.Text;   // KeyPad3
             comboBox46.Text = parent.textBox46.Text;   // KeyPad0
 
 
@@ -183,15 +183,15 @@ namespace TaxonScout
             comboBox34.DataSource = new BindingSource(bs, "");   // D8
             comboBox35.DataSource = new BindingSource(bs, "");   // D9
             comboBox36.DataSource = new BindingSource(bs, "");   // D0
-            comboBox37.DataSource = new BindingSource(bs, "");   // KeyPad1
-            comboBox38.DataSource = new BindingSource(bs, "");   // KeyPad2
-            comboBox39.DataSource = new BindingSource(bs, "");   // KeyPad3
+            comboBox37.DataSource = new BindingSource(bs, "");   // KeyPad7
+            comboBox38.DataSource = new BindingSource(bs, "");   // KeyPad8
+            comboBox39.DataSource = new BindingSource(bs, "");   // KeyPad9
             comboBox40.DataSource = new BindingSource(bs, "");   // KeyPad4
             comboBox41.DataSource = new BindingSource(bs, "");   // KeyPad5
             comboBox42.DataSource = new BindingSource(bs, "");   // KeyPad6
-            comboBox43.DataSource = new BindingSource(bs, "");   // KeyPad7
-            comboBox44.DataSource = new BindingSource(bs, "");   // KeyPad8
-            comboBox45.DataSource = new BindingSource(bs, "");   // KeyPad9
+            comboBox43.DataSource = new BindingSource(bs, "");   // KeyPad1
+            comboBox44.DataSource = new BindingSource(bs, "");   // KeyPad2
+            comboBox45.DataSource = new BindingSource(bs, "");   // KeyPad3
             comboBox46.DataSource = new BindingSource(bs, "");   // KeyPad0
 
 
@@ -237,15 +237,15 @@ namespace TaxonScout
             parent.setString(parent.textBox34, comboBox34.Text);  // D8
             parent.setString(parent.textBox35, comboBox35.Text);  // D9
             parent.setString(parent.textBox36, comboBox36.Text);  // D0
-            parent.setString(parent.textBox37, comboBox37.Text);  // KeyPad1
-            parent.setString(parent.textBox38, comboBox38.Text);  // KeyPad2
-            parent.setString(parent.textBox39, comboBox39.Text);  // KeyPad3
+            parent.setString(parent.textBox37, comboBox37.Text);  // KeyPad7
+            parent.setString(parent.textBox38, comboBox38.Text);  // KeyPad8
+            parent.setString(parent.textBox39, comboBox39.Text);  // KeyPad9
             parent.setString(parent.textBox40, comboBox40.Text);  // KeyPad4
             parent.setString(parent.textBox41, comboBox41.Text);  // KeyPad5
             parent.setString(parent.textBox42, comboBox42.Text);  // KeyPad6
-            parent.setString(parent.textBox43, comboBox43.Text);  // KeyPad7
-            parent.setString(parent.textBox44, comboBox44.Text);  // KeyPad8
-            parent.setString(parent.textBox45, comboBox45.Text);  // KeyPad9
+            parent.setString(parent.textBox43, comboBox43.Text);  // KeyPad1
+            parent.setString(parent.textBox44, comboBox44.Text);  // KeyPad2
+            parent.setString(parent.textBox45, comboBox45.Text);  // KeyPad3
             parent.setString(parent.textBox46, comboBox46.Text);  // KeyPad0
 
 
@@ -284,6 +284,7 @@ namespace TaxonScout
                 myList.Add(line.ToString());
                 i++;
             }
+
             if (i >  1)  comboBox1.Text = myList[ 1];
             if (i >  2)  comboBox2.Text = myList[ 2];
             if (i >  3)  comboBox3.Text = myList[ 3];

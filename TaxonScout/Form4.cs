@@ -12,6 +12,8 @@ namespace TaxonScout
 {
     public partial class Form4 : Form
     {
+        private List<String> parametersList = new List<String>();
+
         public Form4()
         {
             InitializeComponent();
@@ -27,15 +29,18 @@ namespace TaxonScout
         private void button1_Click(object sender, EventArgs e)
         {   // Save button; send the data to parent form;
             Form1 parent = (Form1)this.Owner;
-            /*
-             * 
-             *  code that returns data to main form.
-             *  i have to decide in which form i will store it.
-             *  
-             *  i could pass it on as individual strings but a list
-             *  seems more logical and easier to deal with.
-             * 
-             */
+
+            parametersList.Clear();
+
+            parametersList.Add(textBox2.Text);
+            parametersList.Add(textBox3.Text);
+            parametersList.Add(textBox4.Text);
+            parametersList.Add(textBox5.Text);
+            parametersList.Add(textBox6.Text);
+            parametersList.Add(textBox7.Text);
+            parametersList.Add(textBox8.Text);
+            parametersList.Add(textBox9.Text);
+
             this.Close();
         }
 
@@ -46,12 +51,12 @@ namespace TaxonScout
         
         private void dateTimePicker1_CloseUp(object sender, EventArgs e)
         {
-            textBox2.Text = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            textBox3.Text = dateTimePicker1.Value.ToString("dd-MM-yyyy");
         }
 
         private void dateTimePicker2_CloseUp(object sender, EventArgs e)
         {
-            textBox7.Text = dateTimePicker2.Value.ToString("dd-MM-yyyy");
+            textBox8.Text = dateTimePicker2.Value.ToString("dd-MM-yyyy");
         }
     }
 }
