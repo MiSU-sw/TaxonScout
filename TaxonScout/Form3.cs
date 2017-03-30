@@ -40,10 +40,5 @@ namespace TaxonScout
         {   // Cancel button
             this.Close();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {   // something was selected in this combobox
-            
-        }
     }
 }
