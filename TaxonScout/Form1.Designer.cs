@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -682,6 +683,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -692,7 +694,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1266, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1316, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -3118,7 +3120,7 @@
             this.groupBox37.Controls.Add(this.numericUpDown37);
             this.groupBox37.Controls.Add(this.textBox37);
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox37.Location = new System.Drawing.Point(8, 18);
+            this.groupBox37.Location = new System.Drawing.Point(6, 16);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Size = new System.Drawing.Size(125, 82);
             this.groupBox37.TabIndex = 0;
@@ -3189,7 +3191,7 @@
             this.groupBox38.Controls.Add(this.numericUpDown38);
             this.groupBox38.Controls.Add(this.textBox38);
             this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox38.Location = new System.Drawing.Point(134, 18);
+            this.groupBox38.Location = new System.Drawing.Point(132, 16);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Size = new System.Drawing.Size(125, 82);
             this.groupBox38.TabIndex = 1;
@@ -3260,7 +3262,7 @@
             this.groupBox39.Controls.Add(this.numericUpDown39);
             this.groupBox39.Controls.Add(this.textBox39);
             this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox39.Location = new System.Drawing.Point(260, 18);
+            this.groupBox39.Location = new System.Drawing.Point(258, 16);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Size = new System.Drawing.Size(125, 82);
             this.groupBox39.TabIndex = 2;
@@ -3331,7 +3333,7 @@
             this.groupBox40.Controls.Add(this.numericUpDown40);
             this.groupBox40.Controls.Add(this.textBox40);
             this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox40.Location = new System.Drawing.Point(8, 100);
+            this.groupBox40.Location = new System.Drawing.Point(6, 98);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Size = new System.Drawing.Size(125, 82);
             this.groupBox40.TabIndex = 3;
@@ -3402,7 +3404,7 @@
             this.groupBox41.Controls.Add(this.numericUpDown41);
             this.groupBox41.Controls.Add(this.textBox41);
             this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox41.Location = new System.Drawing.Point(134, 100);
+            this.groupBox41.Location = new System.Drawing.Point(132, 98);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Size = new System.Drawing.Size(125, 82);
             this.groupBox41.TabIndex = 4;
@@ -3473,7 +3475,7 @@
             this.groupBox42.Controls.Add(this.numericUpDown42);
             this.groupBox42.Controls.Add(this.textBox42);
             this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox42.Location = new System.Drawing.Point(260, 100);
+            this.groupBox42.Location = new System.Drawing.Point(258, 98);
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Size = new System.Drawing.Size(125, 82);
             this.groupBox42.TabIndex = 5;
@@ -3544,7 +3546,7 @@
             this.groupBox43.Controls.Add(this.numericUpDown43);
             this.groupBox43.Controls.Add(this.textBox43);
             this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox43.Location = new System.Drawing.Point(8, 182);
+            this.groupBox43.Location = new System.Drawing.Point(6, 180);
             this.groupBox43.Name = "groupBox43";
             this.groupBox43.Size = new System.Drawing.Size(125, 82);
             this.groupBox43.TabIndex = 6;
@@ -3615,7 +3617,7 @@
             this.groupBox44.Controls.Add(this.numericUpDown44);
             this.groupBox44.Controls.Add(this.textBox44);
             this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox44.Location = new System.Drawing.Point(134, 182);
+            this.groupBox44.Location = new System.Drawing.Point(132, 180);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Size = new System.Drawing.Size(125, 82);
             this.groupBox44.TabIndex = 7;
@@ -3686,7 +3688,7 @@
             this.groupBox45.Controls.Add(this.numericUpDown45);
             this.groupBox45.Controls.Add(this.textBox45);
             this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox45.Location = new System.Drawing.Point(260, 182);
+            this.groupBox45.Location = new System.Drawing.Point(258, 180);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.Size = new System.Drawing.Size(125, 82);
             this.groupBox45.TabIndex = 8;
@@ -3757,7 +3759,7 @@
             this.groupBox46.Controls.Add(this.numericUpDown46);
             this.groupBox46.Controls.Add(this.textBox46);
             this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox46.Location = new System.Drawing.Point(8, 264);
+            this.groupBox46.Location = new System.Drawing.Point(6, 262);
             this.groupBox46.Name = "groupBox46";
             this.groupBox46.Size = new System.Drawing.Size(125, 82);
             this.groupBox46.TabIndex = 9;
@@ -3833,9 +3835,9 @@
             this.groupBox47.Controls.Add(this.groupBox39);
             this.groupBox47.Controls.Add(this.groupBox45);
             this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox47.Location = new System.Drawing.Point(540, 353);
+            this.groupBox47.Location = new System.Drawing.Point(924, 271);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(388, 350);
+            this.groupBox47.Size = new System.Drawing.Size(389, 350);
             this.groupBox47.TabIndex = 41;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "Numpad";
@@ -3911,8 +3913,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(1266, 706);
+            this.ClientSize = new System.Drawing.Size(1316, 624);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox48);
             this.Controls.Add(this.textBox47);
@@ -3954,9 +3955,11 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaxonScout";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

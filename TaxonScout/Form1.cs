@@ -87,6 +87,9 @@ namespace TaxonScout
                     
                 default:  /* do nothing */  break;
             }
+
+            //textBox1.Text = this.Height.ToString();
+            //textBox2.Text = this.Width.ToString();
             
             e.Handled = false;
         }
@@ -1355,6 +1358,12 @@ namespace TaxonScout
             {
                 this.BackColor = cd.Color;
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 frm = new Form5();
+            frm.Show(this);
         }
     }
 }
