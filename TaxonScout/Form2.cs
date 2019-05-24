@@ -17,8 +17,279 @@ namespace TaxonScout
         private List<listElement> importedList = new List<listElement>();
         private static string filename = "./import.txt";    // here we save the file name we are importing;
 
+        private static readonly int numberOfKeys  = 46;
+
+        public Label[]      labelArray    = new Label   [numberOfKeys  + 1];
+        public ComboBox[]   comboBoxArray = new ComboBox[numberOfKeys  + 1];
+
+        private TextBox textBox1 = new TextBox();
+
+        private Button button1 = new Button();
+        private Button button2 = new Button();
+        private Button button3 = new Button();
+        private Button button4 = new Button();
+        private Button button5 = new Button();
+        private Button button6 = new Button();
+
+        private GroupBox groupBox1 = new GroupBox();
+        private GroupBox groupBox2 = new GroupBox();
+        private GroupBox groupBox3 = new GroupBox();
+
+        private OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+        public List<Point> keyPoints = new List<Point>()
+        {                                               // index    key
+            new Point(0,0), // index 0 is unused
+            new Point( 10 + 200 *  0,  28 + 30 * 0),     //  1       1
+            new Point( 10 + 200 *  0,  28 + 30 * 1),     //  2       2
+            new Point( 10 + 200 *  0,  28 + 30 * 2),     //  3       3
+            new Point( 10 + 200 *  0,  28 + 30 * 3),     //  4       4
+            new Point( 10 + 200 *  0,  28 + 30 * 4),     //  5       5
+            new Point( 10 + 200 *  0,  28 + 30 * 5),     //  6       6
+            new Point( 10 + 200 *  0,  28 + 30 * 6),     //  7       7
+            new Point( 10 + 200 *  0,  28 + 30 * 7),     //  8       8
+            new Point( 10 + 200 *  0,  28 + 30 * 8),     //  9       9
+            new Point( 10 + 200 *  0,  28 + 30 * 9),     // 10       0
+
+            new Point( 10 + 200 *  1,  28 + 30 * 0),     // 11       Q
+            new Point( 10 + 200 *  1,  28 + 30 * 1),     // 12       W
+            new Point( 10 + 200 *  1,  28 + 30 * 2),     // 13       E
+            new Point( 10 + 200 *  1,  28 + 30 * 3),     // 14       R
+            new Point( 10 + 200 *  1,  28 + 30 * 4),     // 15       T
+            new Point( 10 + 200 *  1,  28 + 30 * 5),     // 16       Y
+            new Point( 10 + 200 *  1,  28 + 30 * 6),     // 17       U
+            new Point( 10 + 200 *  1,  28 + 30 * 7),     // 18       I
+            new Point( 10 + 200 *  1,  28 + 30 * 8),     // 19       O
+            new Point( 10 + 200 *  1,  28 + 30 * 9),     // 20       P
+
+            new Point( 10 + 200 *  2,  28 + 30 * 0),     // 21       A
+            new Point( 10 + 200 *  2,  28 + 30 * 1),     // 22       S
+            new Point( 10 + 200 *  2,  28 + 30 * 2),     // 23       D
+            new Point( 10 + 200 *  2,  28 + 30 * 3),     // 24       F
+            new Point( 10 + 200 *  2,  28 + 30 * 4),     // 25       G
+            new Point( 10 + 200 *  2,  28 + 30 * 5),     // 26       H
+            new Point( 10 + 200 *  2,  28 + 30 * 6),     // 27       J
+            new Point( 10 + 200 *  2,  28 + 30 * 7),     // 28       K
+            new Point( 10 + 200 *  2,  28 + 30 * 8),     // 29       L
+                                                            
+            new Point( 10 + 200 *  3,  28 + 30 * 0),     // 30       Z
+            new Point( 10 + 200 *  3,  28 + 30 * 1),     // 31       X
+            new Point( 10 + 200 *  3,  28 + 30 * 2),     // 32       C
+            new Point( 10 + 200 *  3,  28 + 30 * 3),     // 33       V
+            new Point( 10 + 200 *  3,  28 + 30 * 4),     // 34       B
+            new Point( 10 + 200 *  3,  28 + 30 * 5),     // 35       N
+            new Point( 10 + 200 *  3,  28 + 30 * 6),     // 36       M
+
+            new Point( 10 + 200 *  0,  28 + 30 * 0),     // 37       Numpad 7
+            new Point( 10 + 200 *  1,  28 + 30 * 0),     // 38       Numpad 8
+            new Point( 10 + 200 *  2,  28 + 30 * 0),     // 39       Numpad 9
+
+            new Point( 10 + 200 *  0,  28 + 30 * 1),     // 40       Numpad 4
+            new Point( 10 + 200 *  1,  28 + 30 * 1),     // 41       Numpad 5
+            new Point( 10 + 200 *  2,  28 + 30 * 1),     // 42       Numpad 6
+
+            new Point( 10 + 200 *  0,  28 + 30 * 2),     // 43       Numpad 1
+            new Point( 10 + 200 *  1,  28 + 30 * 2),     // 44       Numpad 2
+            new Point( 10 + 200 *  2,  28 + 30 * 2),     // 45       Numpad 3
+
+            new Point( 25 + 200 *  0,  28 + 30 * 10),    // 46       Numpad 0
+
+            new Point( 42           ,  30 + 82 * 4),     // 47       Controls groupBox 305, 144
+            new Point( 42           ,  30 + 82 * 4),     // 48       Statistics groupBox 305, 144
+                                  
+            new Point( 55           ,  25 + 82 * 6),     // 49       Group 1 Total Count Label 55, 517, 65, 13
+            new Point(130           ,  25 + 82 * 6),     // 50       Group 1 Total Count Textbox 130, 514
+            new Point( 55           ,  25 + 82 * 7),     // 51       Group 2 Total Count Label 55, 517, 65, 13
+            new Point(130           ,  25 + 82 * 7),     // 52       Group 2 Total Count Textbox 130, 514
+            new Point( 55           ,  25 + 82 * 8),     // 53       Group 3 Total Count Label 55, 517, 65, 13
+            new Point(130           ,  25 + 82 * 8),     // 54       Group 3 Total Count Textbox 130, 514
+            new Point( 55           ,  25 + 82 * 9),     // 55       Group 4 Total Count Label 55, 517, 65, 13
+            new Point(130           ,  25 + 82 * 9),     // 56       Group 4 Total Count Textbox 130, 514
+                                  
+            new Point(130           ,  25 + 82 * 9),     // 57       Button Save Data
+            new Point(130           ,  25 + 82 * 9),     // 58       Sample parameters
+
+        }; // keyPoints
+
+        public List<String> keyList = new List<String>()
+            { " ", // index 0 is unused
+              "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D0",
+              "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+              "A", "S", "D", "F", "G", "H", "J", "K", "L",
+              "Z", "X", "C", "V", "B", "N", "M",
+              "N7", "N8", "N9", "N4", "N5", "N6", "N1", "N2", "N3", "N0"
+            }; // keyList
+
         public Form2()
         {
+            int i;
+            for (i = 1; i <= numberOfKeys; i++)
+            {
+                // 
+                // labelArray
+                // 
+                this.labelArray[i] = new Label();
+                this.labelArray[i].AutoSize = true;
+                this.labelArray[i].Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                this.labelArray[i].Location = keyPoints[i];
+                this.labelArray[i].MaximumSize = new Size(39, 16);
+                this.labelArray[i].MinimumSize = new Size(19, 16);
+                this.labelArray[i].Size = new Size(19, 16);
+                this.labelArray[i].TabIndex = 0;
+                this.labelArray[i].Text = keyList[i];
+                this.labelArray[i].TextAlign = ContentAlignment.MiddleCenter;
+
+                // 
+                // comboBoxArray
+                // 
+                this.comboBoxArray[i] = new ComboBox();
+                this.comboBoxArray[i].DropDownStyle = ComboBoxStyle.DropDownList;
+                this.comboBoxArray[i].FormattingEnabled = true;
+                this.comboBoxArray[i].Location = new Point(labelArray[i].Location.X + 27, labelArray[i].Location.Y - 2);
+                this.comboBoxArray[i].Size = new Size(155, 21);
+                this.comboBoxArray[i].TabIndex = 0;
+            }
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new Point(6, 19);
+            this.textBox1.Size = new Size(458, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(467, 17);
+            this.button1.Size = new System.Drawing.Size(24, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(505, 29);
+            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Import from file";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.DialogResult = DialogResult.OK;
+            this.button3.Location = new System.Drawing.Point(648, 29);
+            this.button3.Size = new System.Drawing.Size(155, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Save Assignments";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button3
+            // 
+            this.button4.DialogResult = DialogResult.Cancel;
+            this.button4.Location = new System.Drawing.Point(720, 29);
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Cancel";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(649, 435);
+            this.button5.Size = new System.Drawing.Size(155, 23);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Auto-distribute Taxa";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(649, 465);
+            this.button6.Size = new System.Drawing.Size(155, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Export list to file";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Size = new System.Drawing.Size(600, 50);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Import predefined taxa list";
+            this.Controls.Add(groupBox1);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(12, 68);
+            this.groupBox2.Size = new System.Drawing.Size(800, 330);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Alphanumeric Keyboard";
+            int j;
+            for (j = 1; j <= numberOfKeys - 10; j++)
+            {
+                this.groupBox2.Controls.Add(this.labelArray[j]);
+                this.groupBox2.Controls.Add(this.comboBoxArray[j]);
+            }
+            this.Controls.Add(groupBox2);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(12, 410);
+            this.groupBox3.Size = new System.Drawing.Size(610, 128);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "NumPad";
+            for (; j <= numberOfKeys; j++)
+            {
+                this.groupBox3.Controls.Add(this.labelArray[j]);
+                this.groupBox3.Controls.Add(this.comboBoxArray[j]);
+            }
+            this.Controls.Add(groupBox3);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = filename;
+
+            // 
+            // Form2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.AutoSize = true;
+            //this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(831, 550);
+            this.AcceptButton = this.button2;
+            this.CancelButton = this.button3;
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
+
+            // set icon to a pretty algae
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            this.Icon = ((Icon)(resources.GetObject("$this.Icon")));
+            
+            this.Name = "Form2";
+            this.Text = "Key Bindings";
+            this.Load += new System.EventHandler(this.Form2_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.ResumeLayout(false);
+
             InitializeComponent();      // init
         }
         
@@ -27,56 +298,12 @@ namespace TaxonScout
             textBox1.Text = Form2.filename;
 
             Form1 parent = (Form1)this.Owner;
-            
-            // get selected taxons from parent form;
-            comboBox1.Text  =  parent.textBox1.Text;   // Q
-            comboBox2.Text  =  parent.textBox2.Text;   // W
-            comboBox3.Text  =  parent.textBox3.Text;   // E
-            comboBox4.Text  =  parent.textBox4.Text;   // R
-            comboBox5.Text  =  parent.textBox5.Text;   // T
-            comboBox6.Text  =  parent.textBox6.Text;   // Y
-            comboBox7.Text  =  parent.textBox7.Text;   // U
-            comboBox8.Text  =  parent.textBox8.Text;   // I
-            comboBox9.Text  =  parent.textBox9.Text;   // O
-            comboBox10.Text = parent.textBox10.Text;   // P
-            comboBox11.Text = parent.textBox11.Text;   // A
-            comboBox12.Text = parent.textBox12.Text;   // S
-            comboBox13.Text = parent.textBox13.Text;   // D
-            comboBox14.Text = parent.textBox14.Text;   // F
-            comboBox15.Text = parent.textBox15.Text;   // G
-            comboBox16.Text = parent.textBox16.Text;   // H
-            comboBox17.Text = parent.textBox17.Text;   // J
-            comboBox18.Text = parent.textBox18.Text;   // K
-            comboBox19.Text = parent.textBox19.Text;   // L
-            comboBox20.Text = parent.textBox20.Text;   // Z
-            comboBox21.Text = parent.textBox21.Text;   // X
-            comboBox22.Text = parent.textBox22.Text;   // C
-            comboBox23.Text = parent.textBox23.Text;   // V
-            comboBox24.Text = parent.textBox24.Text;   // B
-            comboBox25.Text = parent.textBox25.Text;   // N
-            comboBox26.Text = parent.textBox26.Text;   // M
-            comboBox27.Text = parent.textBox27.Text;   // D1
-            comboBox28.Text = parent.textBox28.Text;   // D2
-            comboBox29.Text = parent.textBox29.Text;   // D3
-            comboBox30.Text = parent.textBox30.Text;   // D4
-            comboBox31.Text = parent.textBox31.Text;   // D5
-            comboBox32.Text = parent.textBox32.Text;   // D6
-            comboBox33.Text = parent.textBox33.Text;   // D7
-            comboBox34.Text = parent.textBox34.Text;   // D8
-            comboBox35.Text = parent.textBox35.Text;   // D9
-            comboBox36.Text = parent.textBox36.Text;   // D0
-            comboBox37.Text = parent.textBox37.Text;   // KeyPad7
-            comboBox38.Text = parent.textBox38.Text;   // KeyPad8
-            comboBox39.Text = parent.textBox39.Text;   // KeyPad9
-            comboBox40.Text = parent.textBox40.Text;   // KeyPad4
-            comboBox41.Text = parent.textBox41.Text;   // KeyPad5
-            comboBox42.Text = parent.textBox42.Text;   // KeyPad6
-            comboBox43.Text = parent.textBox43.Text;   // KeyPad1
-            comboBox44.Text = parent.textBox44.Text;   // KeyPad2
-            comboBox45.Text = parent.textBox45.Text;   // KeyPad3
-            comboBox46.Text = parent.textBox46.Text;   // KeyPad0
 
-
+            int i;
+            for (i = 1; i <= numberOfKeys; i++)
+            {
+                comboBoxArray[i].Text = parent.textBoxArray[i].Text;
+            }
         }
 
         class listElement : INotifyPropertyChanged
@@ -113,7 +340,33 @@ namespace TaxonScout
             }
         }
 
+        private void updateCBdataSources(BindingSource bs)
+        {   // create different contexts of binding source for each combobox;
+            // it's useful to prevent updating to all comboboxes that share the
+            // same datasource when selecting an item in one combobox;
+            int i;
+            for (i = 1; i <= numberOfKeys; i++)
+            {
+                comboBoxArray[i].DataSource = new BindingSource(bs, "");
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Application.StartupPath;
+            openFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = openFileDialog1.FileName;
+                filename = textBox1.Text;
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
         {   // import button;
             try
             {
@@ -142,224 +395,74 @@ namespace TaxonScout
                 MessageBox.Show("Error: Could not read file from disk. " + ex.Message);
             }
         }
-
-        private void updateCBdataSources(BindingSource bs)
-        {   // create different contexts of binding source for each combobox;
-            // it's useful to prevent updating to all comboboxes that share the
-            // same datasource when selecting an item in one combobox;
-            comboBox1.DataSource  = new BindingSource(bs, "");   // Q
-            comboBox2.DataSource  = new BindingSource(bs, "");   // W
-            comboBox3.DataSource  = new BindingSource(bs, "");   // E
-            comboBox4.DataSource  = new BindingSource(bs, "");   // R
-            comboBox5.DataSource  = new BindingSource(bs, "");   // T
-            comboBox6.DataSource  = new BindingSource(bs, "");   // Y
-            comboBox7.DataSource  = new BindingSource(bs, "");   // U
-            comboBox8.DataSource  = new BindingSource(bs, "");   // I
-            comboBox9.DataSource  = new BindingSource(bs, "");   // O
-            comboBox10.DataSource = new BindingSource(bs, "");   // P
-            comboBox11.DataSource = new BindingSource(bs, "");   // A
-            comboBox12.DataSource = new BindingSource(bs, "");   // S
-            comboBox13.DataSource = new BindingSource(bs, "");   // D
-            comboBox14.DataSource = new BindingSource(bs, "");   // F
-            comboBox15.DataSource = new BindingSource(bs, "");   // G
-            comboBox16.DataSource = new BindingSource(bs, "");   // H
-            comboBox17.DataSource = new BindingSource(bs, "");   // J
-            comboBox18.DataSource = new BindingSource(bs, "");   // K
-            comboBox19.DataSource = new BindingSource(bs, "");   // L
-            comboBox20.DataSource = new BindingSource(bs, "");   // Z
-            comboBox21.DataSource = new BindingSource(bs, "");   // X
-            comboBox22.DataSource = new BindingSource(bs, "");   // C
-            comboBox23.DataSource = new BindingSource(bs, "");   // V
-            comboBox24.DataSource = new BindingSource(bs, "");   // B
-            comboBox25.DataSource = new BindingSource(bs, "");   // N
-            comboBox26.DataSource = new BindingSource(bs, "");   // M
-            comboBox27.DataSource = new BindingSource(bs, "");   // D1
-            comboBox28.DataSource = new BindingSource(bs, "");   // D2
-            comboBox29.DataSource = new BindingSource(bs, "");   // D3
-            comboBox30.DataSource = new BindingSource(bs, "");   // D4
-            comboBox31.DataSource = new BindingSource(bs, "");   // D5
-            comboBox32.DataSource = new BindingSource(bs, "");   // D6
-            comboBox33.DataSource = new BindingSource(bs, "");   // D7
-            comboBox34.DataSource = new BindingSource(bs, "");   // D8
-            comboBox35.DataSource = new BindingSource(bs, "");   // D9
-            comboBox36.DataSource = new BindingSource(bs, "");   // D0
-            comboBox37.DataSource = new BindingSource(bs, "");   // KeyPad7
-            comboBox38.DataSource = new BindingSource(bs, "");   // KeyPad8
-            comboBox39.DataSource = new BindingSource(bs, "");   // KeyPad9
-            comboBox40.DataSource = new BindingSource(bs, "");   // KeyPad4
-            comboBox41.DataSource = new BindingSource(bs, "");   // KeyPad5
-            comboBox42.DataSource = new BindingSource(bs, "");   // KeyPad6
-            comboBox43.DataSource = new BindingSource(bs, "");   // KeyPad1
-            comboBox44.DataSource = new BindingSource(bs, "");   // KeyPad2
-            comboBox45.DataSource = new BindingSource(bs, "");   // KeyPad3
-            comboBox46.DataSource = new BindingSource(bs, "");   // KeyPad0
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {   // Save button; send the data to parent form;
+
             Form1 parent = (Form1)this.Owner;
 
-            parent.setString(parent.textBox1,  comboBox1.Text );  // Q
-            parent.setString(parent.textBox2,  comboBox2.Text );  // W
-            parent.setString(parent.textBox3,  comboBox3.Text );  // E 
-            parent.setString(parent.textBox4,  comboBox4.Text );  // R
-            parent.setString(parent.textBox5,  comboBox5.Text );  // T
-            parent.setString(parent.textBox6,  comboBox6.Text );  // Y
-            parent.setString(parent.textBox7,  comboBox7.Text );  // U
-            parent.setString(parent.textBox8,  comboBox8.Text );  // I
-            parent.setString(parent.textBox9,  comboBox9.Text );  // O
-            parent.setString(parent.textBox10, comboBox10.Text);  // P
-            parent.setString(parent.textBox11, comboBox11.Text);  // A
-            parent.setString(parent.textBox12, comboBox12.Text);  // S
-            parent.setString(parent.textBox13, comboBox13.Text);  // D
-            parent.setString(parent.textBox14, comboBox14.Text);  // F
-            parent.setString(parent.textBox15, comboBox15.Text);  // G
-            parent.setString(parent.textBox16, comboBox16.Text);  // H
-            parent.setString(parent.textBox17, comboBox17.Text);  // J
-            parent.setString(parent.textBox18, comboBox18.Text);  // K
-            parent.setString(parent.textBox19, comboBox19.Text);  // L
-            parent.setString(parent.textBox20, comboBox20.Text);  // Z
-            parent.setString(parent.textBox21, comboBox21.Text);  // X
-            parent.setString(parent.textBox22, comboBox22.Text);  // C
-            parent.setString(parent.textBox23, comboBox23.Text);  // V
-            parent.setString(parent.textBox24, comboBox24.Text);  // B
-            parent.setString(parent.textBox25, comboBox25.Text);  // N
-            parent.setString(parent.textBox26, comboBox26.Text);  // M
-            parent.setString(parent.textBox27, comboBox27.Text);  // D1
-            parent.setString(parent.textBox28, comboBox28.Text);  // D2
-            parent.setString(parent.textBox29, comboBox29.Text);  // D3
-            parent.setString(parent.textBox30, comboBox30.Text);  // D4
-            parent.setString(parent.textBox31, comboBox31.Text);  // D5
-            parent.setString(parent.textBox32, comboBox32.Text);  // D6
-            parent.setString(parent.textBox33, comboBox33.Text);  // D7
-            parent.setString(parent.textBox34, comboBox34.Text);  // D8
-            parent.setString(parent.textBox35, comboBox35.Text);  // D9
-            parent.setString(parent.textBox36, comboBox36.Text);  // D0
-            parent.setString(parent.textBox37, comboBox37.Text);  // KeyPad7
-            parent.setString(parent.textBox38, comboBox38.Text);  // KeyPad8
-            parent.setString(parent.textBox39, comboBox39.Text);  // KeyPad9
-            parent.setString(parent.textBox40, comboBox40.Text);  // KeyPad4
-            parent.setString(parent.textBox41, comboBox41.Text);  // KeyPad5
-            parent.setString(parent.textBox42, comboBox42.Text);  // KeyPad6
-            parent.setString(parent.textBox43, comboBox43.Text);  // KeyPad1
-            parent.setString(parent.textBox44, comboBox44.Text);  // KeyPad2
-            parent.setString(parent.textBox45, comboBox45.Text);  // KeyPad3
-            parent.setString(parent.textBox46, comboBox46.Text);  // KeyPad0
+            int i;
+            for (i = 1; i <= numberOfKeys; i++)
+            {
+                parent.setString(parent.textBoxArray[i], comboBoxArray[i].Text);
+            }
 
-
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {   // Cancel button
             this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+        {   // Cancel button
 
-            openFileDialog1.InitialDirectory = Application.StartupPath;
-            openFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 2;
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = openFileDialog1.FileName;
-                filename = textBox1.Text;
-            }
+            this.Close();
         }
+
 
         private void button5_Click(object sender, EventArgs e)
         {   // auto-distribute taxons button; fill comboboxes starting
             // from the beginning of the list
+
             Form1 parent = (Form1)this.Owner;
             List<String> myList = new List<String>();
-            int i = 0;
+            int j = 0;
             foreach (var line in parent.bs)
             {
                 myList.Add(line.ToString());
-                i++;
+                j++;
             }
 
-            if (i >  1)  comboBox1.Text = myList[ 1];
-            if (i >  2)  comboBox2.Text = myList[ 2];
-            if (i >  3)  comboBox3.Text = myList[ 3];
-            if (i >  4)  comboBox4.Text = myList[ 4];
-            if (i >  5)  comboBox5.Text = myList[ 5];
-            if (i >  6)  comboBox6.Text = myList[ 6];
-            if (i >  7)  comboBox7.Text = myList[ 7];
-            if (i >  8)  comboBox8.Text = myList[ 8];
-            if (i >  9)  comboBox9.Text = myList[ 9];
-            if (i > 10) comboBox10.Text = myList[10];
-            if (i > 11) comboBox11.Text = myList[11];
-            if (i > 12) comboBox12.Text = myList[12];
-            if (i > 13) comboBox13.Text = myList[13];
-            if (i > 14) comboBox14.Text = myList[14];
-            if (i > 15) comboBox15.Text = myList[15];
-            if (i > 16) comboBox16.Text = myList[16];
-            if (i > 17) comboBox17.Text = myList[17];
-            if (i > 18) comboBox18.Text = myList[18];
-            if (i > 19) comboBox19.Text = myList[19];
-            if (i > 20) comboBox20.Text = myList[20];
-            if (i > 21) comboBox21.Text = myList[21];
-            if (i > 22) comboBox22.Text = myList[22];
-            if (i > 23) comboBox23.Text = myList[23];
-            if (i > 24) comboBox24.Text = myList[24];
-            if (i > 25) comboBox25.Text = myList[25];
-            if (i > 26) comboBox26.Text = myList[26];
-            if (i > 27) comboBox27.Text = myList[27];
-            if (i > 28) comboBox28.Text = myList[28];
-            if (i > 29) comboBox29.Text = myList[29];
-            if (i > 30) comboBox30.Text = myList[30];
-            if (i > 31) comboBox31.Text = myList[31];
-            if (i > 32) comboBox32.Text = myList[32];
-            if (i > 33) comboBox33.Text = myList[33];
-            if (i > 34) comboBox34.Text = myList[34];
-            if (i > 35) comboBox35.Text = myList[35];
-            if (i > 36) comboBox36.Text = myList[36];
-            if (i > 37) comboBox37.Text = myList[37];
-            if (i > 38) comboBox38.Text = myList[38];
-            if (i > 39) comboBox39.Text = myList[39];
-            if (i > 40) comboBox40.Text = myList[40];
-            if (i > 41) comboBox41.Text = myList[41];
-            if (i > 42) comboBox42.Text = myList[42];
-            if (i > 43) comboBox43.Text = myList[43];
-            if (i > 44) comboBox44.Text = myList[44];
-            if (i > 45) comboBox45.Text = myList[45];
-            if (i > 46) comboBox46.Text = myList[46];
-
-
+            int i;
+            for (i = 1; i <= j; i++)
+            {
+                comboBoxArray[i].Text = myList[i];
+            }
         }
 
-        /*  This code section is useful for a possible feature in the future, one that
-         *  exports to a file the entire Taxon list Binding data source.
-         
-        private void someKindOfButton_Click(object sender, EventArgs e)
-        {
+        private void button6_Click(object sender, EventArgs e)
+        {   // export current taxon list to file
+
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-            saveFileDialog1.InitialDirectory = "";
-            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            saveFileDialog1.ShowDialog();
-
-            // If the file name is not an empty string open it for saving.  
-            if (saveFileDialog1.FileName != "")
+            saveFileDialog1.InitialDirectory = Application.StartupPath;
+            saveFileDialog1.FileName = "*.txt";
+            saveFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                List<String> exportList = new List<String>();
+                exportList.Clear();
+                
+                for (int i = 1; i <= numberOfKeys; i++)
+                {
+                    // if (!String.IsNullOrEmpty(comboBoxArray[i].Text)) 
+                        exportList.Add(comboBoxArray[i].Text);
+                }
+
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName))
                 {
-                    foreach (var line in bs)
+                    foreach (string line in exportList)
                     {
                         file.WriteLine(line);
                     }
                 }
             }
-        } 
-
-         */
-
+        }
     }
 }

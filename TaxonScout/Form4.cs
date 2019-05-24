@@ -43,7 +43,7 @@ namespace TaxonScout
             if (textBox9.Text.Length > 0) parametersList.Add(textBox9.Text);
 
             parent.parametersList = this.parametersList;
-            parent.checkBox47.Checked = true;
+            parent.checkBoxAddSampleParamsToFile.Checked = true;
             this.Close();
         }
 
