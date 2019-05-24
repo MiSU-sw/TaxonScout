@@ -338,3 +338,12 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+########## end of default VS .gitingore
+
+
+/TaxonScout/obj
+*.txt
+*.config
+*.rar
+
