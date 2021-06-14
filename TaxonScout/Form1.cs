@@ -69,77 +69,87 @@ namespace TaxonScout
               "NumPad7", "NumPad8", "NumPad9", "NumPad4", "NumPad5", "NumPad6", "NumPad1", "NumPad2", "NumPad3", "NumPad0"
             }; // keyList
 
+        const int column1offset =  4;
+        const int column2offset = 14;
+        const int column3offset = 24;
+        const int column4offset = 34;
+
+        const int rowOffset = 25;
+
+        const int widthOfKey = 126;
+        const int heightOfKey = 82;
+
         public List<Point> keyPoints = new List<Point>()
         {                                               // index    key
             new Point(0,0), // index 0 is unused
-            new Point( 4 + 126 *  0,  25 + 82 * 0),     //  1       1
-            new Point( 4 + 126 *  1,  25 + 82 * 0),     //  2       2
-            new Point( 4 + 126 *  2,  25 + 82 * 0),     //  3       3
-            new Point( 4 + 126 *  3,  25 + 82 * 0),     //  4       4
-            new Point( 4 + 126 *  4,  25 + 82 * 0),     //  5       5
-            new Point( 4 + 126 *  5,  25 + 82 * 0),     //  6       6
-            new Point( 4 + 126 *  6,  25 + 82 * 0),     //  7       7
-            new Point( 4 + 126 *  7,  25 + 82 * 0),     //  8       8
-            new Point( 4 + 126 *  8,  25 + 82 * 0),     //  9       9
-            new Point( 4 + 126 *  9,  25 + 82 * 0),     // 10       0
+            new Point(column1offset + widthOfKey *  0,  rowOffset + heightOfKey * 0),     //  1       1
+            new Point(column1offset + widthOfKey *  1,  rowOffset + heightOfKey * 0),     //  2       2
+            new Point(column1offset + widthOfKey *  2,  rowOffset + heightOfKey * 0),     //  3       3
+            new Point(column1offset + widthOfKey *  3,  rowOffset + heightOfKey * 0),     //  4       4
+            new Point(column1offset + widthOfKey *  4,  rowOffset + heightOfKey * 0),     //  5       5
+            new Point(column1offset + widthOfKey *  5,  rowOffset + heightOfKey * 0),     //  6       6
+            new Point(column1offset + widthOfKey *  6,  rowOffset + heightOfKey * 0),     //  7       7
+            new Point(column1offset + widthOfKey *  7,  rowOffset + heightOfKey * 0),     //  8       8
+            new Point(column1offset + widthOfKey *  8,  rowOffset + heightOfKey * 0),     //  9       9
+            new Point(column1offset + widthOfKey *  9,  rowOffset + heightOfKey * 0),     // 10       0
 
-            new Point(14 + 126 *  0,  25 + 82 * 1),     // 11       Q
-            new Point(14 + 126 *  1,  25 + 82 * 1),     // 12       W
-            new Point(14 + 126 *  2,  25 + 82 * 1),     // 13       E
-            new Point(14 + 126 *  3,  25 + 82 * 1),     // 14       R
-            new Point(14 + 126 *  4,  25 + 82 * 1),     // 15       T
-            new Point(14 + 126 *  5,  25 + 82 * 1),     // 16       Y
-            new Point(14 + 126 *  6,  25 + 82 * 1),     // 17       U
-            new Point(14 + 126 *  7,  25 + 82 * 1),     // 18       I
-            new Point(14 + 126 *  8,  25 + 82 * 1),     // 19       O
-            new Point(14 + 126 *  9,  25 + 82 * 1),     // 20       P
+            new Point(column2offset + widthOfKey *  0,  rowOffset + heightOfKey * 1),     // 11       Q
+            new Point(column2offset + widthOfKey *  1,  rowOffset + heightOfKey * 1),     // 12       W
+            new Point(column2offset + widthOfKey *  2,  rowOffset + heightOfKey * 1),     // 13       E
+            new Point(column2offset + widthOfKey *  3,  rowOffset + heightOfKey * 1),     // 14       R
+            new Point(column2offset + widthOfKey *  4,  rowOffset + heightOfKey * 1),     // 15       T
+            new Point(column2offset + widthOfKey *  5,  rowOffset + heightOfKey * 1),     // 16       Y
+            new Point(column2offset + widthOfKey *  6,  rowOffset + heightOfKey * 1),     // 17       U
+            new Point(column2offset + widthOfKey *  7,  rowOffset + heightOfKey * 1),     // 18       I
+            new Point(column2offset + widthOfKey *  8,  rowOffset + heightOfKey * 1),     // 19       O
+            new Point(column2offset + widthOfKey *  9,  rowOffset + heightOfKey * 1),     // 20       P
 
-            new Point(24 + 126 *  0,  25 + 82 * 2),     // 21       A
-            new Point(24 + 126 *  1,  25 + 82 * 2),     // 22       S
-            new Point(24 + 126 *  2,  25 + 82 * 2),     // 23       D
-            new Point(24 + 126 *  3,  25 + 82 * 2),     // 24       F
-            new Point(24 + 126 *  4,  25 + 82 * 2),     // 25       G
-            new Point(24 + 126 *  5,  25 + 82 * 2),     // 26       H
-            new Point(24 + 126 *  6,  25 + 82 * 2),     // 27       J
-            new Point(24 + 126 *  7,  25 + 82 * 2),     // 28       K
-            new Point(24 + 126 *  8,  25 + 82 * 2),     // 29       L
+            new Point(column3offset + widthOfKey *  0,  rowOffset + heightOfKey * 2),     // 21       A
+            new Point(column3offset + widthOfKey *  1,  rowOffset + heightOfKey * 2),     // 22       S
+            new Point(column3offset + widthOfKey *  2,  rowOffset + heightOfKey * 2),     // 23       D
+            new Point(column3offset + widthOfKey *  3,  rowOffset + heightOfKey * 2),     // 24       F
+            new Point(column3offset + widthOfKey *  4,  rowOffset + heightOfKey * 2),     // 25       G
+            new Point(column3offset + widthOfKey *  5,  rowOffset + heightOfKey * 2),     // 26       H
+            new Point(column3offset + widthOfKey *  6,  rowOffset + heightOfKey * 2),     // 27       J
+            new Point(column3offset + widthOfKey *  7,  rowOffset + heightOfKey * 2),     // 28       K
+            new Point(column3offset + widthOfKey *  8,  rowOffset + heightOfKey * 2),     // 29       L
                                                             
-            new Point(34 + 126 *  0,  25 + 82 * 3),     // 30       Z
-            new Point(34 + 126 *  1,  25 + 82 * 3),     // 31       X
-            new Point(34 + 126 *  2,  25 + 82 * 3),     // 32       C
-            new Point(34 + 126 *  3,  25 + 82 * 3),     // 33       V
-            new Point(34 + 126 *  4,  25 + 82 * 3),     // 34       B
-            new Point(34 + 126 *  5,  25 + 82 * 3),     // 35       N
-            new Point(34 + 126 *  6,  25 + 82 * 3),     // 36       M
+            new Point(column4offset + widthOfKey *  0,  rowOffset + heightOfKey * 3),     // 30       Z
+            new Point(column4offset + widthOfKey *  1,  rowOffset + heightOfKey * 3),     // 31       X
+            new Point(column4offset + widthOfKey *  2,  rowOffset + heightOfKey * 3),     // 32       C
+            new Point(column4offset + widthOfKey *  3,  rowOffset + heightOfKey * 3),     // 33       V
+            new Point(column4offset + widthOfKey *  4,  rowOffset + heightOfKey * 3),     // 34       B
+            new Point(column4offset + widthOfKey *  5,  rowOffset + heightOfKey * 3),     // 35       N
+            new Point(column4offset + widthOfKey *  6,  rowOffset + heightOfKey * 3),     // 36       M
 
-            new Point(34 + 126 *  7,  25 + 82 * 3),     // 37       Numpad 7
-            new Point(34 + 126 *  8,  25 + 82 * 3),     // 38       Numpad 8
-            new Point(34 + 126 *  9,  25 + 82 * 3),     // 39       Numpad 9
+            new Point(column4offset + widthOfKey *  7,  rowOffset + heightOfKey * 3),     // 37       Numpad 7
+            new Point(column4offset + widthOfKey *  8,  rowOffset + heightOfKey * 3),     // 38       Numpad 8
+            new Point(column4offset + widthOfKey *  9,  rowOffset + heightOfKey * 3),     // 39       Numpad 9
 
-            new Point(34 + 126 *  7,  25 + 82 * 4),     // 40       Numpad 4
-            new Point(34 + 126 *  8,  25 + 82 * 4),     // 41       Numpad 5
-            new Point(34 + 126 *  9,  25 + 82 * 4),     // 42       Numpad 6
+            new Point(column4offset + widthOfKey *  7,  rowOffset + heightOfKey * 4),     // 40       Numpad 4
+            new Point(column4offset + widthOfKey *  8,  rowOffset + heightOfKey * 4),     // 41       Numpad 5
+            new Point(column4offset + widthOfKey *  9,  rowOffset + heightOfKey * 4),     // 42       Numpad 6
 
-            new Point(34 + 126 *  7,  25 + 82 * 5),     // 43       Numpad 1
-            new Point(34 + 126 *  8,  25 + 82 * 5),     // 44       Numpad 2
-            new Point(34 + 126 *  9,  25 + 82 * 5),     // 45       Numpad 3
+            new Point(column4offset + widthOfKey *  7,  rowOffset + heightOfKey * 5),     // 43       Numpad 1
+            new Point(column4offset + widthOfKey *  8,  rowOffset + heightOfKey * 5),     // 44       Numpad 2
+            new Point(column4offset + widthOfKey *  9,  rowOffset + heightOfKey * 5),     // 45       Numpad 3
 
-            new Point(34 + 126 *  7,  25 + 82 * 6),     // 46       Numpad 0
+            new Point(column4offset + widthOfKey *  7,  rowOffset + heightOfKey * 6),     // 46       Numpad 0
 
-            new Point( 42          ,  30 + 82 * 4),     // 47       Controls groupBox 305, 144
-            new Point( 42          ,  30 + 82 * 4),     // 48       Statistics groupBox 305, 144
+            new Point( 42          ,  30 + heightOfKey * 4),     // 47       Controls groupBox 305, 144
+            new Point( 42          ,  30 + heightOfKey * 4),     // 48       Statistics groupBox 305, 144
 
-            new Point( 55          ,  25 + 82 * 6),     // 49       Group 1 Total Count Label 55, 517, 65, 13
-            new Point(130          ,  25 + 82 * 6),     // 50       Group 1 Total Count Textbox 130, 514
-            new Point( 55          ,  25 + 82 * 7),     // 51       Group 2 Total Count Label 55, 517, 65, 13
-            new Point(130          ,  25 + 82 * 7),     // 52       Group 2 Total Count Textbox 130, 514
-            new Point( 55          ,  25 + 82 * 8),     // 53       Group 3 Total Count Label 55, 517, 65, 13
-            new Point(130          ,  25 + 82 * 8),     // 54       Group 3 Total Count Textbox 130, 514
-            new Point( 55          ,  25 + 82 * 9),     // 55       Group 4 Total Count Label 55, 517, 65, 13
-            new Point(130          ,  25 + 82 * 9),     // 56       Group 4 Total Count Textbox 130, 514
+            new Point( 55          ,  rowOffset + heightOfKey * 6),     // 49       Group 1 Total Count Label 55, 517, 65, 13
+            new Point(130          ,  rowOffset + heightOfKey * 6),     // 50       Group 1 Total Count Textbox 130, 514
+            new Point( 55          ,  rowOffset + heightOfKey * 7),     // 51       Group 2 Total Count Label 55, 517, 65, 13
+            new Point(130          ,  rowOffset + heightOfKey * 7),     // 52       Group 2 Total Count Textbox 130, 514
+            new Point( 55          ,  rowOffset + heightOfKey * 8),     // 53       Group 3 Total Count Label 55, 517, 65, 13
+            new Point(130          ,  rowOffset + heightOfKey * 8),     // 54       Group 3 Total Count Textbox 130, 514
+            new Point( 55          ,  rowOffset + heightOfKey * 9),     // 55       Group 4 Total Count Label 55, 517, 65, 13
+            new Point(130          ,  rowOffset + heightOfKey * 9),     // 56       Group 4 Total Count Textbox 130, 514
 
-            new Point(130          ,  25 + 82 * 9),     // 57       Button Save Data
-            new Point(130          ,  25 + 82 * 9),     // 58       Sample parameters
+            new Point(130          ,  rowOffset + heightOfKey * 9),     // 57       Button Save Data
+            new Point(130          ,  rowOffset + heightOfKey * 9),     // 58       Sample parameters
 
         }; // keyPoints
 
@@ -168,6 +178,7 @@ namespace TaxonScout
 
         ListBox historyListBox = new ListBox();
 
+
         public Form1()
         {
             // set window title
@@ -181,10 +192,10 @@ namespace TaxonScout
             this.CenterToScreen();
 
             // subscribe this Form to the KeyUp and KeyDown keyboard events
-            this.Load        += new EventHandler(this.Form1_Load);
+            this.Load += new EventHandler(this.Form1_Load);
             this.FormClosing += new FormClosingEventHandler(this.Form1_FormClosing);
-            this.KeyDown     += new KeyEventHandler(Form1_KeyDown);
-            this.KeyUp       += new KeyEventHandler(Form1_KeyUp);
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+            this.KeyUp += new KeyEventHandler(Form1_KeyUp);
 
             String dummy1 = "";         // create empty dummy list to initialize
             dummyList.Add(dummy1);      // comboboxes in order to not have
@@ -195,136 +206,170 @@ namespace TaxonScout
             // programmatically generate key-assigned objects
             for (i = 1; i <= 46; i++)
             {
-                // 
                 // groupBox
-                // 
-                groupBox_kb[i] = new GroupBoxMOD();
-                GroupBoxArray[i] = groupBox_kb[i];
-                groupBox_kb[i].Location = keyPoints[i];
-                groupBox_kb[i].Text = keyList[i];
-                groupBox_kb[i].Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                generateGroupboxes(i);
 
-                groupBox_kb[i].Controls.Add(button_kb[i] = new Button());
-                groupBox_kb[i].Controls.Add(checkBox_kb[i] = new CheckBox());
-                groupBox_kb[i].Controls.Add(textBox_kb[i] = new TextBox());
-                groupBox_kb[i].Controls.Add(label_kb[i] = new Label());
-                groupBox_kb[i].Controls.Add(numericUD_kb[i] = new NumericUpDown());
-
-                selectTaxonArray[i] = button_kb[i];
-                checkBoxArray[i] = checkBox_kb[i];
-                textBoxArray[i] = textBox_kb[i];
-                labelArray[i] = label_kb[i];
-                numericUpDownArray[i] = numericUD_kb[i];
-
-                groupBox_kb[i].Size = new Size(125, 82);
-                groupBox_kb[i].TabIndex = 8 + i * 6;
-                groupBox_kb[i].TabStop = false;
-
-                this.Controls.Add(groupBox_kb[i]);
-
-                // 
                 // button
-                //
-                button_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-                button_kb[i].Location = new Point(8, 18);
-                button_kb[i].Size = new Size(79, 20);
-                button_kb[i].TabIndex = 10 + i * 6;
-                button_kb[i].Text = "Select Taxon";
-                button_kb[i].Name = i.ToString();
-                button_kb[i].UseVisualStyleBackColor = true;
-                button_kb[i].Click += new System.EventHandler(this.button_Click);
-                //
+                generateButtons(i);
+
                 // checkBox
-                //
-                checkBox_kb[i].Appearance = System.Windows.Forms.Appearance.Button;
-                checkBox_kb[i].AutoSize = true;
-                checkBox_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-                checkBox_kb[i].Location = new Point(96, 18);
-                checkBox_kb[i].MaximumSize = new Size(25, 20);
-                checkBox_kb[i].MinimumSize = new Size(25, 20);
-                checkBox_kb[i].Size = new Size(25, 20);
-                checkBox_kb[i].TabIndex = 11 + i * 6;
+                generateCheckboxes(i);
 
-                switch (i)
-                {
-                    case 37:
-                        {
-                            checkBox_kb[i].Text = "7";
-                        };break;
-                    case 38:
-                        {
-                            checkBox_kb[i].Text = "8";
-                        }; break;
-                    case 39:
-                        {
-                            checkBox_kb[i].Text = "9";
-                        }; break;
-                    case 40:
-                        {
-                            checkBox_kb[i].Text = "4";
-                        }; break;
-                    case 41:
-                        {
-                            checkBox_kb[i].Text = "5";
-                        }; break;
-                    case 42:
-                        {
-                            checkBox_kb[i].Text = "6";
-                        }; break;
-                    case 43:
-                        {
-                            checkBox_kb[i].Text = "1";
-                        }; break;
-                    case 44:
-                        {
-                            checkBox_kb[i].Text = "2";
-                        }; break;
-                    case 45:
-                        {
-                            checkBox_kb[i].Text = "3";
-                        }; break;
-                    case 46:
-                        {
-                            checkBox_kb[i].Text = "0";
-                        }; break;
-
-                    default:
-                        {
-                            checkBox_kb[i].Text = keyList[i];
-                        }; break;
-                }
-                checkBox_kb[i].TextAlign = ContentAlignment.MiddleCenter;
-                checkBox_kb[i].UseVisualStyleBackColor = true;
-                checkBox_kb[i].Click += new System.EventHandler(this.checkBox_Click);
-                //
                 // textBox
-                //
-                textBox_kb[i].Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-                textBox_kb[i].Location = new Point(0, 39);
-                textBox_kb[i].ReadOnly = true;
-                textBox_kb[i].Size = new Size(129, 18);
-                textBox_kb[i].TabIndex = 12 + i * 6;
-                // 
+                generateTextboxes(i);
+
                 // label
-                //
-                label_kb[i].AutoSize = true;
-                label_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-                label_kb[i].Location = new Point(8, 60);
-                label_kb[i].Size = new Size(38, 13);
-                label_kb[i].TabIndex = 13 + i * 6;
-                label_kb[i].Text = "Count:";
-                // 
+                generateLabels(i);
+
                 // numericUpDown
-                //
-                numericUD_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-                numericUD_kb[i].Location = new Point(51, 58);
-                numericUD_kb[i].Size = new Size(70, 20);
-                numericUD_kb[i].TabIndex = 14 + i * 6;
-                numericUD_kb[i].TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-                numericUD_kb[i].ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-                numericUD_kb[i].Maximum = 999999999999;
+                generateNumericupdowns(i);
             }
 
+            // this Form's other objects
+            generateForm1Objects(i);
+
+            // this Form's tool strip menu
+            generateToolStripMenu();
+
+
+            InitializeComponent();
+        } // Form1
+
+        private void generateGroupboxes(int i)
+        {
+            groupBox_kb[i] = new GroupBoxMOD();
+            GroupBoxArray[i] = groupBox_kb[i];
+            groupBox_kb[i].Location = keyPoints[i];
+            groupBox_kb[i].Text = keyList[i];
+            groupBox_kb[i].Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+
+            groupBox_kb[i].Controls.Add(button_kb[i] = new Button());
+            groupBox_kb[i].Controls.Add(checkBox_kb[i] = new CheckBox());
+            groupBox_kb[i].Controls.Add(textBox_kb[i] = new TextBox());
+            groupBox_kb[i].Controls.Add(label_kb[i] = new Label());
+            groupBox_kb[i].Controls.Add(numericUD_kb[i] = new NumericUpDown());
+
+            selectTaxonArray[i] = button_kb[i];
+            checkBoxArray[i] = checkBox_kb[i];
+            textBoxArray[i] = textBox_kb[i];
+            labelArray[i] = label_kb[i];
+            numericUpDownArray[i] = numericUD_kb[i];
+
+            groupBox_kb[i].Size = new Size(125, heightOfKey);
+            groupBox_kb[i].TabIndex = 8 + i * 6;
+            groupBox_kb[i].TabStop = false;
+
+            this.Controls.Add(groupBox_kb[i]);
+        }
+
+        private void generateButtons(int i)
+        {
+            button_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            button_kb[i].Location = new Point(8, 18);
+            button_kb[i].Size = new Size(79, 20);
+            button_kb[i].TabIndex = 10 + i * 6;
+            button_kb[i].Text = "Select Taxon";
+            button_kb[i].Name = i.ToString();
+            button_kb[i].UseVisualStyleBackColor = true;
+            button_kb[i].Click += new System.EventHandler(this.button_Click);
+        }
+
+        private void generateCheckboxes(int i)
+        {
+            checkBox_kb[i].Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox_kb[i].AutoSize = true;
+            checkBox_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            checkBox_kb[i].Location = new Point(96, 18);
+            checkBox_kb[i].MaximumSize = new Size(25, 20);
+            checkBox_kb[i].MinimumSize = new Size(25, 20);
+            checkBox_kb[i].Size = new Size(25, 20);
+            checkBox_kb[i].TabIndex = 11 + i * 6;
+            switch (i)
+            {
+                case 37:
+                    {
+                        checkBox_kb[i].Text = "7";
+                    }; break;
+                case 38:
+                    {
+                        checkBox_kb[i].Text = "8";
+                    }; break;
+                case 39:
+                    {
+                        checkBox_kb[i].Text = "9";
+                    }; break;
+                case 40:
+                    {
+                        checkBox_kb[i].Text = "4";
+                    }; break;
+                case 41:
+                    {
+                        checkBox_kb[i].Text = "5";
+                    }; break;
+                case 42:
+                    {
+                        checkBox_kb[i].Text = "6";
+                    }; break;
+                case 43:
+                    {
+                        checkBox_kb[i].Text = "1";
+                    }; break;
+                case 44:
+                    {
+                        checkBox_kb[i].Text = "2";
+                    }; break;
+                case 45:
+                    {
+                        checkBox_kb[i].Text = "3";
+                    }; break;
+                case 46:
+                    {
+                        checkBox_kb[i].Text = "0";
+                    }; break;
+
+                default:
+                    {
+                        checkBox_kb[i].Text = keyList[i];
+                    }; break;
+            }
+            checkBox_kb[i].TextAlign = ContentAlignment.MiddleCenter;
+            checkBox_kb[i].UseVisualStyleBackColor = true;
+            checkBox_kb[i].Click += new System.EventHandler(this.checkBox_Click);
+        }
+
+        private void generateTextboxes(int i)
+        {
+            textBox_kb[i].Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            textBox_kb[i].Location = new Point(0, 39);
+            textBox_kb[i].ReadOnly = true;
+            textBox_kb[i].Size = new Size(129, 18);
+            textBox_kb[i].TabIndex = 12 + i * 6;
+        }
+
+        private void generateLabels(int i)
+        {
+            label_kb[i].AutoSize = true;
+            label_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            label_kb[i].Location = new Point(8, 60);
+            label_kb[i].Size = new Size(38, 13);
+            label_kb[i].TabIndex = 13 + i * 6;
+            label_kb[i].Text = "Count:";
+        }
+
+
+        private void generateNumericupdowns(int i)
+        {
+            numericUD_kb[i].Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            numericUD_kb[i].Location = new Point(51, 58);
+            numericUD_kb[i].Size = new Size(70, 20);
+            numericUD_kb[i].TabIndex = 14 + i * 6;
+            numericUD_kb[i].TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            numericUD_kb[i].ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            numericUD_kb[i].Maximum = 999999999999;
+        }
+
+        private void generateForm1Objects(int i)
+        {
             // 
             // buttonKeyBindings
             // 
@@ -409,7 +454,7 @@ namespace TaxonScout
             this.groupBoxCtrls.Controls.Add(this.FgColorButton);
             this.groupBoxCtrls.Controls.Add(this.BkColorButton);
             this.groupBoxCtrls.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCtrls.Location = new Point(  8, 359);
+            this.groupBoxCtrls.Location = new Point(8, 359);
             this.groupBoxCtrls.Name = "groupBoxCtrls";
             this.groupBoxCtrls.Size = new Size(182, 204);
             this.groupBoxCtrls.TabIndex = 0;
@@ -566,7 +611,7 @@ namespace TaxonScout
             this.groupBoxStatistics.Controls.Add(this.labelLastKey);
             this.groupBoxStatistics.Controls.Add(this.textBoxLastKey);
             this.groupBoxStatistics.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-                                                // Ctrls groupbox position + size + offset = 226
+            // Ctrls groupbox position + size + offset = 226
             this.groupBoxStatistics.Location = new Point(groupBoxCtrls.Location.X + groupBoxCtrls.Size.Width + 7, 359);
             this.groupBoxStatistics.Name = "groupBoxStats";
             this.groupBoxStatistics.Size = new Size(175, 204);
@@ -599,7 +644,10 @@ namespace TaxonScout
             this.groupBoxHistory.TabStop = false;
             this.groupBoxHistory.Text = "Key press history";
             this.Controls.Add(this.groupBoxHistory);
+        }
 
+        private void generateToolStripMenu()
+        {
             // 
             // fileToolStripMenuItem
             // 
@@ -712,12 +760,8 @@ namespace TaxonScout
 
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-
-
-
-
-            InitializeComponent();
-        } // Form1
+        }
+ 
 
         private int findIndex(List<String> theList, String textToFind)
         {
