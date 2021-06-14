@@ -244,7 +244,55 @@ namespace TaxonScout
                 checkBox_kb[i].MinimumSize = new Size(25, 20);
                 checkBox_kb[i].Size = new Size(25, 20);
                 checkBox_kb[i].TabIndex = 11 + i * 6;
-                checkBox_kb[i].Text = keyList[i];
+
+                switch (i)
+                {
+                    case 37:
+                        {
+                            checkBox_kb[i].Text = "7";
+                        };break;
+                    case 38:
+                        {
+                            checkBox_kb[i].Text = "8";
+                        }; break;
+                    case 39:
+                        {
+                            checkBox_kb[i].Text = "9";
+                        }; break;
+                    case 40:
+                        {
+                            checkBox_kb[i].Text = "4";
+                        }; break;
+                    case 41:
+                        {
+                            checkBox_kb[i].Text = "5";
+                        }; break;
+                    case 42:
+                        {
+                            checkBox_kb[i].Text = "6";
+                        }; break;
+                    case 43:
+                        {
+                            checkBox_kb[i].Text = "1";
+                        }; break;
+                    case 44:
+                        {
+                            checkBox_kb[i].Text = "2";
+                        }; break;
+                    case 45:
+                        {
+                            checkBox_kb[i].Text = "3";
+                        }; break;
+                    case 46:
+                        {
+                            checkBox_kb[i].Text = "0";
+                        }; break;
+
+                    default:
+                        {
+                            checkBox_kb[i].Text = keyList[i];
+                        }; break;
+                }
                 checkBox_kb[i].TextAlign = ContentAlignment.MiddleCenter;
                 checkBox_kb[i].UseVisualStyleBackColor = true;
                 checkBox_kb[i].Click += new System.EventHandler(this.checkBox_Click);
