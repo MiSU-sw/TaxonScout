@@ -11,17 +11,19 @@ using System.Windows.Forms;
 
 namespace TaxonScout
 {
-    public partial class Form2 : Form
+    public partial class Form2 : Form       // Form2 is opened when selecting Edit > Assign Taxa to Keys or when clicking on Key Assignments from the main window (Form1)
     {
-        // list declaration. will be populated and used as datasource for all the comboboxes;
+        // list which will be populated and used as datasource for all the comboboxes;
         private List<listElement> importedList = new List<listElement>();
-        private static string filename = "./import.txt";    // here we save the file name we are importing;
+        // here we save the file name template we are importing;
+        private static string filename = "./import.txt";
 
         private static readonly int numberOfKeys  = 46;
 
         public Label[]      labelArray    = new Label   [numberOfKeys  + 1];
         public ComboBox[]   comboBoxArray = new ComboBox[numberOfKeys  + 1];
 
+        private Label labelStatus = new Label();
         private TextBox textBox1 = new TextBox();
 
         private Button button1 = new Button();
@@ -37,62 +39,68 @@ namespace TaxonScout
 
         private OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
+        private static readonly int columnoffset = 10;
+        private static readonly int rowOffset = 28;
+
+        private static readonly int widthOfKey = 200;
+        private static readonly int heightOfKey = 30;
+
         public List<Point> keyPoints = new List<Point>()
         {                                               // index    key
             new Point(0,0), // index 0 is unused
-            new Point( 10 + 200 *  0,  28 + 30 * 0),     //  1       1
-            new Point( 10 + 200 *  0,  28 + 30 * 1),     //  2       2
-            new Point( 10 + 200 *  0,  28 + 30 * 2),     //  3       3
-            new Point( 10 + 200 *  0,  28 + 30 * 3),     //  4       4
-            new Point( 10 + 200 *  0,  28 + 30 * 4),     //  5       5
-            new Point( 10 + 200 *  0,  28 + 30 * 5),     //  6       6
-            new Point( 10 + 200 *  0,  28 + 30 * 6),     //  7       7
-            new Point( 10 + 200 *  0,  28 + 30 * 7),     //  8       8
-            new Point( 10 + 200 *  0,  28 + 30 * 8),     //  9       9
-            new Point( 10 + 200 *  0,  28 + 30 * 9),     // 10       0
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 0),     //  1       1
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 1),     //  2       2
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 2),     //  3       3
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 3),     //  4       4
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 4),     //  5       5
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 5),     //  6       6
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 6),     //  7       7
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 7),     //  8       8
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 8),     //  9       9
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 9),     // 10       0
 
-            new Point( 10 + 200 *  1,  28 + 30 * 0),     // 11       Q
-            new Point( 10 + 200 *  1,  28 + 30 * 1),     // 12       W
-            new Point( 10 + 200 *  1,  28 + 30 * 2),     // 13       E
-            new Point( 10 + 200 *  1,  28 + 30 * 3),     // 14       R
-            new Point( 10 + 200 *  1,  28 + 30 * 4),     // 15       T
-            new Point( 10 + 200 *  1,  28 + 30 * 5),     // 16       Y
-            new Point( 10 + 200 *  1,  28 + 30 * 6),     // 17       U
-            new Point( 10 + 200 *  1,  28 + 30 * 7),     // 18       I
-            new Point( 10 + 200 *  1,  28 + 30 * 8),     // 19       O
-            new Point( 10 + 200 *  1,  28 + 30 * 9),     // 20       P
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 0),     // 11       Q
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 1),     // 12       W
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 2),     // 13       E
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 3),     // 14       R
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 4),     // 15       T
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 5),     // 16       Y
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 6),     // 17       U
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 7),     // 18       I
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 8),     // 19       O
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 9),     // 20       P
 
-            new Point( 10 + 200 *  2,  28 + 30 * 0),     // 21       A
-            new Point( 10 + 200 *  2,  28 + 30 * 1),     // 22       S
-            new Point( 10 + 200 *  2,  28 + 30 * 2),     // 23       D
-            new Point( 10 + 200 *  2,  28 + 30 * 3),     // 24       F
-            new Point( 10 + 200 *  2,  28 + 30 * 4),     // 25       G
-            new Point( 10 + 200 *  2,  28 + 30 * 5),     // 26       H
-            new Point( 10 + 200 *  2,  28 + 30 * 6),     // 27       J
-            new Point( 10 + 200 *  2,  28 + 30 * 7),     // 28       K
-            new Point( 10 + 200 *  2,  28 + 30 * 8),     // 29       L
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 0),     // 21       A
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 1),     // 22       S
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 2),     // 23       D
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 3),     // 24       F
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 4),     // 25       G
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 5),     // 26       H
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 6),     // 27       J
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 7),     // 28       K
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 8),     // 29       L
                                                             
-            new Point( 10 + 200 *  3,  28 + 30 * 0),     // 30       Z
-            new Point( 10 + 200 *  3,  28 + 30 * 1),     // 31       X
-            new Point( 10 + 200 *  3,  28 + 30 * 2),     // 32       C
-            new Point( 10 + 200 *  3,  28 + 30 * 3),     // 33       V
-            new Point( 10 + 200 *  3,  28 + 30 * 4),     // 34       B
-            new Point( 10 + 200 *  3,  28 + 30 * 5),     // 35       N
-            new Point( 10 + 200 *  3,  28 + 30 * 6),     // 36       M
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 0),     // 30       Z
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 1),     // 31       X
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 2),     // 32       C
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 3),     // 33       V
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 4),     // 34       B
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 5),     // 35       N
+            new Point( columnoffset + widthOfKey *  3,  rowOffset + heightOfKey * 6),     // 36       M
 
-            new Point( 10 + 200 *  0,  28 + 30 * 0),     // 37       Numpad 7
-            new Point( 10 + 200 *  1,  28 + 30 * 0),     // 38       Numpad 8
-            new Point( 10 + 200 *  2,  28 + 30 * 0),     // 39       Numpad 9
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 0),     // 37       Numpad 7
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 0),     // 38       Numpad 8
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 0),     // 39       Numpad 9
 
-            new Point( 10 + 200 *  0,  28 + 30 * 1),     // 40       Numpad 4
-            new Point( 10 + 200 *  1,  28 + 30 * 1),     // 41       Numpad 5
-            new Point( 10 + 200 *  2,  28 + 30 * 1),     // 42       Numpad 6
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 1),     // 40       Numpad 4
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 1),     // 41       Numpad 5
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 1),     // 42       Numpad 6
 
-            new Point( 10 + 200 *  0,  28 + 30 * 2),     // 43       Numpad 1
-            new Point( 10 + 200 *  1,  28 + 30 * 2),     // 44       Numpad 2
-            new Point( 10 + 200 *  2,  28 + 30 * 2),     // 45       Numpad 3
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 2),     // 43       Numpad 1
+            new Point( columnoffset + widthOfKey *  1,  rowOffset + heightOfKey * 2),     // 44       Numpad 2
+            new Point( columnoffset + widthOfKey *  2,  rowOffset + heightOfKey * 2),     // 45       Numpad 3
 
-            new Point( 25 + 200 *  0,  28 + 30 * 10),    // 46       Numpad 0
+            new Point( columnoffset + widthOfKey *  0,  rowOffset + heightOfKey * 3),     // 46       Numpad 0
 
             new Point( 42           ,  30 + 82 * 4),     // 47       Controls groupBox 305, 144
             new Point( 42           ,  30 + 82 * 4),     // 48       Statistics groupBox 305, 144
@@ -127,135 +135,14 @@ namespace TaxonScout
             {
                 // 
                 // labelArray
-                // 
-                this.labelArray[i] = new Label();
-                this.labelArray[i].AutoSize = true;
-                this.labelArray[i].Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-                this.labelArray[i].Location = keyPoints[i];
-                this.labelArray[i].MaximumSize = new Size(39, 16);
-                this.labelArray[i].MinimumSize = new Size(19, 16);
-                this.labelArray[i].Size = new Size(19, 16);
-                this.labelArray[i].TabIndex = 0;
-                this.labelArray[i].Text = keyList[i];
-                this.labelArray[i].TextAlign = ContentAlignment.MiddleCenter;
+                generateLabels(i);
 
                 // 
                 // comboBoxArray
-                // 
-                this.comboBoxArray[i] = new ComboBox();
-                this.comboBoxArray[i].DropDownStyle = ComboBoxStyle.DropDownList;
-                this.comboBoxArray[i].FormattingEnabled = true;
-                this.comboBoxArray[i].Location = new Point(labelArray[i].Location.X + 27, labelArray[i].Location.Y - 2);
-                this.comboBoxArray[i].Size = new Size(155, 21);
-                this.comboBoxArray[i].TabIndex = 0;
+                generateComboboxes(i);
             }
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new Point(6, 19);
-            this.textBox1.Size = new Size(458, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(467, 17);
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(505, 29);
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Import from file";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.DialogResult = DialogResult.OK;
-            this.button3.Location = new System.Drawing.Point(648, 29);
-            this.button3.Size = new System.Drawing.Size(155, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Save Assignments";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button3
-            // 
-            this.button4.DialogResult = DialogResult.Cancel;
-            this.button4.Location = new System.Drawing.Point(720, 29);
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(649, 435);
-            this.button5.Size = new System.Drawing.Size(155, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Auto-distribute Taxa";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(649, 465);
-            this.button6.Size = new System.Drawing.Size(155, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Export list to file";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Size = new System.Drawing.Size(600, 50);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Import predefined taxa list";
-            this.Controls.Add(groupBox1);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(12, 68);
-            this.groupBox2.Size = new System.Drawing.Size(800, 330);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Alphanumeric Keyboard";
-            int j;
-            for (j = 1; j <= numberOfKeys - 10; j++)
-            {
-                this.groupBox2.Controls.Add(this.labelArray[j]);
-                this.groupBox2.Controls.Add(this.comboBoxArray[j]);
-            }
-            this.Controls.Add(groupBox2);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(12, 410);
-            this.groupBox3.Size = new System.Drawing.Size(610, 128);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "NumPad";
-            for (; j <= numberOfKeys; j++)
-            {
-                this.groupBox3.Controls.Add(this.labelArray[j]);
-                this.groupBox3.Controls.Add(this.comboBoxArray[j]);
-            }
-            this.Controls.Add(groupBox3);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = filename;
+
+            generateForm2Objects();
 
             // 
             // Form2
@@ -264,13 +151,13 @@ namespace TaxonScout
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.AutoSize = true;
             //this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(831, 550);
+            this.ClientSize = new System.Drawing.Size(860, 590);
             this.AcceptButton = this.button2;
-            this.CancelButton = this.button3;
+            this.CancelButton = this.button4;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
+
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -280,7 +167,7 @@ namespace TaxonScout
             this.Icon = ((Icon)(resources.GetObject("$this.Icon")));
             
             this.Name = "Form2";
-            this.Text = "Key Bindings";
+            this.Text = "Key Assignments";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -292,7 +179,151 @@ namespace TaxonScout
 
             InitializeComponent();      // init
         }
-        
+
+        private void generateForm2Objects()
+        {
+            // textBox1
+            this.textBox1.Location = new Point(6, 19);
+            this.textBox1.Size = new Size(458, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Visible = true;
+
+            // button1
+            this.button1.Location = new System.Drawing.Point(467, 17);
+            this.button1.Size = new System.Drawing.Size(24, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Visible = true;
+
+            // button2
+            this.button2.Location = new System.Drawing.Point(493, 17);
+            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Import from file";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Visible = true;
+
+            // button3
+            this.button3.DialogResult = DialogResult.OK;
+            this.button3.Location = new System.Drawing.Point(648, 435);
+            this.button3.Size = new System.Drawing.Size(155, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Save Assignments";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Visible = true;
+
+            // button4
+            this.button4.DialogResult = DialogResult.Cancel;
+            this.button4.Location = new System.Drawing.Point(720, 29);
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Cancel";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Visible = true;
+
+            // button5
+            this.button5.Location = new System.Drawing.Point(649, 465);
+            this.button5.Size = new System.Drawing.Size(155, 23);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Auto-distribute Taxa";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Visible = true;
+
+            // button6
+            this.button6.Location = new System.Drawing.Point(649, 495);
+            this.button6.Size = new System.Drawing.Size(155, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Export list to file";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Visible = true;
+
+            // groupBox1
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Size = new System.Drawing.Size(600, 50);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Import predefined taxa list";
+            this.groupBox1.Visible = true;
+            this.Controls.Add(groupBox1);
+
+            // groupBox2
+            this.groupBox2.Location = new System.Drawing.Point(12, 68);
+            this.groupBox2.Size = new System.Drawing.Size(800, 330);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Alphanumeric Keyboard";
+            int j;
+            for (j = 1; j <= numberOfKeys - 10; j++)
+            {
+                this.groupBox2.Controls.Add(this.labelArray[j]);
+                this.groupBox2.Controls.Add(this.comboBoxArray[j]);
+            }
+            this.groupBox2.Visible = true;
+            this.Controls.Add(groupBox2);
+
+            // groupBox3
+            this.groupBox3.Location = new System.Drawing.Point(12, 410);
+            this.groupBox3.Size = new System.Drawing.Size(610, 158);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "NumPad";
+            for (; j <= numberOfKeys; j++)
+            {
+                this.groupBox3.Controls.Add(this.labelArray[j]);
+                this.groupBox3.Controls.Add(this.comboBoxArray[j]);
+            }
+            this.groupBox3.Visible = true;
+            this.Controls.Add(groupBox3);
+
+            // openFileDialog1
+            this.openFileDialog1.FileName = filename;
+
+            // labelStatus
+            this.labelStatus.Location = new System.Drawing.Point(648, 35);
+            this.labelStatus.Size = new System.Drawing.Size(180, 32);
+            this.labelStatus.TabStop = false;
+            this.labelStatus.Text = "Ready for import!";
+            this.labelStatus.Visible = true;
+            this.Controls.Add(labelStatus);
+
+
+        }
+
+        private void generateLabels(int i)
+        {
+            this.labelArray[i] = new Label();
+            this.labelArray[i].AutoSize = true;
+            this.labelArray[i].Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            this.labelArray[i].Location = keyPoints[i];
+            this.labelArray[i].MaximumSize = new Size(39, 16);
+            this.labelArray[i].MinimumSize = new Size(19, 16);
+            this.labelArray[i].Size = new Size(19, 16);
+            this.labelArray[i].TabIndex = 0;
+            this.labelArray[i].Text = keyList[i];
+            this.labelArray[i].TextAlign = ContentAlignment.MiddleCenter;
+        }
+
+        private void generateComboboxes(int i)
+        {
+            this.comboBoxArray[i] = new ComboBox();
+            this.comboBoxArray[i].DropDownStyle = ComboBoxStyle.DropDown;
+            this.comboBoxArray[i].FormattingEnabled = true;
+            this.comboBoxArray[i].Location = new Point(labelArray[i].Location.X + 27, labelArray[i].Location.Y - 2);
+            this.comboBoxArray[i].Size = new Size(155, 21);
+            this.comboBoxArray[i].TabIndex = 0;
+        }
+
+
         private void Form2_Load(object sender, EventArgs e)
         {
             textBox1.Text = Form2.filename;
@@ -383,28 +414,50 @@ namespace TaxonScout
                     importedList.Add(listElement1);
                 }
 
-                importedList.Sort((x, y) => x.Taxon.CompareTo(y.Taxon));    // sort list alphabetically
+                // importedList.Sort((x, y) => x.Taxon.CompareTo(y.Taxon));    // sort list alphabetically
+                // remove duplicates and sort
+                listCleanup(importedList);
+
+                // assign list to binding source
                 bs.DataSource = importedList;
                 updateCBdataSources(bs);    // call update of comboboxes datasources;
 
                 Form1 parent = (Form1)this.Owner;
                 parent.setBSource(bs);  // pass along to Form1 the list (as a binding source);
+
+                //MessageBox.Show("Import complete!");
+                this.labelStatus.Text = "Import complete!";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Could not read file from disk. " + ex.Message);
+                //MessageBox.Show("Error: Could not read file from disk. " + ex.Message);
+                this.labelStatus.Text = "Error! Could not read file from disk!";
             }
         }
         private void button3_Click(object sender, EventArgs e)
         {   // Save button; send the data to parent form;
 
             Form1 parent = (Form1)this.Owner;
+            var bs = new BindingSource();
 
             int i;
             for (i = 1; i <= numberOfKeys; i++)
             {
+                // set each textbox from the parent with the combobox value
                 parent.setString(parent.textBoxArray[i], comboBoxArray[i].Text);
+
+                // for each combobox add its value to the list
+                listElement listElement1 = new listElement(comboBoxArray[i].Text);
+                importedList.Add(listElement1);
             }
+
+            // remove duplicates. list will be already sorted
+            listCleanup(importedList);
+            
+            bs.DataSource = importedList;
+            updateCBdataSources(bs);    // call update of comboboxes datasources;
+
+            parent.setBSource(bs);  // pass along to Form1 the list (as a binding source);
 
             this.Close();
         }
@@ -429,10 +482,17 @@ namespace TaxonScout
                 j++;
             }
 
-            int i;
-            for (i = 1; i <= j; i++)
+            if (j == 1) //empty list?
             {
-                comboBoxArray[i].Text = myList[i];
+                MessageBox.Show("Error: the taxon list is empty.");
+            }
+            else
+            {
+                int i;
+                for (i = 1; i < j; i++)
+                {
+                    comboBoxArray[i].Text = myList[i];
+                }
             }
         }
 
@@ -463,6 +523,49 @@ namespace TaxonScout
                     }
                 }
             }
+        }
+
+        private void listCleanup(List<listElement> list)
+        {
+            // Duplicates will be noticed after a sort O(nLogn)
+            list.Sort((x, y) => x.Taxon.CompareTo(y.Taxon));
+
+            // Store the current and last items. Current item declaration is not really needed, and probably optimized by the compiler, but in case it's not...
+            listElement lastItem = new listElement("");
+            listElement currItem = new listElement("");
+
+            int size = list.Count;
+
+            // Store the index pointing to the last item we want to keep in the list
+            int last = size - 1;
+
+            // Travel the items from last to first O(n)
+            for (int i = last; i >= 0; --i)
+            {
+                currItem = list[i];
+
+                // If this item was the same as the previous one, we don't want it
+                if (currItem.Taxon.Equals(lastItem.Taxon))
+                {
+                    // Overwrite last in current place. It is a swap but we don't need the last
+                    list[i] = list[last];
+
+                    // Reduce the last index, we don't want that one anymore
+                    last--;
+                }
+
+                // A new item, we store it and continue
+                else
+                    lastItem = currItem;
+            }
+
+            // We now have an unsorted list with the duplicates at the end.
+
+            // Remove the last items just once
+            list.RemoveRange(last + 1, size - last - 1);
+
+            // Sort again O(n logn)
+            list.Sort((x, y) => x.Taxon.CompareTo(y.Taxon));
         }
     }
 }

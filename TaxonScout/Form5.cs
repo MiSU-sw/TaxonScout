@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TaxonScout
 {
-    public partial class Form5 : Form
+    public partial class Form5 : Form       // Form5 is the "About" form
     {
         public Form5()
         {
@@ -24,7 +24,7 @@ namespace TaxonScout
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/MiSU-mihai/TaxonScout");
+            System.Diagnostics.Process.Start("https://github.com/MiSU-sw/TaxonScout");
         }
     }
 }

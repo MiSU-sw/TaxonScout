@@ -12,7 +12,7 @@ using System.Drawing.Drawing2D;
 
 namespace TaxonScout
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form       // Form1 is the main window of TaxonScout, containing all the controls needed for counting
     {
         MenuStrip menuStrip1 = new MenuStrip();
         private ToolStripMenuItem fileToolStripMenuItem                   = new ToolStripMenuItem();
@@ -69,10 +69,10 @@ namespace TaxonScout
               "NumPad7", "NumPad8", "NumPad9", "NumPad4", "NumPad5", "NumPad6", "NumPad1", "NumPad2", "NumPad3", "NumPad0"
             }; // keyList
 
-        const int column1offset =  4;
-        const int column2offset = 14;
-        const int column3offset = 24;
-        const int column4offset = 34;
+        private static readonly int column1offset =  4;
+        private static readonly int column2offset = 14;
+        private static readonly int column3offset = 24;
+        private static readonly int column4offset = 34;
 
         const int rowOffset = 25;
 
@@ -80,7 +80,7 @@ namespace TaxonScout
         const int heightOfKey = 82;
 
         public List<Point> keyPoints = new List<Point>()
-        {                                               // index    key
+        {                                                                                 // index    key
             new Point(0,0), // index 0 is unused
             new Point(column1offset + widthOfKey *  0,  rowOffset + heightOfKey * 0),     //  1       1
             new Point(column1offset + widthOfKey *  1,  rowOffset + heightOfKey * 0),     //  2       2
@@ -285,7 +285,7 @@ namespace TaxonScout
             checkBox_kb[i].Size = new Size(25, 20);
             checkBox_kb[i].TabIndex = 11 + i * 6;
             switch (i)
-            {
+            {   // 37 to 46 correspond to NumPad keys
                 case 37:
                     {
                         checkBox_kb[i].Text = "7";
@@ -1019,7 +1019,7 @@ namespace TaxonScout
             if (e.CloseReason == CloseReason.UserClosing)
             // Prompt user to save his data
             {
-                var confirmResult = MessageBox.Show("Are you sure you want to exit?",
+                var confirmResult = MessageBox.Show("Are you sure you want to exit?\nAny unsaved data may be lost!",
                                     "Confirm Exit",
                                     MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
@@ -1033,7 +1033,7 @@ namespace TaxonScout
             }
 
             if (e.CloseReason == CloseReason.WindowsShutDown)
-            // Autosave and clear up ressources
+            // Autosave and clear up resources
             {
                 performSaveToFile(
                                   System.Windows.Forms.Application.StartupPath.ToString() +
@@ -1044,7 +1044,7 @@ namespace TaxonScout
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {   // File -> Exit
-            var confirmResult = MessageBox.Show("Are you sure you want to exit?",
+            var confirmResult = MessageBox.Show("Are you sure you want to exit?\nAny unsaved data may be lost!",
                                     "Confirm Exit",
                                     MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
@@ -1067,8 +1067,8 @@ namespace TaxonScout
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-            //saveFileDialog1.RestoreDirectory = (false);
-            saveFileDialog1.InitialDirectory = Application.StartupPath;
+            saveFileDialog1.RestoreDirectory = (true);
+            //saveFileDialog1.InitialDirectory = Application.StartupPath;
             saveFileDialog1.FileName = "*.txt";
             saveFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)

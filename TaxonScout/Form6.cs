@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TaxonScout
 {
-    public partial class Form6 : Form
+    public partial class Form6 : Form       // Form6 is a setup form for grouping controls associated with certain keys in order to form separately-counted categories.
     {
         public Form6()
         {

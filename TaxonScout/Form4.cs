@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TaxonScout
 {
-    public partial class Form4 : Form
+    public partial class Form4 : Form       // Form4 is opened when clicking on the "Sample Parameters" button from Form1. It contains controls for introducing metadata related to the sample
     {
         private List<String> parametersList = new List<String>();
 
