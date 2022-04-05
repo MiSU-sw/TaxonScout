@@ -22,6 +22,7 @@ namespace TaxonScout
         private ToolStripMenuItem bindTaxonToKeysToolStripMenuItem        = new ToolStripMenuItem();
         private ToolStripMenuItem optionsToolStripMenuItem                = new ToolStripMenuItem();
         private ToolStripMenuItem resetAllCountersToZeroToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem resetKeyHistoryMenuItem                 = new ToolStripMenuItem();
         private ToolStripMenuItem helpToolStripMenuItem                   = new ToolStripMenuItem();
         private ToolStripMenuItem aboutToolStripMenuItem                  = new ToolStripMenuItem();
         private ToolStripMenuItem newCountToolStripMenuItem               = new ToolStripMenuItem();
@@ -718,7 +719,8 @@ namespace TaxonScout
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetAllCountersToZeroToolStripMenuItem});
+            this.resetAllCountersToZeroToolStripMenuItem,
+            resetKeyHistoryMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -729,6 +731,13 @@ namespace TaxonScout
             this.resetAllCountersToZeroToolStripMenuItem.Size = new Size(205, 22);
             this.resetAllCountersToZeroToolStripMenuItem.Text = "Reset all counters to zero";
             this.resetAllCountersToZeroToolStripMenuItem.Click += new System.EventHandler(this.resetAllCountersToZeroToolStripMenuItem_Click);
+            // 
+            // resetKeyHistoryMenuItem
+            // 
+            this.resetKeyHistoryMenuItem.Name = "resetKeyHistoryMenuItem";
+            this.resetKeyHistoryMenuItem.Size = new Size(205, 22);
+            this.resetKeyHistoryMenuItem.Text = "Clear Key Press History";
+            this.resetKeyHistoryMenuItem.Click += new System.EventHandler(this.resetKeyHistoryMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -1120,18 +1129,28 @@ namespace TaxonScout
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
-                for (int i = 1; i <= numberOfKeys; i++)
-                {
-                    numericUD_kb[i].Value = 0;
-                }
-
-                CalculateTotal(); // recalculate total
+                resetAllCounters();
             }
             else
             {
                 // Nothing to do
             }
         } // resetAllCountersToZeroToolStripMenuItem_Click
+
+        private void resetKeyHistoryMenuItem_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Are you sure you want to clear the key press history?\nOnly the key press history will be erased!\nThe count data will not be affected!",
+                                     "Confirm Reset",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                resetKeyHistory();
+            }
+            else
+            {
+                // Nothing to do
+            }
+        } // resetKeyHistoryMenuItem_Click
 
         private void newCountToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1140,13 +1159,8 @@ namespace TaxonScout
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
-                for (int i = 1; i <= numberOfKeys; i++)
-                {
-                    textBox_kb[i].Text = "";
-                    numericUD_kb[i].Value = 0;
-                }
-
-                CalculateTotal(); // recalculate total
+                resetAllCounters();
+                resetKeyHistory();
             }
             else
             {
@@ -1192,6 +1206,23 @@ namespace TaxonScout
             Form5 frm = new Form5();
             frm.Show(this);
         } // aboutToolStripMenuItem_Click
+
+        private void resetAllCounters()
+        { 
+        for (int i = 1; i <= numberOfKeys; i++)
+                {
+                    textBox_kb[i].Text = "";
+                    numericUD_kb[i].Value = 0;
+                }
+
+                CalculateTotal(); // recalculate total
+        }
+
+        private void resetKeyHistory()
+        {
+            textBoxLastKey.Text = "";       // clear last key pressed
+            historyListBox.Items.Clear();   // clear history listbox
+        }
 
 
         /// <summary>

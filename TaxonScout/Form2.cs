@@ -32,6 +32,7 @@ namespace TaxonScout
         private Button button4 = new Button();
         private Button button5 = new Button();
         private Button button6 = new Button();
+        private Button button7 = new Button();
 
         private GroupBox groupBox1 = new GroupBox();
         private GroupBox groupBox2 = new GroupBox();
@@ -161,6 +162,7 @@ namespace TaxonScout
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.button7);
 
             // set icon to a pretty algae
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
@@ -243,6 +245,15 @@ namespace TaxonScout
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.Visible = true;
+
+            // button7
+            this.button7.Location = new System.Drawing.Point(649, 525);
+            this.button7.Size = new System.Drawing.Size(155, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Clear taxa list";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Visible = true;
 
             // groupBox1
             this.groupBox1.Controls.Add(this.textBox1);
@@ -402,7 +413,7 @@ namespace TaxonScout
             try
             {
                 var bs = new BindingSource();
-                string[] lines = System.IO.File.ReadAllLines(textBox1.Text);    // read all lines;
+                string[] lines = System.IO.File.ReadAllLines(textBox1.Text);    // read all lines; not really safe for huge files but is sufficient for most use-cases
 
                 importedList.Clear();
                 listElement blankListElement = new listElement("");
@@ -523,6 +534,14 @@ namespace TaxonScout
                     }
                 }
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {   // clear taxa list
+            var bs = new BindingSource();
+            importedList.Clear();
+            //bs.DataSource = importedList;
+            updateCBdataSources(bs);    // call update of comboboxes datasources;
         }
 
         private void listCleanup(List<listElement> list)

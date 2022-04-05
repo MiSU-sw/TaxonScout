@@ -167,7 +167,7 @@
             this.label9.Padding = new System.Windows.Forms.Padding(3);
             this.label9.Size = new System.Drawing.Size(212, 19);
             this.label9.TabIndex = 13;
-            this.label9.Text = "in mind but it\'s useable for any kind of taxa";
+            this.label9.Text = "in mind but it\'s usable for any kind of taxa";
             // 
             // Form5
             // 
