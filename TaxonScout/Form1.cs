@@ -18,6 +18,7 @@ namespace TaxonScout
         private ToolStripMenuItem fileToolStripMenuItem                   = new ToolStripMenuItem();
         private ToolStripMenuItem saveToolStripMenuItem                   = new ToolStripMenuItem();
         private ToolStripMenuItem saveAsToolStripMenuItem                 = new ToolStripMenuItem();
+        private ToolStripMenuItem closeFileToolStripMenuItem              = new ToolStripMenuItem();
         private ToolStripMenuItem toolStripMenuItem1                      = new ToolStripMenuItem();
         private ToolStripMenuItem editToolStripMenuItem                   = new ToolStripMenuItem();
         private ToolStripMenuItem bindTaxonToKeysToolStripMenuItem        = new ToolStripMenuItem();
@@ -662,6 +663,7 @@ namespace TaxonScout
             this.toolStripSeparator2,
             this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
+            this.closeFileToolStripMenuItem,
             this.toolStripSeparator1,
             this.toolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -694,6 +696,13 @@ namespace TaxonScout
             this.saveAsToolStripMenuItem.Size = new Size(134, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // closeFileToolStripMenuItem
+            // 
+            this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
+            this.closeFileToolStripMenuItem.Size = new Size(134, 22);
+            this.closeFileToolStripMenuItem.Text = "Close File";
+            this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.closeFileToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -1149,6 +1158,14 @@ namespace TaxonScout
                 checkSaveToFile(saveFileDialog1.FileName);
             }
         } // saveAsToolStripMenuItem_Click
+
+        private void closeFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveEnabled = false;
+            buttonSaveData.Enabled = SaveEnabled;
+            saveToolStripMenuItem.Enabled = SaveEnabled;
+            SaveTarget = "";
+        } // closeFileToolStripMenuItem_Click
 
         private void sampleParametersToolStripMenuItem_Click(object sender, EventArgs e)
         {
