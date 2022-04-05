@@ -16,6 +16,7 @@ namespace TaxonScout
     {
         MenuStrip menuStrip1 = new MenuStrip();
         private ToolStripMenuItem fileToolStripMenuItem                   = new ToolStripMenuItem();
+        private ToolStripMenuItem saveToolStripMenuItem                   = new ToolStripMenuItem();
         private ToolStripMenuItem saveAsToolStripMenuItem                 = new ToolStripMenuItem();
         private ToolStripMenuItem toolStripMenuItem1                      = new ToolStripMenuItem();
         private ToolStripMenuItem editToolStripMenuItem                   = new ToolStripMenuItem();
@@ -58,6 +59,9 @@ namespace TaxonScout
 
         private List<String> dummyList      = new List<String>();
         public  List<String> parametersList = new List<String>();
+
+        private bool SaveEnabled = false;
+        private String SaveTarget = "";
 
         private static readonly int numberOfKeys = 46;
 
@@ -419,6 +423,7 @@ namespace TaxonScout
             this.buttonSaveData.Text = "Save Data";
             this.buttonSaveData.UseVisualStyleBackColor = true;
             this.buttonSaveData.Click += new EventHandler(this.buttonSaveData_Click);
+            this.buttonSaveData.Enabled = SaveEnabled;
             // 
             // BkColorButton
             // 
@@ -655,6 +660,7 @@ namespace TaxonScout
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newCountToolStripMenuItem,
             this.toolStripSeparator2,
+            this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
             this.toolStripMenuItem1});
@@ -673,6 +679,14 @@ namespace TaxonScout
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new Size(131, 6);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new Size(134, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Enabled = SaveEnabled;
             // 
             // saveAsToolStripMenuItem
             // 
@@ -826,20 +840,6 @@ namespace TaxonScout
             // set icon to a pretty algae
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Icon = ((Icon)(resources.GetObject("$this.Icon")));
-
-            /*
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "text|*.txt";
-            
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                MessageBox.Show(sfd.FileName);
-                MessageBox.Show(Path.GetFullPath(sfd.FileName));
-                MessageBox.Show(Path.GetFileName(sfd.FileName));
-            }
-            */
-            //MessageBox.Show(System.Windows.Forms.Application.StartupPath.ToString());
-            //MessageBox.Show(System.IO.Path.GetDirectoryName(Application.ExecutablePath).ToString());
 
         } // Form1_Load
 
@@ -1074,17 +1074,30 @@ namespace TaxonScout
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-            saveFileDialog1.RestoreDirectory = (true);
-            //saveFileDialog1.InitialDirectory = Application.StartupPath;
-            saveFileDialog1.FileName = "*.txt";
-            saveFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                performSaveToFile(saveFileDialog1.FileName);
-            }
+            checkSaveToFile(SaveTarget);
         } // buttonSaveData_Click
+
+        private void checkSaveToFile(String path_filename)
+        { 
+            if (File.Exists(path_filename))
+            {
+                var confirmResult = MessageBox.Show("Are you sure you want to overwrite the existing file?",
+                                     "Confirm Overwrite",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    performSaveToFile(path_filename);
+                }
+                else
+                {
+                    // Nothing to do
+                }
+            }
+            else 
+            { 
+                performSaveToFile(path_filename);
+            }
+        } // checkSaveToFile
 
         private void performSaveToFile(String path_filename)
         {
@@ -1111,10 +1124,30 @@ namespace TaxonScout
                     file.WriteLine(line);
                 }
             }
+            SaveEnabled = true;
+            buttonSaveData.Enabled = SaveEnabled;
+            saveToolStripMenuItem.Enabled = SaveEnabled;
+            SaveTarget = path_filename;
+
         } // performSaveToFile
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
            buttonSaveData.PerformClick();
+        } // saveToolStripMenuItem_Click
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            
+            saveFileDialog1.RestoreDirectory = (true);
+            //saveFileDialog1.InitialDirectory = Application.StartupPath;
+            saveFileDialog1.FileName = "*.txt";
+            saveFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                checkSaveToFile(saveFileDialog1.FileName);
+            }
         } // saveAsToolStripMenuItem_Click
 
         private void sampleParametersToolStripMenuItem_Click(object sender, EventArgs e)

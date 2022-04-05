@@ -164,6 +164,10 @@ namespace TaxonScout
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
 
+            
+            openFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+
             // set icon to a pretty algae
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.Icon = ((Icon)(resources.GetObject("$this.Icon")));
@@ -395,12 +399,6 @@ namespace TaxonScout
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-            openFileDialog1.InitialDirectory = Application.StartupPath;
-            openFileDialog1.Filter = "Text Documents (*.txt)|*.txt|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 2;
-            openFileDialog1.RestoreDirectory = true;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
