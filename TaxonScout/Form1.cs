@@ -1211,12 +1211,14 @@ namespace TaxonScout
             {
                 resetAllCounters();
                 resetKeyHistory();
+                resetBindings();
             }
             else
             {
                 // Nothing to do
             }
         } // newCountToolStripMenuItem_Click
+
         private void FgColorButton_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
@@ -1259,13 +1261,21 @@ namespace TaxonScout
 
         private void resetAllCounters()
         { 
-        for (int i = 1; i <= numberOfKeys; i++)
+            for (int i = 1; i <= numberOfKeys; i++)
                 {
-                    textBox_kb[i].Text = "";
+                    // textBox_kb[i].Text = "";
                     numericUD_kb[i].Value = 0;
                 }
 
                 CalculateTotal(); // recalculate total
+        }
+
+        private void resetBindings()
+        { 
+            for (int i = 1; i <= numberOfKeys; i++)
+            {
+                textBox_kb[i].Text = "";
+            }
         }
 
         private void resetKeyHistory()
